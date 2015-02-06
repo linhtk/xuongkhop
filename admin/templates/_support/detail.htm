@@ -1,0 +1,83 @@
+<!--BEGIN:MAIN-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; {page_charset}" />
+<title>{page_title}</title>
+<link rel="stylesheet" href="{menu_css}" />
+<link rel="stylesheet" href="{main_css}" />
+<script language="javascript">
+function go_back()
+{
+	var f = document.frmAction;
+	f.action="index.php";
+	f.submit();
+}
+function openwin(url,w_title,width,height)
+{
+	var maxw = window.screen.availWidth;
+	var maxh = window.screen.availHeight;
+	var win = window.open(url,w_title,'screenX=0,screenY=0,left='+((maxw-width)/2)+',top=0,width=' + width + ',height=' + height+',toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no');
+	win.focus();
+}
+</script>
+</head>
+<body style="margin:0px;">
+<form name="frmAction" method="post" action="index.php">
+<input type="hidden" name="adding" value="{adding}" />
+<input type="hidden" name="editing" value="{editing}" />
+<input type="hidden" name="keyword" value="{keyword}" />
+<input type="hidden" name="page" value="{page}" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="2">{header_tostring}</td>
+    </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+    </tr>
+  <tr>
+    <td colspan="2" class="header_navigation_nolink"  style="padding-left:7px;">{url_path}</td>
+    </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+    </tr>
+  <tr>
+    <td valign="top" align="left" width="200">{left_tostring}</td>
+    <td width="780" style="padding-left:5px; padding-right:5px;"><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+      <tr>
+        <td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<td style="padding:0px; width:5px;"><img src="{image_path}images/new_admin_panel_list_12.gif" width="5" height="26" border="0" vspace="0" hspace="0" align="absmiddle" /></td>
+				<td align="center" class="listHeader_Admin_Near_Left">{TITLE_RECORD_DETAIL} - {title}</td>
+				<td style="padding:0px; width:5px;"><img src="{image_path}images/new_admin_panel_list_15.gif" width="5" height="26" border="0" vspace="0" hspace="0" align="absmiddle" /></td>
+			  </tr>
+		  </table>
+		</td>
+      </tr>
+	  <tr>
+	  	<td>
+		<table width="100%" border="0" cellspacing="0" cellpadding="5" class="actionForm">
+           <tr>
+		  	<td>
+				<table width="100%" cellpadding="5" cellspacing="0" class="detailForm">
+					<tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_NAME}</td><td align="left" class="detail_row">{gallery_name}</td></tr><tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_POSITION}</td><td align="left" class="detail_row">{gallery_position}</td></tr><tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_IMAGE1}</td><td align="left" class="detail_row">{gallery_image1}</td></tr><tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_IMAGE2}</td><td align="left" class="detail_row">{gallery_image2}</td></tr><tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_IMAGE3}</td><td align="left" class="detail_row">{gallery_image3}</td></tr><tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_IMAGE4}</td><td align="left" class="detail_row">{gallery_image4}</td></tr><tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_IMAGE5}</td><td align="left" class="detail_row">{gallery_image5}</td></tr><tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_IMAGE6}</td><td align="left" class="detail_row">{gallery_image6}</td></tr><tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_IMAGE7}</td><td align="left" class="detail_row">{gallery_image7}</td></tr><tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_IMAGE8}</td><td align="left" class="detail_row">{gallery_image8}</td></tr><tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_IMAGE9}</td><td align="left" class="detail_row">{gallery_image9}</td></tr><tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_IMAGE10}</td><td align="left" class="detail_row">{gallery_image10}</td></tr><tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_IMAGE11}</td><td align="left" class="detail_row">{gallery_image11}</td></tr><tr><td width="25%" align="left" style="font-weight:bold;" class="detail_row">{LBL_GALLERY_IMAGE12}</td><td align="left" class="detail_row">{gallery_image12}</td></tr>
+				</table>
+			</td>
+		  </tr>
+          <tr>
+            <td align="center"><input type="image" name="btnUpdate" src="{image_path}images/go_back.gif" onclick="javascript:go_back();" /></td>
+          </tr>
+        </table>
+		</td>
+	  </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">{footer_tostring}</td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
+<!--END:MAIN-->

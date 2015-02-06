@@ -1,0 +1,42 @@
+<!-- BEGIN:main -->
+{header_tostring}
+<table  border="0" cellspacing="0" cellpadding="0" class="box-detail" align="center">
+  <tr>
+    <td width="8"><img src="images/images_03.gif" width="9" height="30"></td>
+    <td class="bg-heading" width="100%">{title_page}</td>
+    <td width="7"><img src="images/images_06.gif" width="7" height="30"></td>
+  </tr>
+  <tr>
+    <td colspan="3" class="body-content"><table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td width="28%" class="content">Họ tên </td>
+    <td width="72%" class="content">{row.admin_fullname}</td>
+  </tr>
+  <tr>
+    <td class="content">Email</td>
+    <td class="content">{row.admin_email}</td>
+  </tr>
+  <tr>
+    <td class="content">Phone</td>
+    <td class="content">{row.admin_phone}</td>
+  </tr>
+  <tr>
+    <td class="content">Mobile</td>
+    <td class="content">{row.admin_mobile}</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><input type="button" value="Đổi thông tin cá nhân" class="a_button" onclick="location.href='index.php?mod=admin&amp;act=change_profile'">&nbsp;
+	<input type="button" value="Đổi mật khẩu" class="a_button" onclick="location.href='index.php?mod=admin&amp;act=change_pass'"/>&nbsp;
+	<input type="button" value="Quay lại" class="a_button" onclick="history.go(-1);">&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+    <td><img src="images/images_17.gif" width="9" height="10" style="float:left"></td>
+    <td><div class="line-bottom">&nbsp;</div></td>
+    <td><img src="images/images_21.gif" width="7" height="10" style="float:right;"></td>
+  </tr>
+</table>
+{footer_tostring}
+<!-- END:main -->

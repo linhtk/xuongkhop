@@ -1,0 +1,75 @@
+<!-- BEGIN:main -->
+{header_tostring}
+<br/>
+<script language="javascript" type="text/javascript" src="../js/general.js"></script>
+<script type="text/javascript" language="javascript">
+function openwin(url,w_title,width,height)
+{
+	var maxw = window.screen.availWidth;
+	var maxh = window.screen.availHeight;
+	var win = window.open(url,w_title,'screenX=0,screenY=0,left='+((maxw-width)/2)+',top=0,width=' + width + ',height=' + height+',toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no');
+		win.focus();
+}
+</script>
+<table  border="0" cellspacing="0" cellpadding="0" style="width:900px;" align="center" class="box-detail">
+  <tr>
+    <td width="9"><img src="images/images_03.gif" width="9" height="30"></td>
+    <td class="bg-heading" style="width:884px;">{title_page}&nbsp;</td>
+    <td width="7"><img src="images/images_06.gif" width="7" height="30"></td>
+  </tr>
+  <tr>
+    <td colspan="3" class="body-content"><table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td width="19%" class="content">Tên Bộ sưu tập </td>
+    <td width="81%" class="content">{row.bosuutap_ten}</td>
+  </tr>
+  <tr>
+    <td class="content">Ảnh đại diện</td>
+    <td class="content">{row.bosuutap_anh}&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="content">Ảnh 1</td>
+    <td class="content">{row.bosuutap_anh1}</td>
+  </tr>
+  <tr>
+    <td class="content">Ảnh 2</td>
+    <td class="content">{row.bosuutap_anh2}</td>
+  </tr>
+  <tr>
+    <td class="content">Ảnh 3</td>
+    <td class="content">{row.bosuutap_anh3}</td>
+  </tr>
+  <tr>
+    <td class="content">Ảnh 4</td>
+    <td class="content">{row.bosuutap_anh4}</td>
+  </tr>
+  <tr>
+    <td class="content">Ảnh 5</td>
+    <td class="content">{row.bosuutap_anh5}</td>
+  </tr>
+  <tr>
+    <td class="content">Ảnh 6</td>
+    <td class="content">{row.bosuutap_anh6}</td>
+  </tr>
+  <tr>
+    <td class="content">Thông tin bosuutap</td>
+    <td class="content">{row.bosuutap_thongtin}</td>
+  </tr>
+  <tr>
+    <td class="content">Hiển thị</td>
+    <td class="content">{row.bosuutap_hienthi}</td>
+  </tr>
+  
+  <tr>
+    <td colspan="2" align="center"><input type="button" value="{COM_BUTTON_BACK}" class="a_button" onclick="history.go(-1);">&nbsp;  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+    <td><img src="images/images_17.gif" width="9" height="10" style="float:left"></td>
+    <td><div class="line-bottom">&nbsp;</div></td>
+    <td><img src="images/images_21.gif" width="7" height="10" style="float:right;"></td>
+  </tr>
+</table>
+{footer_tostring}
+<!-- END:main -->

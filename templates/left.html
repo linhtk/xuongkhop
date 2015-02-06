@@ -1,0 +1,163 @@
+<!-- BEGIN: LEFT -->
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="bg_title" colspan="2">Danh mục chính</td>
+   </tr> 
+   <tr>
+     <td id="tabvanilla">
+      <ul class="tabnav">
+        <li><a href="#new_item">Hàng mới</a></li>
+        <li><a href="#old_item">Hàng cũ</a></li>
+      </ul>
+     </td>
+     <td></td>
+   </tr>
+  </table>
+<div id="new_item">  
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">  
+   <tr>
+   	  <td>
+      
+      </td>
+   </tr>
+   <!-- BEGIN:category -->
+    <tr>
+    <td class="bg_menu_left">
+		<a href="category.php?category={category_id}" class="link_menu_left">{category_name}</a>	</td>
+  </tr>
+  <!-- BEGIN:subcate -->
+  <tr>
+    <td class="bg_menu_left"><a href="subcategory.php?category={cateid}&subcate_id={subcate_id}" class="link_sub_menu_left">{subcate_name} &nbsp;({num})</a></td>
+  </tr>
+  <!-- END:subcate -->
+  <!-- END:category -->
+  <tr>
+    <td class="bg_menu_left"><img src="css/image/bottom_menuleft.jpg" /></td>
+  </tr>
+</table>
+</div>
+<div id="old_item">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">  
+   <!-- BEGIN:oldcategory -->
+    <tr>
+    <td class="bg_menu_left">
+		<a href="category_old.php?oldcategory={oldcategory_id}#old_item" class="link_menu_left">{oldcategory_name}</a>	</td>
+  </tr>
+  <!-- BEGIN:oldsubcate -->
+  <tr>
+    <td class="bg_menu_left"><a href="subcategory_old.php?oldcategory={oldcateid}&oldsubcate_id={oldsubcate_id}#old_item" class="link_sub_menu_left">{subcate_name_old} &nbsp;({num_old})</a></td>
+  </tr>
+  <!-- END:oldsubcate -->
+  <!-- END:oldcategory -->
+  <tr>
+    <td class="bg_menu_left"><img src="css/image/bottom_menuleft.jpg" /></td>
+  </tr>
+</table>
+</div>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="25" class="bg_title"><span class="title">Tư vấn trực tuyến</span></td>
+            </tr>
+            <tr>
+              <td><table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#1FA2E1">
+                <tr>
+                  <td align="center"><img src="css/image/home_68.gif" width="32" height="32" /></td>
+                  <td style="color:#ffffff" align="center"><strong>{row_support.config_phone}</strong></td>
+                </tr>
+                <tr>
+                  <td align="center">&nbsp;</td>
+                  <td align="center" style="color:#CCCCCC">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td align="center"><img src="css/image/home_69.gif" width="32" height="32" /></td>
+                  <td style="color:#ffffff" align="center"><strong>{row_support.config_mobile}</strong></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <!-- BEGIN:ONLINE -->
+                <tr>
+                  <td colspan="2" align="center" style="color:#CCC; font-weight:bold;">{ONLINE.support_name}</td>
+                </tr>
+                <tr>
+                  <td align="center" colspan="2"><a href="ymsgr:sendIM?{ONLINE.support_yahoo}"><img src="http://opi.yahoo.com/online?u={ONLINE.support_yahoo}&amp;m=g&amp;t=2" border="0"></a></td>
+                </tr>
+                <tr>
+                  <td colspan="2" align="center" style="color:#CCC; font-weight:bold;">{ONLINE.support_mobile}</td>
+                </tr>
+                <tr>
+                  <td align="center" colspan="2">&nbsp;</td>
+                </tr>
+                <!-- END:ONLINE -->
+                <tr>
+                  <td align="center" colspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td colspan="2" height="13" valign="top"><img src="css/image/bottom_menuleft.jpg" height="13" /></td>
+                </tr>
+                
+              </table></td>
+            </tr>
+          </table>
+         <form action="search.php" method="post" name="search" enctype="multipart/form-data">
+		 <input type="hidden" name="act" value="act" />
+		  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="25" class="bg_title">Tìm kiếm</td>
+            </tr>
+            <tr>
+              <td><table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#1FA2E1">
+                <tr>
+                  <td align="center" style="color:#CCCCCC">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td align="center"><input type="text" name="keyword" maxlength="30" class="search_box" value="Nhập từ khóa" onblur="if (this.value == '') {this.value = 'Nhập từ khóa';}" onfocus="if (this.value == 'Nhập từ khóa') {this.value = '';}" /></td>
+                </tr>
+                <tr>
+                  <td align="center">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td align="center">{cate_product}</td>
+                </tr>
+                <tr>
+                  <td align="center">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td align="center"><input name="submit" type="submit" value="" class="search_button" /></td>
+                </tr>
+                <tr>
+                  <td align="center">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="13" valign="top"><img src="css/image/bottom_menuleft.jpg" height="13" /></td>
+                </tr>
+                
+              </table></td>
+            </tr>
+          </table>
+		  </form>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<!-- BEGIN: adv -->
+            <tr>
+              <td align="center"><a href="{row_adv.adv_link}" target="_blank"><img src="images/adv/thumb_0_{row_adv.adv_image}" border="0" class="image_left" alt="{row_adv.adv_title}" title="{row_adv.adv_title}" /></a><br />
+              </td>
+            </tr>
+		<!-- END:adv -->
+            <tr>
+              <td align="center" style="color:#F60">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" style="color:#fff">Lượt truy cập: <strong>{total_page}</strong></td>
+            </tr>
+            <tr>
+              <td align="center" style="color:#fff">Đang online: <strong>{user_online}</strong></td>
+            </tr>
+            <tr>
+              <td align="center">
+               
+              </td>
+            </tr>
+            <tr><td>&nbsp;</td></tr>
+          </table>
+<!-- END:LEFT -->

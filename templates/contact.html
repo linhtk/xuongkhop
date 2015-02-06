@@ -1,0 +1,93 @@
+<!-- BEGIN:MAIN -->
+{header_tostring}
+  <tr>
+    <td width="210" valign="top" class="boder_main">
+	{left_tostring}
+	</td>
+    <td valign="top" class="main_center" width="560">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="28" class="bg_title_center" style="padding-left:10px;">Liên hệ với chúng tôi</td>
+          </tr>
+          <!-- BEGIN:thanks -->
+          <tr>
+          	<td align="center">Thông tin của bạn đã được gửi tới Trung tâm chúng tôi. Chúng tôi sẽ liên lạc lại với bạn trong thời gian sớm nhất. Cảm ơn bạn đã quan tâm.</td>
+          </tr>
+          <!-- END:thanks -->
+          <!-- BEGIN:error -->
+          <tr>
+           <td colspan="2" align="center" style="color:#FF0000;">{error}</td>
+          </tr>
+          <!-- END:error -->
+          <!-- BEGIN:form -->
+          <tr>
+            <td valign="top" style="padding-left:20px;">
+				<form action="contact.php" name="frm_contact" method="post" onsubmit="javascript: return check_contactform(this);">
+                	<input type="hidden" name="act" value="act" />
+                <table width="80%" border="0" cellspacing="2" cellpadding="2">
+                  <tr>
+                    <td colspan="2" align="center">Quý khách có nhu cầu liên hệ với chúng tôi. Xin vui lòng điền đầy đủ vào Form dưới đây. Chúng tôi sẽ liên lạc với quý khách ngay trong thời gian sớm nhất</td>
+                  </tr>
+                  <tr>
+                    <td>Họ tên</td>
+                    <td><input type="text" name="fullname" id="textfield" value="{fullname}" /></td>
+                  </tr>
+                  <tr>
+                    <td>Địa chỉ</td>
+                    <td><input type="text" name="add" id="textfield2" value="{add}" /></td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td><input type="text" name="email" id="textfield3" value="{email}" /></td>
+                  </tr>
+                  <tr>
+                    <td>Điện thoại</td>
+                    <td><input type="text" name="phone" id="textfield4" value="{phone}" /></td>
+                  </tr>
+                  <tr>
+                    <td>Nội dung</td>
+                    <td><label>
+                      <textarea name="content" id="textfield5">{content}</textarea>
+                    </label></td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="submit" name="submit" id="button" value="Gửi" />
+                    <input type="reset" name="button2" id="button2" value="Làm lại" /></td>
+                  </tr>
+                </table>
+               </form>
+		    </td>
+          </tr>
+          <!-- END:form -->
+        </table>
+	</td>
+    <td width="210" valign="top" class="boder_main">
+	{right_tostring}
+	</td>
+  </tr>
+{footer_tostring}
+				<script language="javascript" type="text/javascript">
+					function check_contactform(the_form){
+						if ( (the_form.fullname.value == "") || (the_form.email.value == "") || (the_form.add.value == "") || (the_form.content.value == "")  || (the_form.phone.value == "")){
+							window.alert("Xin dien du thong tin");
+							return false;
+						}
+	
+						var the_at    = the_form.email.value.indexOf("@");
+						var the_dot   = the_form.email.value.indexOf(".");
+						var the_space = the_form.email.value.indexOf(" ");
+				
+						if ( (the_at!=-1) && (the_at!=0) && (the_dot!=-1) && (the_dot>the_at + 1) && (the_dot<the_form.email.value.length-1) && (the_space==-1) ){
+							return true;
+						}
+						else{
+						window.alert("Xin dien dung dia chi email");
+						the_form.email.focus();
+						return false;	
+						}
+					}
+				</script>
+</table>
+
+<!-- END:MAIN -->

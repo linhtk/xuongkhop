@@ -1,0 +1,65 @@
+<!-- BEGIN:MAIN -->
+{header_tostring}
+  <tr>
+    <td width="210" valign="top" class="boder_main">
+	{left_tostring}
+	</td>
+    <td valign="top" class="main_center" width="560">
+    	<table width="100%" border="0">
+          <tr>
+            <td height="28" class="bg_title_center">{cate.category_name}</td>
+          </tr>
+          <tr>
+            <td valign="top">
+				<table border="0" cellspacing="2" cellpadding="2" width="100%">
+                  <tr>
+ 	  <!-- BEGIN:sub_category -->
+                   <td valign="top" width="50%" align="left">
+                     &loz; <a href="subcategory.php?subcate_id={subcate.category_id}" class="link_bol">{subcate.category_name}&nbsp;<i>({subcate.sum})</i></a><br />
+                      </td>
+            {subcate.line}
+		<!-- END:sub_category -->
+                  </tr>
+                </table>
+			</td>
+		  </tr>
+          <tr>
+            <td>
+            	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                  	<td class="category_title">Danh sách sản phẩm</td>
+                  </tr>
+                <!-- BEGIN:list_product -->
+                  <tr>
+                  	<td class="product_list">
+                      <table border="0" cellpadding="2" cellspacing="2" width="100%">
+                        <tr>
+                          <td width="60"><a href="product_detail.php?product_id={row_product.product_id}"><img src="images/product/thumb_1_{row_product.product_image}" border="0" width="60" class="img_product_list" /></a></td>
+                          <td align="left" valign="top">
+                          	<span><a href="product_detail.php?product_id={row_product.product_id}" class="product_list_title">{row_product.product_name}</a></span><br />
+                            <span>{row_product.product_description}</span>
+                          </td>
+                          <td width="90" style="border-left:dashed 1px #CCC;">{row_product.product_price} VNĐ <br />
+                            <span class="tb_bol1"><em>({row_product.is_in_store})</em></span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+               <!-- END:list_product -->
+                  <tr>
+                    <td align="left">{pages}</td>
+                  </tr>
+                </table>
+            </td>
+          </tr>
+        </table>
+	</td>
+    <td width="210" valign="top" class="boder_main">
+	{right_tostring}
+	</td>
+  </tr>
+{footer_tostring}
+</table>
+
+<!-- END:MAIN -->

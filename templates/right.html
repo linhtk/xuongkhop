@@ -1,0 +1,64 @@
+<!-- BEGIN:RIGHT -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+     <tr>
+        <td class="bg_title">Sản phẩm bán chạy</td>
+     </tr>
+     <tr>
+     	<td class="right_shopcart" align="center">
+            <marquee behavior="scroll" direction="up" scrollamount="1" scrolldelay="80" truespeed="true" onmouseover="this.stop()" onmouseout="this.start()" width="150" height="125">
+               <!-- BEGIN:list_sell -->
+                        <span style="font-weight: bold;">{sell_product_name}</span><br>
+						<a title="{sell_product_name}" href="#"><img src="images/product/thumb_1_{sell_image}" alt="{sell_product_name}" border="0"></a><br>
+						<span style="font-weight: bold;">{sell_product_price} VNĐ</span>
+					<hr />
+					<br />
+               <!-- END:list_sell -->
+			   </marquee>
+        </td>
+     </tr>
+     <tr>
+        <td class="bg_title">Giỏ hàng của bạn</td>
+     </tr>
+     <tr>
+     	<td class="right_shopcart" align="center">Tổng số tiền: <b>{total} VNĐ</b></td>
+     </tr>
+     <tr>
+     	<td class="right_shopcart" align="center">Tổng số sản phẩm: <b>{total_item}</b></td>
+     </tr>
+     <tr>
+     	<td align="center"><a href="shopping_cart.php" class="right_shopcart">Xem giỏ hàng</a></td>
+     </tr>
+     <tr>
+     	<td align="center">&nbsp;</td>
+     </tr>
+     <tr>
+        <td class="bg_title">Hàng mới cập nhật </td>
+     </tr>
+    <!-- BEGIN: list_product -->
+      <tr>
+        <td align="center">
+        <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="top">
+        <!-- BEGIN: image -->
+          <tr>
+            <td align="center"><a href="product_detail.php?product_id={products_id}"><img src="images/product/thumb_1_{image}" alt="{product_name}" border="0" title="{product_name}" class="img_product" /></a></td>
+          </tr>
+        <!-- END:image -->
+          <tr>
+            <td align="center"><a href="product_detail.php?product_id={row.products_id}" class="link_right">{row.product_name}</a><span class="tg_bol">Giá: {row.product_price} VNĐ</span><br /><span class="tg_bol1">({is_in_store})</span></a>
+            </td>
+          </tr>
+        </table>
+        <div class="dot"></div>
+        </td>
+      </tr>
+    <!-- END:list_product -->
+    </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<!-- BEGIN: adv -->
+            <tr>
+              <td align="center"><a href="{row_adv.adv_link}" target="_blank"><img src="images/adv/thumb_0_{row_adv.adv_image}" border="0" class="image_left" alt="{row_adv.adv_title}" title="{row_adv.adv_title}" /></a><br />
+              </td>
+            </tr>
+		<!-- END:adv -->
+          </table>
+<!-- END:RIGHT -->

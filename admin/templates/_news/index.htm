@@ -1,0 +1,149 @@
+<!-- BEGIN:main -->
+{header_tostring} <br/>
+<script language="javascript" type="text/javascript" src="../js/general.js"></script>
+<script type="text/javascript" language="javascript">
+function openwin(url,w_title,width,height)
+{
+	var maxw = window.screen.availWidth;
+	var maxh = window.screen.availHeight;
+	var win = window.open(url,w_title,'screenX=0,screenY=0,left='+((maxw-width)/2)+',top=0,width=' + width + ',height=' + height+',toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no');
+		win.focus();
+}
+</script>
+<form name="" action="" method="post">
+  <table width="100%" border="0" cellspacing="0" cellpadding="2">
+    <tr>
+      <td align="left" valign="middle">&nbsp;</td>
+      <td width="110" style="background:#EBEEF7;">&nbsp;<a href="#" onclick="Add();"><img src="images/images_05.jpg" width="52" height="52" alt="Add new" border="0" /></a>&nbsp;<a href="#" onclick="Delete();"><img src="images/images_07.jpg" width="43" height="52" alt="Delete" border="0" /></a></td>
+    </tr>
+  </table>
+</form>
+<form name="frmUpdate" action="" method="post">
+  <input type="hidden" name="bool_field" value=""/>
+  <input type="hidden" name="edit_id" value="">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="body-index">
+    <tr>
+      <td width="6" valign="top"><img src="images/images_03_1.jpg" width="6"></td>
+      <td class="row-index"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="sortable" >
+          <thead>
+          <tr><td width="10" class="cols-action">{COM_LBL_NO}</td>
+            <td class="cols-index">Tiêu đề tin</td>
+            <td width="100" class="cols-index">Ảnh</td>
+            <td width="100" class="cols-index">Tin nóng</td>
+            <td width="100" class="cols-index">Trạng thái</td>
+            <td width="100" class="cols-index">{COM_LBL_ACTION}</td>
+          </thead>
+          <tr>
+            <td colspan="6" style="height:5px;"></td>
+          </tr>
+          <!-- BEGIN:LIST -->
+          <tr onmouseover="this.className='tr-mouserOver';" onmouseout="this.className='tr-mouserOut'">
+            <td class="cols-content">{LIST.no}&nbsp;</td>
+            <td class="cols-content"><a href="#" onclick="Detail('{LIST.edit_id}')">{LIST.news_title}</a>&nbsp;</td>
+            <td class="cols-content" valign="top">{LIST.news_image}&nbsp;</td>
+            <td class="cols-content" valign="top">{LIST.news_is_hot}&nbsp;</td>
+            <td class="cols-content" valign="top">{LIST.news_active}&nbsp;</td>
+            <td class="cols-content" valign="top"><a href="#" onclick="Update('{LIST.edit_id}')"><img src="images/images_17.jpg" width="16" border="0"></a>&nbsp;<a href="#" onclick="Delete('{LIST.edit_id}')"><img src="images/images_19.jpg" width="18" border="0"></a>&nbsp;
+              <input type="checkbox" name="check_delete[]" value="{LIST.edit_id}"></td>
+          </tr>
+		  <!-- END:LIST -->
+          <tr>
+            <td colspan="6" align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="6">{COM_LBL_TOTAL} &nbsp;&nbsp;{pages}</td>
+          </tr>
+          
+      </table></td>
+      <td width="6" valign="top"><img src="images/images_03_2.jpg" width="6"></td>
+    </tr>
+  </table>
+</form>
+<br />
+<script language="javascript" type="text/javascript">
+var frm=document.frmUpdate;
+function Update(id)
+{
+	if(id)
+	{
+		frm.edit_id.value=id;
+		frm.action="index.php?mod={MOD}&act=action";
+	}
+	frm.submit();
+}
+function Add()
+{
+	location.href="index.php?mod={MOD}&act=action";
+}
+function SetBoolean(edit_id,field)
+{
+	frm.edit_id.value=edit_id;
+	frm.bool_field.value=field;
+	frm.submit();
+}
+function Delete(id)
+{
+	Confirm();
+	if(id)
+	{
+		frm.edit_id.value=id;
+		frm.action="index.php?mod={MOD}&act=confirm";
+		frm.submit();
+	}else
+	{ 
+		var check=Confirm();
+		if(!check)
+		{
+			alert("Bạn phải chọn trước khi xóa!");
+			return false;
+		}else{
+			frm.edit_id.value=check;
+			frm.action="index.php?mod={MOD}&act=confirm";
+			frm.submit();		
+		}
+	}
+	
+}
+function Confirm()
+{
+	var Obj=frm.elements['check_delete[]'];
+	var string="";
+	if(Obj)
+	{
+		if(Obj.length)
+		{
+			for (i=0;i<Obj.length;i++)
+			{
+				if(Obj[i].checked)
+					string+=Obj[i].value + "~~~";
+			}
+		}else if(Obj.checked)
+			string=Obj.value;
+	}
+	return string;	
+}
+function Detail(id)
+{
+	frm.edit_id.value=id;
+	frm.action="index.php?mod={MOD}&act=view_detail";
+	frm.submit();
+}
+function check_all(bool)
+{
+	var Obj=document.frmUpdate.elements['check_delete[]'];
+	if(Obj)
+	{
+		if(Obj.length)
+		{
+			for(i=0;i<Obj.length;i++)
+				Obj[i].checked=bool;
+		}else
+		{
+			Obj.checked=bool;
+		}
+	}
+}
+</script>
+
+{footer_tostring}
+<!-- END:main -->

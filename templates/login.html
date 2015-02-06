@@ -1,0 +1,78 @@
+<!-- BEGIN:MAIN -->
+{header_tostring}
+  <tr>
+    <td width="210" valign="top" class="boder_main">
+	{left_tostring}
+	</td>
+    <td valign="top" class="main_center" width="560">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="28" class="bg_title_center" style="padding-left:10px;">Đăng nhập</td>
+          </tr>
+          <!-- BEGIN:thanks -->
+          <tr>
+          	<td align="center">Đăng nhập hệ thống</td>
+          </tr>
+          <!-- END:thanks -->
+          <!-- BEGIN:error -->
+          <tr>
+           <td colspan="2" align="center" style="color:#FF0000;">{error}</td>
+          </tr>
+          <!-- END:error -->
+          <!-- BEGIN:form -->
+          <tr>
+            <td valign="top" style="padding-left:20px;">
+				<form action="login.php" name="frm_login" method="post" onsubmit="javascript: return check_login(this);">
+                	<input type="hidden" name="act" value="act" />
+                <table width="80%" border="0" cellspacing="2" cellpadding="2">
+                  <tr>
+                    <td>Tên đăng nhập</td>
+                    <td><input type="text" name="username" id="username" value="{username}" /></td>
+                  </tr>
+                  <tr>
+                    <td>Mật khẩu</td>
+                    <td><input type="text" name="password" id="password" value="{password}" /></td>
+                  </tr>
+                  <tr>
+                  
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="submit" name="submit" id="button" value="Đăng nhập" />
+                    <input type="reset" name="button2" id="button2" value="Làm lại" /></td>
+                  </tr>
+                </table>
+               </form>
+		    </td>
+          </tr>
+          <!-- END:form -->
+        </table>
+	</td>
+    <td width="210" valign="top" class="boder_main">
+	{right_tostring}
+	</td>
+  </tr>
+{footer_tostring}
+				<script language="javascript" type="text/javascript">
+					function check_contactform(the_form){
+						if ( (the_form.fullname.value == "") || (the_form.email.value == "") || (the_form.add.value == "") || (the_form.content.value == "")  || (the_form.phone.value == "")){
+							window.alert("Xin dien du thong tin");
+							return false;
+						}
+	
+						var the_at    = the_form.email.value.indexOf("@");
+						var the_dot   = the_form.email.value.indexOf(".");
+						var the_space = the_form.email.value.indexOf(" ");
+				
+						if ( (the_at!=-1) && (the_at!=0) && (the_dot!=-1) && (the_dot>the_at + 1) && (the_dot<the_form.email.value.length-1) && (the_space==-1) ){
+							return true;
+						}
+						else{
+						window.alert("Xin dien dung dia chi email");
+						the_form.email.focus();
+						return false;	
+						}
+					}
+				</script>
+</table>
+
+<!-- END:MAIN -->

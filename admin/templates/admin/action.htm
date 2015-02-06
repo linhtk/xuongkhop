@@ -1,0 +1,68 @@
+<!-- BEGIN:main -->
+{header_tostring}
+<form name="frmUpdate" action="" method="post">
+<input type="hidden" name="frmAction" value="Action" />
+{input_hidden_edit_id}
+{input_hidden_admin_password}
+{input_hidden_admin_id}
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="box-detail" align="center">
+  <tr>
+    <td width="8"><img src="images/images_03.gif" width="9" height="30"></td>
+    <td class="bg-heading" width="100%">{title_page}</td>
+    <td width="7"><img src="images/images_06.gif" width="7" height="30"></td>
+  </tr>
+  <tr>
+    <td colspan="3" class="body-content"><table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <!-- BEGIN:error -->	
+  <tr>
+    <td colspan="2"><p class="p_error">{error}</p></td>
+  </tr>
+  <!-- END:error -->
+  <tr>
+    <td class="content">Tên truy cập</td>
+    <td class="content">{input_admin_id}</td>
+  </tr>
+  <tr>
+    <td class="content">Mật khẩu </td>
+    <td class="content">{input_admin_password}{message_change_password}</td>
+  </tr>
+  <tr>
+    <td class="content">Xác nhận mật khẩu </td>
+    <td class="content">{input_admin_confirm_password}</td>
+  </tr>
+  <tr>
+    <td width="28%" class="content">Họ tên </td>
+    <td width="72%" class="content">{input_admin_fullname}</td>
+  </tr>
+  <tr>
+    <td class="content">Email</td>
+    <td class="content">{input_admin_email}</td>
+  </tr>
+  <tr>
+    <td class="content">Phone</td>
+    <td class="content">{input_admin_phone}</td>
+  </tr>
+  <tr>
+    <td class="content">Mobile</td>
+    <td class="content">{input_admin_mobile}</td>
+  </tr>
+  <tr>
+    <td class="content">Trạng thái</td>
+    <td class="content">{input_admin_is_active}</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><input type="submit" value="Thêm mới / Cập nhật" class="a_button"/>
+    <input type="reset" value="Hủy" class="a_button">&nbsp;<input type="button" value="{COM_BUTTON_BACK}" onclick="location.href='index.php?mod={MOD}&act=index'" class="a_button"/></td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+    <td><img src="images/images_17.gif" width="9" height="10" style="float:left"></td>
+    <td><div class="line-bottom">&nbsp;</div></td>
+    <td><img src="images/images_21.gif" width="7" height="10" style="float:right;"></td>
+  </tr>
+</table>
+</form>
+{footer_tostring}
+<!-- END:main -->

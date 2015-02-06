@@ -1,0 +1,111 @@
+﻿<!-- BEGIN:HEADER -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{title}</title>
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/scriptaculous.js?load=effects"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/cycle.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/sprinkle.js"></script>
+<script type="text/javascript" src="js/jquery-ui_pro.js"></script>
+<script language="javascript" type="text/javascript">
+function empty_cart()
+{
+	if(confirm('Bạn có muốn xóa giỏ hàng?'))
+	{
+		window.location.href='shopping_cart.php?act=empty';
+	}
+	return;
+}
+function update_cart()
+{
+	var f = document.frm_shopping_cart;
+	f.submit();
+	return;
+}
+
+function check_out()
+{
+	var total = document.getElementById('total');
+	if(total.value)
+	{
+		window.location.href='delivery_info.php';
+	}
+	else
+	{
+		alert('Giỏ hàng đang rỗng. Hãy tiếp tục mua hàng.');
+		return;
+	}
+}
+function add_to_cart()
+{
+	var frm = document.getElementById('form1');
+	frm.submit();
+}
+//window.onload=check_selected;
+$(document).ready(function() {
+	$('.slideshow').cycle({
+		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+});
+
+</script>
+<body>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="3" valign="top">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center">
+        <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="980" height="240">
+          <param name="movie" value="quangdien.swf" />
+          <param name="quality" value="high" />
+          <param name="wmode" value="opaque" />
+          <param name="swfversion" value="6.0.65.0" />
+          <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don't want users to see the prompt. -->
+          <param name="expressinstall" value="../Scripts/expressInstall.swf" />
+          <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+          <!--[if !IE]>-->
+          <object type="application/x-shockwave-flash" data="quangdien.swf" width="980" height="240">
+            <!--<![endif]-->
+            <param name="quality" value="high" />
+            <param name="wmode" value="opaque" />
+            <param name="swfversion" value="6.0.65.0" />
+            <param name="expressinstall" value="../Scripts/expressInstall.swf" />
+            <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+            <div>
+              <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+              <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+            </div>
+            <!--[if !IE]>-->
+          </object>
+          <!--<![endif]-->
+        </object>
+        <div style="clear:both;"></div>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" valign="top">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="top_menu">
+      <tr>
+        <td> <a href="index.php" class="link_top_menu">Trang chủ</a></td>
+        <td> <a href="introduction.php" class="link_top_menu">Giới thiệu </a></td>
+        <td><a href="product_list.php" class="link_top_menu">Sản Phẩm</a></td>
+        <td> <a href="service.php" class="link_top_menu">Bảo hành</a></td>
+         <td><a href="list_news.php" class="link_top_menu">Tin tức</a></td>
+       <td> <a href="contact.php" class="link_top_menu">Liên hệ</a></td>
+       <td> <a href="download.php" class="link_top_menu">Download</a></td>
+       <td> <a href="search.php" class="link_top_menu">Tìm kiếm</a></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+<!-- END:HEADER -->

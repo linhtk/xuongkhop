@@ -1,0 +1,123 @@
+<!-- BEGIN:MAIN -->
+{header_tostring}
+  <tr>
+    <td valign="top" class="boder_main">
+	{left_tostring}
+	</td>
+    <td valign="top" class="main_center" width="560">
+    	<table width="100%" border="0">
+       <!-- BEGIN:home_image -->
+          <tr>
+            <td><img src="images/config/thumb_0_{home_image}" border="0" alt="Máy tính Kiên Thảo" /></td>
+          </tr>
+       <!-- END:home_image -->
+       <tr>
+       	<td>
+        			<!-- BEGIN:hot_news -->
+					<table width="100%" border="0" cellspacing="2" cellpadding="2" style="border:solid 1px #f1f1f1;">
+					  <tr bgcolor="#f1f1f1">
+						<td colspan="2"><a href="news_detail.php?news_id={row_news.news_id}" class="hot_news_title">{row_news.news_title}</a><img src="css/image/hot_news.gif" /></td>
+					  </tr>
+					  <tr>
+						<td align="left">{row_news.news_image}</td>
+						<td align="left" valign="top">{row_news.news_brief}<br/><i>({row_news.news_date})</i></td>
+					  </tr>
+					  <tr>
+						<td colspan="2" align="right"><a href="news_detail.php?news_id={row_news.news_id}" class="more">Xem tiếp ...</a> </td>
+					  </tr>
+					</table>
+					<br />
+			<!-- END:hot_news -->
+
+        </td>
+       </tr>
+          <tr>
+            <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td><img src="css/image/tieu_bieu.jpg" border="0" /></td>
+                          </tr>
+                          <tr>
+                            <td>
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="top">
+                                <!-- BEGIN:ms -->
+                                  <tr>
+                                    <td colspan="3">{ms}</td>
+                                  </tr>
+                                <!-- END:ms -->
+                                  <tr height="200">
+                                <!-- BEGIN:hot -->
+                                    <td class="prod_box" align="center" width="33%" valign="top">
+                                        <table width="100%" border="0" cellpadding="2" cellspacing="2">
+                                          <tr>
+                                            <td align="center">&nbsp;</td>
+                                          </tr>
+                                          <tr>
+                                            <td align="center"><a href="product_detail.php?product_id={row.products_id}" class="link_bol">{row.product_name}</a></td>
+                                          </tr>
+                                          <tr>
+                                            <td valign="top" align="center"><a href="product_detail.php?product_id={row.products_id}"><img src="images/product/thumb_1_{image}" alt="{row.product_name}" border="0" class="img_product" /></a></td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg_bol" align="center">Giá: {row.product_price} VNĐ</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg_bol1" align="center">Tình trạng: {row.is_in_store}</td>
+                                          </tr>
+                                        </table>
+                                    </td>
+                                    {row.line}
+                                <!-- END:hot -->
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                        </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td><img src="css/image/moi.jpg" border="0" /></td>
+                          </tr>
+                          <tr>
+                            <td>
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="top">
+                                  <tr height="200">
+                                <!-- BEGIN:new -->
+                                    <td class="prod_box" align="center" width="33%" valign="top">
+                                        <table width="100%" border="0" cellpadding="2" cellspacing="2">
+                                          <tr>
+                                            <td valign="top" align="center"><a href="product_detail.php?product_id={row1.products_id}" class="link_bol">{row1.product_name}</a></td>
+                                          </tr>
+                                          <tr>
+                                            <td valign="top" align="center"><a href="product_detail.php?product_id={row1.products_id}"><img src="images/product/thumb_1_{image}" alt="{row1.product_name}" border="0" class="img_product" /></a></td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg_bol" align="center">Giá: {row1.product_price} VNĐ</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg_bol1" align="center">Tình trạng: {row1.is_in_store}</td>
+                                          </tr>
+                                        </table>
+                                    </td>
+                                    {row1.line}
+                                <!-- END:new -->
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                        </table>
+            </td>
+          </tr>
+        </table>
+
+	</td>
+    <td width="210" valign="top" class="boder_main">
+	{right_tostring}
+	</td>
+  </tr>
+{footer_tostring}
+
+<!-- END:MAIN -->

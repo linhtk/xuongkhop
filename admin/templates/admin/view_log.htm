@@ -1,0 +1,40 @@
+<!-- BEGIN:main -->
+{header_tostring}
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="box-detail" align="center">
+  <tr>
+    <td width="8"><img src="images/images_03.gif" width="9" height="30"></td>
+    <td class="bg-heading" width="100%">{title_page}</td>
+    <td width="7"><img src="images/images_06.gif" width="7" height="30"></td>
+  </tr>
+  <tr>
+    <td colspan="3" class="body-content"><table width="100%" border="0" cellspacing="0" cellpadding="5">
+  
+  <tr>
+    <td align="center" class="content"><strong>Thời gian Log in </strong></td>
+    <td align="center" class="content"><strong>Thời gian Logout </strong></td>
+    <td align="center" class="content"><strong>Từ địa chỉ IP </strong></td>
+  </tr>
+  <!-- BEGIN:session -->
+  <tr>
+    <td class="content" align="center">{session.session_in}</td>
+    <td class="content" align="center">{session.session_out}</td>
+    <td class="content" align="center">{session.session_ip}</td>
+  </tr>
+  <!-- END:session -->
+  <tr>
+    <td colspan="3" align="center"><input type="button" class="a_button" value="Quay lại" onclick="history.go(-1)"/></td>
+  </tr>
+  <tr>
+    <td colspan="3" align="left">{pages}</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+    <td><img src="images/images_17.gif" width="9" height="10" style="float:left"></td>
+    <td><div class="line-bottom">&nbsp;</div></td>
+    <td><img src="images/images_21.gif" width="7" height="10" style="float:right;"></td>
+  </tr>
+</table>
+{footer_tostring}
+<!-- END:main -->
