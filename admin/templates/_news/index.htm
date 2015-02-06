@@ -1,6 +1,6 @@
 <!-- BEGIN:main -->
 {header_tostring} <br/>
-<script language="javascript" type="text/javascript" src="../js/general.js"></script>
+
 <script type="text/javascript" language="javascript">
 function openwin(url,w_title,width,height)
 {
@@ -23,7 +23,6 @@ function openwin(url,w_title,width,height)
   <input type="hidden" name="edit_id" value="">
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="body-index">
     <tr>
-      <td width="6" valign="top"><img src="images/images_03_1.jpg" width="6"></td>
       <td class="row-index"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="sortable" >
           <thead>
           <tr><td width="10" class="cols-action">{COM_LBL_NO}</td>
@@ -47,18 +46,12 @@ function openwin(url,w_title,width,height)
               <input type="checkbox" name="check_delete[]" value="{LIST.edit_id}"></td>
           </tr>
 		  <!-- END:LIST -->
-          <tr>
-            <td colspan="6" align="right">&nbsp;</td>
-          </tr>
-          <tr>
-            <td colspan="6">{COM_LBL_TOTAL} &nbsp;&nbsp;{pages}</td>
-          </tr>
-          
-      </table></td>
-      <td width="6" valign="top"><img src="images/images_03_2.jpg" width="6"></td>
+      </table>
+      </td>
     </tr>
   </table>
 </form>
+<div class="alight_center">{COM_LBL_TOTAL} &nbsp;&nbsp;{pages}</div>
 <br />
 <script language="javascript" type="text/javascript">
 var frm=document.frmUpdate;

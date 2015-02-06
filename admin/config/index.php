@@ -29,7 +29,6 @@
 				md5(".$table_name."_id) as edit_id	
 				,".$table_name."_id
 				,config_email
-				,config_phone
 				,config_title_site
 				FROM ".TABLE_PREFIX.$table_name." 
 				".$condition ;

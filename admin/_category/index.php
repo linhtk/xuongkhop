@@ -25,9 +25,9 @@
 	$condition=" WHERE 1=1";
 	$page=$_POST['page']?$_POST['page']:1;
 	$pagegroup_size=10;
-//	$limit=($show_result?$show_result:20);
-//	$offset=($page-1)*$limit;
-//	$LIMIT=" LIMIT $offset,$limit";
+	$limit=($show_result?$show_result:10);
+	$offset=($page-1)*$limit;
+	$LIMIT=" LIMIT $offset,$limit";
 	$sql="SELECT 
 				md5(".$table_name."_id) as edit_id	
 				,".$table_name."_id
@@ -38,9 +38,10 @@
 				".$condition ;
 	$rs=execSQL($sql);
 	$row_total=mysql_num_rows($rs);
-//	$sql.=$LIMIT;
-//	$rs=execSQL($sql);
+	$sql.=$LIMIT;
+	$rs=execSQL($sql);
 	$array=get_fetch_assoc($rs);
+	//var_dump($array);
 	$pages=pagenavigator($page, $row_total, $limit, $pagegroup_size,'',$PHP_SELF) ;
 	for($i=0;$i<count($array);$i++)
 	{

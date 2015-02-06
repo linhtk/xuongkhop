@@ -8,6 +8,8 @@
 	if($action=="Action")
 	{
 		$news_title=$_POST['news_title'];
+		$news_id=$_POST['news_id'];
+		$news_cate = $_POST['news_cate'];
 		$news_brief=$_POST['news_brief'];
 		$news_content=$_POST['news_content'];
 		$news_image=$_FILES['news_image'];
@@ -20,6 +22,10 @@
 		if($news_title=="")
 		{
 			$error.=sprintf(ERR_NULL,"tiêu đề tin");
+		}
+		if(count($news_cate)<1)
+		{
+			$error.=sprintf(ERR_NULL,"danh mục tin");
 		}
 		if($news_content=="")
 		{
@@ -133,8 +139,23 @@
 								,news_is_hot='$news_it_hot'
 							WHERE md5(news_id)='$edit_id'";
 					execSQL($sql);
-					redir('index.php?mod=news');
-					exit();		
+					$sql_cate1 = "DELETE FROM tg_news_cate WHERE news_id='".$news_id."'";
+					execSQL($sql_cate1);
+					$sql_cate2 = "INSERT INTO tg_news_cate(news_id, cate_id, news_title, news_image) 
+							VALUES ";
+					for($i=0;$i<count($news_cate);$i++){
+						if($i == count($news_cate)-1){
+							$sql_cate2 .= "('$news_id', '$news_cate[$i]', '$news_title', '$news_image')";
+						} else {
+							$sql_cate2 .= "('$news_id', '$news_cate[$i]', '$news_title', '$news_image'),";
+						}
+					}
+					
+					//echo $sql_cate2;
+					execSQL($sql_cate2);
+					redir('index.php?mod=_news');
+					exit();
+							
 			}
 			else
 			{
@@ -157,8 +178,20 @@
 							,'$news_active'
 							,'$news_is_hot'
 							)";
-					execSQL($sql);
-					redir('index.php?mod=news');
+					$rs = execSQL($sql);
+					$news_id = db2_last_insert_id($rs);
+					$sql_cate2 = "INSERT INTO tg_news_cate(news_id, cate_id, news_title, news_image) 
+							VALUES ";
+					for($i=0;$i<count($news_cate);$i++){
+						if($i == count($news_cate)-1){
+							$sql_cate2 .= "('$news_id', '$news_cate[$i]', '$news_title', '$news_image')";
+						} else {
+							$sql_cate2 .= "('$news_id', '$news_cate[$i]', '$news_title', '$news_image'),";
+						}
+					}
+					$sql_cate2 .= "";
+					execSQL($sql_cate2);
+					redir('index.php?mod=_news');
 					exit();
 			}
 		}
@@ -168,6 +201,8 @@
 		if($edit_id){
 			$sql="SELECT news_title
 						,news_brief	
+						,news_id 
+						,md5(news_id) as edit_id
 						,news_content	
 						,news_image 
 						,news_position
@@ -176,7 +211,30 @@
 				 FROM ".TABLE_PREFIX."news
 				 WHERE md5(news_id)='$edit_id'";
 			$row=recordset($sql);
+			$sql_current_cate = "SELECT cate_id FROM tg_news_cate WHERE news_id = '".$row['news_id']."'";
+			$rs_cur_cate = execSQL($sql_current_cate);
+			$arr_cur_cate = get_fetch_assoc($rs_cur_cate);
+			$arr_cur = array();
+			for($j=0;$j<count($arr_cur_cate);$j++)
+			{
+				$arr_cur[$j] = (int)$arr_cur_cate[$j]['cate_id'];
+			}
+			//var_dump($arr_cur);
+			$sql_cate = "SELECT * FROM tg_category WHERE category_has_child = 0 AND category_status = 1 ORDER BY category_parent";
+			$rs_cate = execSQL($sql_cate);
+			$array=get_fetch_assoc($rs_cate);
+			for($i=0;$i<count($array);$i++)
+			{
+				if(in_array((int)$array[$i]['category_id'], $arr_cur))
+				{
+					$array[$i]['checked']=" checked='checked'";
+				}
+				$xtpl->assign('CATE',$array[$i]);
+				$xtpl->parse('main.CATE');
+			}		
 			$news_title			= $row['news_title'];
+			$edit_id			= $row['edit_id'];
+			$news_id			= $row['news_id'];
 			$news_brief			= $row['news_brief'];
 			$news_content		= $row['news_content'];
 			$news_image			= $row['news_image'];
@@ -184,7 +242,17 @@
 			$news_active		= $row['news_active'];			
 			$news_is_hot		= $row['news_is_hot'];
 			$hidden_news_image  = $news_image;
+		} else {
+			$sql_cate = "SELECT * FROM tg_category WHERE category_has_child = 0 AND category_status = 1 ORDER BY category_parent";
+			$rs_cate = execSQL($sql_cate);
+			$array=get_fetch_assoc($rs_cate);
+			for($i=0;$i<count($array);$i++)
+			{
+				$xtpl->assign('CATE',$array[$i]);
+				$xtpl->parse('main.CATE');
+			}
 		}
+		
 	}
 	
 	$input_news_title				= gen_input_text('news_title',$news_title,50,255,'','a_text');
@@ -205,6 +273,7 @@
 		}
 	}
 	
+	$xtpl->assign('news_id',$news_id);
 	$xtpl->assign('input_news_title',$input_news_title);
 	$xtpl->assign('input_news_image',$input_news_image);
 	$xtpl->assign('input_news_position',$input_news_position);

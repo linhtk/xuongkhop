@@ -23,7 +23,6 @@ function openwin(url,w_title,width,height)
   <input type="hidden" name="edit_id" value="">
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="body-index">
     <tr>
-      <td width="6" valign="top"><img src="images/images_03_1.jpg" width="6"></td>
       <td class="row-index">
       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="sortable" id="cate_table">
           <tr>
@@ -32,8 +31,6 @@ function openwin(url,w_title,width,height)
               <td class="cols-index">Danh mục cha</td>
               <td class="cols-index">Hiển thị</td>
               <td width="100" class="cols-index">{COM_LBL_ACTION}</td>
-          <tr>
-            <td colspan="5" style="height:5px;"></td>
           </tr>
           <!-- BEGIN:LIST -->
           <tr onmouseover="this.className='tr-mouserOver';" onmouseout="this.className='tr-mouserOut'">
@@ -45,42 +42,17 @@ function openwin(url,w_title,width,height)
               <input type="checkbox" name="check_delete[]" value="{LIST.edit_id}"></td>
           </tr>
 		  <!-- END:LIST -->
-      </table></td>
-      <td width="6" valign="top"><img src="images/images_03_2.jpg" width="6"></td>
+      </table>
+      </td>
     </tr>
   </table>
 </form>
-
+<div class="alight_center">{COM_LBL_TOTAL} &nbsp;&nbsp;{pages}</div>
 <br />
 <script language="javascript" type="text/javascript">
     $(document).ready(function(){
         var table = $("#cate_table");
-        var oTable = table.DataTable({
-            "columns": [
-                {"width": "5%"},
-                {"width": "25%"},
-                {"width": "12%"},
-                {"width": "25%"},
-                {"width": "12%"}
-            ],
-            "bLengthChange": false,
-            "sPaginationType": "bootstrap_essensys",
-            "language": {
-                "lengthMenu": " _MENU_ records",
-                "info": "Showing page _PAGE_ of _PAGES_ ",
-                "paginate": {
-                    "previous": "Prev",
-                    "next": "Next"
-                },
-                "search": ""
-            },
-            "pageLength": 10,
-            "order": [
-                [0, "asc"]
-            ], // set first column as a default sort by asc
-            "autoWidth": false,
-            "stateSave": true
-        });
+        //var oTable = table.DataTable();
     });
 var frm=document.frmUpdate;
 function Update(id)

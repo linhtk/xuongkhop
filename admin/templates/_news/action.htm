@@ -5,7 +5,7 @@
 <script type="text/javascript" src="../js/jscalendar/lang/calendar-en.js"></script>
 <script type="text/javascript" src="../js/jscalendar/calendar-setup.js"></script>
 
-<script language="javascript" type="text/javascript" src="../js/general.js"></script>
+
 <script type="text/javascript" language="javascript">
 function openwin(url,w_title,width,height)
 {
@@ -17,6 +17,7 @@ function openwin(url,w_title,width,height)
 </script>
 <form name="frmUpdate" action="" method="post" enctype="multipart/form-data">
 <input type="hidden" name="frmAction" value="Action" />
+<input type="hidden" name="news_id" value="{news_id}" />
 {input_hidden_edit_id}
 {input_hidden_news_image}
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="box-detail" align="center" style="width:900px;">
@@ -35,6 +36,14 @@ function openwin(url,w_title,width,height)
   <tr>
     <td width="28%" class="content">Tiêu đề tin</td>
     <td width="72%" class="content">{input_news_title}</td>
+  </tr>
+  <tr>
+    <td width="28%" class="content">Danh mục</td>
+    <td width="72%" class="content">
+    <!-- BEGIN: CATE -->
+    	<input type="checkbox" name="news_cate[]" value="{CATE.category_id}" {CATE.checked} />{CATE.category_name} <br />
+    <!-- END: CATE -->
+    </td>
   </tr>
   <tr>
     <td class="content">Ảnh</td>
@@ -62,8 +71,7 @@ function openwin(url,w_title,width,height)
   </tr>
   <tr>
     <td colspan="2" align="center"><input type="submit" value="{COM_ADD_UPDATE}" class="a_button"/>
-    &nbsp;
-	<input type="reset" value="{COM_RESET}" class="a_button">&nbsp;</td>
+    &nbsp;</td>
   </tr>
 </table>
 </td>
