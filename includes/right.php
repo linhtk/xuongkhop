@@ -26,7 +26,28 @@
 			$xtpl_right->parse("RIGHT.right_news");
 		}
 	}
-
+//san pham
+    $sql_sp = "SELECT * FROM tg_product ORDER BY product_id DESC LIMIT 0,3";
+    $rs_sp = execSQL($sql_sp);
+    while($row_sp = mysql_fetch_assoc($rs_sp))
+    {
+        if($row_sp['product_image'])
+        {
+            if(file_exists("upload/products/thumb_1_".$row_sp['product_image']))
+            {
+                $row_sp['product_image'] = '<img src="upload/products/thumb_1_'.$row_sp['product_image'].'" class="img-responsive" />';
+            } else
+            {
+                $row_sp['product_image'] = "";
+            }
+        } else
+        {
+            $row_sp['product_image'] = "";
+        }
+        $row_sp['product_desc'] = sub_string($row_sp['product_desc'], 150, true);
+        $xtpl_right->assign("SP",$row_sp);
+        $xtpl_right->parse("RIGHT.SP");
+    }
 	$xtpl_right->parse("RIGHT");
 	$right_tostring = $xtpl_right->text("RIGHT");
 	

@@ -45,9 +45,9 @@
 		$edit_id=$array[$i]['edit_id'];
 		if($array[$i]['product_image'])
 		{
-			if (file_exists("../upload/product/thumb_0_".$array[$i]['product_image']))
+			if (file_exists("../upload/products/thumb_0_".$array[$i]['product_image']))
 			{
-				$array[$i]['product_image'] = '<a href="#" onclick="openwin(\'image_viewer.php?path=product&img=thumb_0_'.$array[$i]['product_image'].'\');">'.COM_VIEW_IMAGE.'</a>';
+				$array[$i]['product_image'] = '<a href="#" onclick="openwin(\'image_viewer.php?path=products&img=thumb_0_'.$array[$i]['product_image'].'\');">'.COM_VIEW_IMAGE.'</a>';
 			} else 
 			{
 				$array[$i]['product_image'] = 'Không có ảnh';

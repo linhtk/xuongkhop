@@ -6,5 +6,5 @@
 	$page['contact'] 					= "Quản lý Liên hệ";
 	$page['config'] 				= "Quản lý Thông tin chung";
 	$page['share'] 					= "Bệnh nhân chia sẻ";
-	
+    $page['product'] 					= "Quản lý Sản phẩm";
 ?>
