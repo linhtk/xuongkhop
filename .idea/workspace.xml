@@ -117,14 +117,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xuongkhop.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="xuongkhop.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xuongkhop.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31501833" vertical-offset="253" max-vertical-offset="1003">
+            <state vertical-scroll-proportion="-6.6153846" vertical-offset="253" max-vertical-offset="1003">
               <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
               <folding>
                 <marker date="1423473970317" expanded="true" signature="578:680" placeholder="SELECT md5(n..tg_news_cate..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.42647058" vertical-offset="68941" max-vertical-offset="111690">
+              <caret line="4069" column="17" selection-start-line="4069" selection-start-column="17" selection-end-line="4069" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -189,6 +199,7 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/xuongkhop.html" />
         <option value="$PROJECT_DIR$/xuongkhop.php" />
+        <option value="$PROJECT_DIR$/css/bootstrap.css" />
       </list>
     </option>
   </component>
@@ -268,25 +279,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xuongkhop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_news" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -389,13 +382,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/_category/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="340" max-vertical-offset="1411">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.392857" vertical-offset="2229" max-vertical-offset="3757">
@@ -848,11 +834,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xuongkhop.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31501833" vertical-offset="253" max-vertical-offset="1003">
+        <state vertical-scroll-proportion="-6.6153846" vertical-offset="253" max-vertical-offset="1003">
           <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding>
             <marker date="1423473970317" expanded="true" signature="578:680" placeholder="SELECT md5(n..tg_news_cate..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42647058" vertical-offset="68941" max-vertical-offset="111690">
+          <caret line="4069" column="17" selection-start-line="4069" selection-start-column="17" selection-end-line="4069" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
