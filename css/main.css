@@ -48,6 +48,12 @@ body{
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
     background: #BAB32D;
 }
+@media (min-width: 768px){
+    .navbar-nav {
+        float: left;
+        margin-left: -15px;
+    }
+}
 /*==================== MAIN HOMEPAGE =============*/
 #main-homepage{
     background: #e6e7e8;
@@ -404,6 +410,7 @@ aside p{
 }
 .slider #slider-thumbs ul{
     background: #636467;
+    margin-bottom: 0;
 }
 .slider #slider-thumbs ul li{
     
@@ -446,6 +453,9 @@ aside p{
 }
 .slider .carousel-caption p{
     font-size: 12px;
+}
+#slider .carousel-inner img{
+    width: 632px;height: 305px;
 }
 /*=========== FOOTER ===========*/
 footer{

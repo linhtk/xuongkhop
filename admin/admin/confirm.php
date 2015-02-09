@@ -1,7 +1,7 @@
 <?php
 	$title_page="Xác nhận thông tin xóa";
-	$action=post('frmAction');
-	$edit_id=post('edit_id');
+	$action=$_POST['frmAction'];
+	$edit_id=$_POST['edit_id'];
 	if($action=="Action")
 	{
 		if(strpos($edit_id,"~~~")===false)

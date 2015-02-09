@@ -72,7 +72,7 @@
     $rs_kt = execSQL($sql_kt);
     $num = 1;
     while($row_kt = mysql_fetch_assoc($rs_kt)){
-        $sql_news_kt = "SELECT news_id, news_title FROM tg_news_cate WHERE cate_id = ".$row_kt['category_id']." ORDER BY news_id DESC LIMIT 0,3";
+        $sql_news_kt = "SELECT md5(news_id) AS news_id, news_title FROM tg_news_cate WHERE cate_id = ".$row_kt['category_id']." ORDER BY news_id DESC LIMIT 0,3";
         $rs_news_kt = execSQL($sql_news_kt);
         while($row_news_kt = mysql_fetch_assoc($rs_news_kt)){
             $xtpl->assign("news_kt",$row_news_kt);
@@ -84,7 +84,7 @@
         $xtpl->parse("MAIN.KT");
     }
 //cam nang
-    $sql_cn = "SELECT news_id, news_title, news_brief, news_image FROM tg_news_cate WHERE cate_id = 112 ORDER BY news_id DESC LIMIT 0,2";
+    $sql_cn = "SELECT md5(news_id) AS news_id, news_title, news_brief, news_image FROM tg_news_cate WHERE cate_id = 112 ORDER BY news_id DESC LIMIT 0,2";
     $rs_cn = execSQL($sql_cn);
     while($row_cn = mysql_fetch_assoc($rs_cn)){
         $row_cn['news_brief'] = sub_string($row_cn['news_brief'], 100, true);
@@ -92,7 +92,7 @@
         $xtpl->parse("MAIN.CN");
     }
 //kinh nghiem
-    $sql_kn = "SELECT news_id, news_title, news_brief, news_image FROM tg_news_cate WHERE cate_id = 109 ORDER BY news_id DESC LIMIT 0,2";
+    $sql_kn = "SELECT md5(news_id) AS news_id, news_title, news_brief, news_image FROM tg_news_cate WHERE cate_id = 109 ORDER BY news_id DESC LIMIT 0,2";
     $rs_kn = execSQL($sql_kn);
     while($row_kn = mysql_fetch_assoc($rs_kn)){
         $row_kn['news_brief'] = sub_string($row_kn['news_brief'], 100, true);
@@ -100,14 +100,14 @@
         $xtpl->parse("MAIN.KN");
     }
 //bai thuoc
-    $sql_bt1 = "SELECT news_id, news_title, news_brief, news_image FROM tg_news_cate WHERE cate_id = 120 ORDER BY news_id DESC LIMIT 0,1";
+    $sql_bt1 = "SELECT md5(news_id) AS news_id, news_title, news_brief, news_image FROM tg_news_cate WHERE cate_id = 120 ORDER BY news_id DESC LIMIT 0,1";
     $rs_bt1 = execSQL($sql_bt1);
     while($row_bt1 = mysql_fetch_assoc($rs_bt1)){
         $row_bt1['news_brief'] = sub_string($row_bt1['news_brief'], 100, true);
         $xtpl->assign("BT1", $row_bt1);
         $xtpl->parse("MAIN.BT1");
     }
-    $sql_bt2 = "SELECT news_id, news_title, news_brief, news_image FROM tg_news_cate WHERE cate_id = 120 ORDER BY news_id DESC LIMIT 0,4";
+    $sql_bt2 = "SELECT md5(news_id) AS news_id, news_title, news_brief, news_image FROM tg_news_cate WHERE cate_id = 120 ORDER BY news_id DESC LIMIT 0,4";
     $rs_bt2 = execSQL($sql_bt2);
     while($row_bt2 = mysql_fetch_assoc($rs_bt2)){
         $row_bt2['news_brief'] = sub_string($row_bt2['news_brief'], 100, true);

@@ -16,8 +16,7 @@
 	$email = $_POST['email'];
 	$address = $_POST['address'];
 	$content = $_POST['content'];
-	var_dump($_POST);
-	die();
+
 	$error = 0;
 	if($fullname==''){ $error = 1;}
 	if($phoneNumber == '') { $error = 1; }

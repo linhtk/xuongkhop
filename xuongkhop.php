@@ -18,7 +18,7 @@
 	$limit=($show_result?$show_result:4);
 	$offset=($page-1)*$limit;
 	$LIMIT=" LIMIT $offset,$limit";
-	$sql_tin = "SELECT * FROM tg_news_cate WHERE cate_id=118";
+	$sql_tin = "SELECT md5(news_id) AS news_id, news_title, news_image, news_brief FROM tg_news_cate WHERE cate_id=118";
 	$rs_tin1 = execSQL($sql_tin);
 	$row_total=mysql_num_rows($rs_tin1);
 	$sql_tin.=$LIMIT;

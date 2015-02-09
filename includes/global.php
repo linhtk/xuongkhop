@@ -43,7 +43,6 @@ function setfocus($cbovalue,$selected_key){
 }
 function deletefile($file_path){
 	if (file_exists($file_path)) { 
-		echo 'fghdfkjh';
 		$deleted = unlink($file_path);
 	}
 	return $deleted;

@@ -66,7 +66,7 @@
 						thumbnail_images($_FILES['news_image'],$MAX_THUMB_WIDTH[$i] ,$MAX_THUMB_HEIGHT[$i] ,$path,$MAX_QUALITY[$i],"thumb_".$i,$news_image); 
 						
 						// delete old thumb
-						deletefile($path."thumb_".$i."_".$hidden_news_image);
+						unlink($path."thumb_".$i."_".$hidden_news_image);
 					}
 					
 					// delete old file
@@ -107,14 +107,14 @@
 						thumbnail_images($_FILES['news_image'],$MAX_THUMB_WIDTH[$i] ,$MAX_THUMB_HEIGHT[$i] ,$path,$MAX_QUALITY[$i],"thumb_".$i,$news_image); 
 						
 						// delete old thumb
-						deletefile($path."thumb_".$i."_".$hidden_news_image);
+						unlink($path."thumb_".$i."_".$hidden_news_image);
 					}
 					
 					// delete old file
-					deletefile($path.$hidden_news_image);
+                    unlink($path.$hidden_news_image);
 					if($DELETE_ORIGIN_IMAGE)
 					{
-						deletefile($path.$news_image);
+                        unlink($path.$news_image);
 					}
 				}
 		}
@@ -179,7 +179,7 @@
 							,'$news_is_hot'
 							)";
 					$rs = execSQL($sql);
-					$news_id = db2_last_insert_id($rs);
+					$news_id = mysqli_insert_id($rs);
 					$sql_cate2 = "INSERT INTO tg_news_cate(news_id, cate_id, news_title, news_image, news_brief) 
 							VALUES ";
 					for($i=0;$i<count($news_cate);$i++){

@@ -1,46 +1,25 @@
 <!-- BEGIN:MAIN -->
 {header_tostring}
-  <tr style="padding-top:5px;">
-    <td width="210" valign="top" class="boder_main">
-	{left_tostring}
-	</td>
-    <td valign="top" class="main_center" width="560">
-        <table width="100%" border="0" cellspacing="3" cellpadding="3">
-          <tr>
-            <td class="bg_title_center" colspan="2">Tin tức</td>
-          </tr>
-		  
-		  <tr>
-		    <td colspan="2" class="news_title"><span style="font-size:16px;">{row.news_title}</span> <span style="color:#CCCCCC; font-style:italic;">({row.news_date})</span></td>
-	      </tr>
-		  <tr>
-			<td colspan="2">
-			<table cellSpacing="0" cellPadding="3" width="1" align="left" border="0">
-				<tr>
-				 <td align="left">{row.news_image}</td>
-				</tr>
-			</table>
-			<p><b><span>{row.news_brief}</span></b></p>
-			<p>{row.news_content}</p>			</td>
-		  </tr>
-		</table>
-		<table width="100%" border="0" cellspacing="3" cellpadding="3">
-		  <tr>
-			<td style="text-decoration:underline; font-size:13px;"><b>Các tin khác:</b></td>
-		  </tr>
-		<!-- BEGIN:other -->
-		  <tr>
-			<td> - <a href="news_detail.php?news_id={row1.news_id}" class="news_title">{row1.news_title}</a></td>
-		  </tr>
-		<!-- END:other -->
-		</table>
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
 
-		</td>
-    <td width="210" valign="top" class="boder_main">
-	{right_tostring}
-	</td>
-  </tr>
+                <div class="content">
+                    <div class="news">
+                        <h4><a href="#">{row.news_title}</a></h4>
+                        <p><b>{row.news_brief}</b></p>
+                        <p>{row.news_image}</p>
+                        <p>{row.news_content}</p>
+                    </div>
+
+                </div>
+            </div>
+            {right_tostring}
+        </div>
+
+    </div>
+    <a href="#" class="scrollToTop"><i class="glyphicon glyphicon-circle-arrow-up"></i></a>
+</section>
 {footer_tostring}
-</table>
-
 <!-- END:MAIN -->
