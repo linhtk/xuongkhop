@@ -26,6 +26,7 @@
 	while ($row=mysql_fetch_assoc($rs))
 	{
 		$edit_id=$row['edit_id'];
+		$row['support_created_date'] = formatDateFromDatabase($row['support_created_date']);
 		$row['no']=++$num;
 		$xtpl->assign('LIST',$row);
 		$xtpl->parse('main.LIST');

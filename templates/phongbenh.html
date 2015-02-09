@@ -1,0 +1,52 @@
+<!-- BEGIN:MAIN -->
+{header_tostring}
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="block-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="#">Phòng & chữa bệnh</a>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div class="content">
+                    <div class="news">
+                    <!-- BEGIN:tin -->
+                        <div class="media item-news">
+                            <h4 class="media-heading"> >> {tin.news_title}</h4>
+                            <a class="pull-left" href="#">
+                                {tin.news_image}
+                            </a>
+                            <div class="media-body">
+                                
+                                <p>{tin.news_brief}</p>
+                                <a href="#" class="readmore pull-right">Chi tiết</a>
+                            </div>
+                        </div>
+                        <!-- END: tin -->
+                        {pages}
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="upload/adv2.jpg" alt="" class="img-responsive">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="upload/adv2.jpg" alt="" class="img-responsive">
+                        </div>
+                    </div>
+                    {benh_tostring}
+                    
+                </div>
+            </div>
+           {right_tostring} 
+        </div>
+        
+    </div>
+     <a href="#" class="scrollToTop"><i class="glyphicon glyphicon-circle-arrow-up"></i></a>
+    </section>
+{footer_tostring}
+<!-- END:MAIN -->

@@ -35,7 +35,7 @@
 								,category_status='$category_status'
 							WHERE md5(category_id)='$edit_id'";
 					execSQL($sql);
-					redir('index.php?mod=category');
+					redir('index.php?mod=_category');
 					exit();		
 			}
 			else
@@ -54,7 +54,7 @@
 							,'$category_status'
 							)";
 					execSQL($sql);
-					redir('index.php?mod=category');
+					redir('index.php?mod=_category');
 					exit();
 		}
 		}

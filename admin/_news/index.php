@@ -46,7 +46,7 @@
 		$edit_id=$array[$i]['edit_id'];
 		if($array[$i]['news_image'])
 		{
-			if (file_exists("../images/news/thumb_0_".$array[$i]['news_image']))
+			if (file_exists("../upload/news/thumb_0_".$array[$i]['news_image']))
 			{
 				$array[$i]['news_image'] = '<a href="#" onclick="openwin(\'image_viewer.php?path=news&img=thumb_0_'.$array[$i]['news_image'].'\');">'.COM_VIEW_IMAGE.'</a>';
 			} else 

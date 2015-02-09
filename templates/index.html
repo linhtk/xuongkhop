@@ -1,123 +1,202 @@
 <!-- BEGIN:MAIN -->
 {header_tostring}
-  <tr>
-    <td valign="top" class="boder_main">
-	{left_tostring}
-	</td>
-    <td valign="top" class="main_center" width="560">
-    	<table width="100%" border="0">
-       <!-- BEGIN:home_image -->
-          <tr>
-            <td><img src="images/config/thumb_0_{home_image}" border="0" alt="Máy tính Kiên Thảo" /></td>
-          </tr>
-       <!-- END:home_image -->
-       <tr>
-       	<td>
-        			<!-- BEGIN:hot_news -->
-					<table width="100%" border="0" cellspacing="2" cellpadding="2" style="border:solid 1px #f1f1f1;">
-					  <tr bgcolor="#f1f1f1">
-						<td colspan="2"><a href="news_detail.php?news_id={row_news.news_id}" class="hot_news_title">{row_news.news_title}</a><img src="css/image/hot_news.gif" /></td>
-					  </tr>
-					  <tr>
-						<td align="left">{row_news.news_image}</td>
-						<td align="left" valign="top">{row_news.news_brief}<br/><i>({row_news.news_date})</i></td>
-					  </tr>
-					  <tr>
-						<td colspan="2" align="right"><a href="news_detail.php?news_id={row_news.news_id}" class="more">Xem tiếp ...</a> </td>
-					  </tr>
-					</table>
-					<br />
-			<!-- END:hot_news -->
+<section class="slider">
+    <div class="container">     
+        <div class="row">
+            <!-- main slider carousel -->
+            <div class="col-md-8" id="slider">
+                <div id="carousel-bounding-box">
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- main slider carousel items -->
+                        <div class="carousel-inner">
+                        	
+                        <!-- BEGIN: hot_news -->
+                            <div class="{row_news.class}item" data-slide-number="0">
+                                {row_news.news_image}
+                                <div class="carousel-caption">
+                                    <h4>{row_news.news_title}</h4>
+                                    <p>{row_news.news_brief} <a href="#" class="readmore">Chi tiết</a></p>
+                                </div>
+                            </div>
+                        <!-- END: hot_news -->
+                        </div>
+                        <!-- main slider carousel nav controls --> <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+    
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+                    </div>
+                </div>
+            </div>
+            <!-- thumb navigation carousel -->
+            <div class="hidden-sm hidden-xs col-md-4" id="slider-thumbs">
+                <!-- thumb navigation carousel items -->
+                <ul class="list-unstyled">
+                <!-- BEGIN:news -->
+                    <li>
+                        <div class="media" id="carousel-selector-0" class="selected">
+                            <a class="pull-left" href="#">{row_news1.news_image}</a>
+                            <div class="media-body">
+                                <h4 class="media-heading">{row_news1.news_title}</h4>
+                                <p>{row_news1.news_brief}</p>
+                            </div>
+                        </div>
+                    </li>
+                <!-- END: news -->
+                </ul>
+            </div>
+        </div>
+        <!--/main slider carousel-->
+    </div>
+    </section>
+    <section id="main-homepage">
+    <div class="container">
+        <section class="group-category">
+            <h1><span>Kiến thức</span> bệnh xương khớp</h1>
+            <div class="row">
+                <!-- BEGIN: KT -->
+                <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        {KT.image}
+                        <div class="caption">
+                            <h3>{KT.category_name}</h3>
+                            <ul class="list-unstyled">
+                                <!-- BEGIN: NEWS_KT -->
+                                <li><a href="#">{news_kt.news_title}</a></li>
+                                <!-- END: NEWS_KT -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: KT -->
 
-        </td>
-       </tr>
-          <tr>
-            <td>
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                          <tr>
-                            <td><img src="css/image/tieu_bieu.jpg" border="0" /></td>
-                          </tr>
-                          <tr>
-                            <td>
-                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="top">
-                                <!-- BEGIN:ms -->
-                                  <tr>
-                                    <td colspan="3">{ms}</td>
-                                  </tr>
-                                <!-- END:ms -->
-                                  <tr height="200">
-                                <!-- BEGIN:hot -->
-                                    <td class="prod_box" align="center" width="33%" valign="top">
-                                        <table width="100%" border="0" cellpadding="2" cellspacing="2">
-                                          <tr>
-                                            <td align="center">&nbsp;</td>
-                                          </tr>
-                                          <tr>
-                                            <td align="center"><a href="product_detail.php?product_id={row.products_id}" class="link_bol">{row.product_name}</a></td>
-                                          </tr>
-                                          <tr>
-                                            <td valign="top" align="center"><a href="product_detail.php?product_id={row.products_id}"><img src="images/product/thumb_1_{image}" alt="{row.product_name}" border="0" class="img_product" /></a></td>
-                                          </tr>
-                                          <tr>
-                                            <td class="tg_bol" align="center">Giá: {row.product_price} VNĐ</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="tg_bol1" align="center">Tình trạng: {row.is_in_store}</td>
-                                          </tr>
-                                        </table>
-                                    </td>
-                                    {row.line}
-                                <!-- END:hot -->
-                                  </tr>
-                                </table>
-                            </td>
-                          </tr>
-                        </table>
-            </td>
-          </tr>
-          <tr>
-            <td>
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                          <tr>
-                            <td><img src="css/image/moi.jpg" border="0" /></td>
-                          </tr>
-                          <tr>
-                            <td>
-                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="top">
-                                  <tr height="200">
-                                <!-- BEGIN:new -->
-                                    <td class="prod_box" align="center" width="33%" valign="top">
-                                        <table width="100%" border="0" cellpadding="2" cellspacing="2">
-                                          <tr>
-                                            <td valign="top" align="center"><a href="product_detail.php?product_id={row1.products_id}" class="link_bol">{row1.product_name}</a></td>
-                                          </tr>
-                                          <tr>
-                                            <td valign="top" align="center"><a href="product_detail.php?product_id={row1.products_id}"><img src="images/product/thumb_1_{image}" alt="{row1.product_name}" border="0" class="img_product" /></a></td>
-                                          </tr>
-                                          <tr>
-                                            <td class="tg_bol" align="center">Giá: {row1.product_price} VNĐ</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="tg_bol1" align="center">Tình trạng: {row1.is_in_store}</td>
-                                          </tr>
-                                        </table>
-                                    </td>
-                                    {row1.line}
-                                <!-- END:new -->
-                                  </tr>
-                                </table>
-                            </td>
-                          </tr>
-                        </table>
-            </td>
-          </tr>
-        </table>
+            </div>
+        </section><!--End .group-category -->
+        <section class="group-category multi-group-category">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1><span>Cẩm nang </span>Bệnh xương khớp</h1>
+                    <div class="row">
+                        <!-- BEGIN: CN -->
+                        <div class="col-md-6">
+                            <div class="thumbnail">
+                                <img alt="" src="upload/news/thumb_0_{CN.news_image}" class="img-responsive" />
+                                <div class="caption">
+                                    <h4><a href="#">{CN.news_title}</a></h4>
+                                    <p>{CN.news_brief}</p>
+                                    <p class="text-right btn-detail"><a href="#" class="btn btn-default" role="button">Chi tiết</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: CN -->
 
-	</td>
-    <td width="210" valign="top" class="boder_main">
-	{right_tostring}
-	</td>
-  </tr>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h1><span>Kinh nghiệm </span>Chữa bệnh xương khớp</h1>
+                    <div class="row">
+                        <!-- BEGIN: KN -->
+                        <div class="col-md-6">
+                            <div class="thumbnail">
+                                <img alt="" src="upload/news/thumb_0_{KN.news_image}" class="img-responsive" />
+                                <div class="caption">
+                                    <h4><a href="#">{KN.news_title}</a></h4>
+                                    <p>{KN.news_brief}</p>
+                                    <p class="text-right btn-detail"><a href="#" class="btn btn-default" role="button">Chi tiết</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: KN -->
+
+                    </div>
+                </div>
+            </div>
+        </section><!--End .group-category -->
+        <section id="adv">
+            <div class="row">
+                <div class="col-md-8">
+                    <img alt="" src="upload/adv2.jpg"/>
+                </div>
+                <div class="col-md-4">
+                    <img alt="" src="upload/adv1.jpg" />
+                </div>
+            </div>
+        </section><!--End #adv-->
+        <section>
+            <div class="row">
+                <div class="col-md-8 block-featured-news">
+                    <div class="inner">
+                        <h2><span>Bài thuốc chữa bệnh xương khớp</span></h2>
+                        <div class="row">
+                            <!-- BEGIN: BT1 -->
+                            <div class="col-md-6">
+                                <div class="thumbnail">
+                                    <a href="#"><img alt="" src="upload/news/thumb_0_{BT1.news_image}" class="img-responsive" /></a>
+                                    <div class="caption">
+                                        <h3><a href="#">{BT1.news_title}</a></h3>
+                                        <p>{BT1.news_brief}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END: BT1 -->
+                            <div class="col-md-6">
+                                <!-- BEGIN: BT2 -->
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object" alt="" src="upload/news/thumb_0_{BT2.news_image}" />
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">{BT2.news_title}</a></h4>
+                                    </div>
+                                </div>
+                                <!-- END: BT2 -->
+
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-md-4 block-question">
+                    <div class="inner">
+                        <img alt="" src="img/question.png" class="img-responsive" />
+                         <h3>Hỏi đáp chuyên gia</h3>
+                        <div id="carousel-question" class="carousel slide" data-ride="carousel">
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target="#carousel-question" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-question" data-slide-to="1"></li>
+                          </ol>
+    
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <p class="question">Người bị tiểu đường có thể sử dụng sản phẩm này không?</p>
+                                    <p class="answer">
+                                        <strong class="help-block">Trả lời</strong>
+                                        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span>
+                                    </p>
+                                </div>
+                                <div class="item">
+                                    <p class="question">Người bị tiểu đường có thể sử dụng sản phẩm này không?</p>
+                                    <p class="answer">
+                                        <strong class="help-block">Trả lời</strong>
+                                        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span>
+                                    </p>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="send-question">
+                            <a href="#">Gửi câu hỏi của bạn</a>
+                        </div>
+                    </div>
+                </div><!--End .block-question-->
+            </div>
+    
+        </section>
+    </div>
+    
+    </section>
 {footer_tostring}
 
 <!-- END:MAIN -->

@@ -141,13 +141,13 @@
 					execSQL($sql);
 					$sql_cate1 = "DELETE FROM tg_news_cate WHERE news_id='".$news_id."'";
 					execSQL($sql_cate1);
-					$sql_cate2 = "INSERT INTO tg_news_cate(news_id, cate_id, news_title, news_image) 
+					$sql_cate2 = "INSERT INTO tg_news_cate(news_id, cate_id, news_title, news_image, news_brief) 
 							VALUES ";
 					for($i=0;$i<count($news_cate);$i++){
 						if($i == count($news_cate)-1){
-							$sql_cate2 .= "('$news_id', '$news_cate[$i]', '$news_title', '$news_image')";
+							$sql_cate2 .= "('$news_id', '$news_cate[$i]', '$news_title', '$news_image', '$news_brief')";
 						} else {
-							$sql_cate2 .= "('$news_id', '$news_cate[$i]', '$news_title', '$news_image'),";
+							$sql_cate2 .= "('$news_id', '$news_cate[$i]', '$news_title', '$news_image', '$news_brief'),";
 						}
 					}
 					
@@ -180,13 +180,13 @@
 							)";
 					$rs = execSQL($sql);
 					$news_id = db2_last_insert_id($rs);
-					$sql_cate2 = "INSERT INTO tg_news_cate(news_id, cate_id, news_title, news_image) 
+					$sql_cate2 = "INSERT INTO tg_news_cate(news_id, cate_id, news_title, news_image, news_brief) 
 							VALUES ";
 					for($i=0;$i<count($news_cate);$i++){
 						if($i == count($news_cate)-1){
-							$sql_cate2 .= "('$news_id', '$news_cate[$i]', '$news_title', '$news_image')";
+							$sql_cate2 .= "('$news_id', '$news_cate[$i]', '$news_title', '$news_image', '$news_brief')";
 						} else {
-							$sql_cate2 .= "('$news_id', '$news_cate[$i]', '$news_title', '$news_image'),";
+							$sql_cate2 .= "('$news_id', '$news_cate[$i]', '$news_title', '$news_image', '$news_brief'),";
 						}
 					}
 					$sql_cate2 .= "";

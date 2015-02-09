@@ -128,7 +128,7 @@ function pagenavigator($page, $row_total, $page_size, $pagegroup_size,$class,$ur
 				</script>';
 		$str.='<form name="frm_navigator" method="post" action="">';
 		$str.='<input type="hidden" name="page" id="page" value=""/>';
-		$str.='<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td class="'.$class.'"> Trang: ';
+		$str.='<ul class="pagination">';
 		if ($end_page>$pagegroup_size)
 			$start_group = $pagegroup_size;
 		else
@@ -144,10 +144,10 @@ function pagenavigator($page, $row_total, $page_size, $pagegroup_size,$class,$ur
 			$end = $begin + $page_size - 1; 
 			if ($i == $page)
 				//$str.= "[<span class='".$class."Visited'>$begin - $end</span>]";
-				$str.= "<span class='".$class."Visited'>[$i]</span>";
+				$str.= "<li class='active'><a href='#'>$i</a></li>";
 			else
 				//$str.= '<a class='.$class.' style="text-decoration: none;" href="'.$url.$andpage.$i.'"> '.$i.'</a> ';
-				$str.= '<a class="'.$class.'" style="text-decoration: none;" href="#" onclick="navigate('.$i.');"> '.$i.'</a> ';
+				$str.= '<li><a href="#" onclick="navigate('.$i.');"> '.$i.'</a> </li>';
 		}
 		//$str.="</td><td class=".$class.">";		
 		if ($page_total-$end_page>$pagegroup_size)
@@ -157,7 +157,7 @@ function pagenavigator($page, $row_total, $page_size, $pagegroup_size,$class,$ur
 		if ($end_page<$page_total)
 			//$str.= '<a  class='.$class.' style="text-decoration: none;" href="'.$url.$andpage.($end_page+1).'">[Next '.$pagegroup_size.' pages]</a>';
 			$str.= '&nbsp;<a  class="'.$class.'Page" style="text-decoration: none;" href="#" onclick="navigate('.($end_page+1).')">[Next '.$pagegroup_size.' pages]</a>';
-		$str.='</td></tr></table></form>';
+		$str.='</uh></form>';
 		return $str;
 	}	
 }

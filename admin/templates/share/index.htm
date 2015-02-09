@@ -42,7 +42,8 @@ function openwin(url,w_title,width,height)
             <td class="cols-content">{LIST.email}&nbsp;</td>
             <td class="cols-content">{LIST.phone}&nbsp;</td>
             <td class="cols-content">{LIST.address}&nbsp;</td>
-            <td class="cols-content" valign="top"><a href="#" onclick="Update('{LIST.edit_id}')"><img src="images/images_17.jpg" width="16" border="0"></a>&nbsp;</td>
+            <td class="cols-content" valign="top"><a href="#" onclick="Update('{LIST.edit_id}')"><img src="images/images_17.jpg" width="16" border="0"></a>&nbsp;<a href="#" onclick="Delete('{LIST.edit_id}')"><img src="images/images_19.jpg" width="18" border="0"></a>&nbsp;
+              <input type="checkbox" name="check_delete[]" value="{LIST.edit_id}"></td>
           </tr>
 		  <!-- END:LIST -->
           <tr>

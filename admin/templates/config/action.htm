@@ -5,7 +5,7 @@
 <script type="text/javascript" src="../js/jscalendar/lang/calendar-en.js"></script>
 <script type="text/javascript" src="../js/jscalendar/calendar-setup.js"></script>
 
-<script language="javascript" type="text/javascript" src="../js/general.js"></script>
+<!--<script language="javascript" type="text/javascript" src="../js/general.js"></script>-->
 <script type="text/javascript" language="javascript">
 function openwin(url,w_title,width,height)
 {
@@ -20,12 +20,13 @@ function openwin(url,w_title,width,height)
 {input_hidden_edit_id}
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="box-detail" align="center" style="width:900px;">
   <tr>
-    <td width="8"><img src="images/images_03.gif" width="9" height="30"></td>
+    <td width="7"><img src="images/images_03.gif" width="9" height="30"></td>
     <td class="bg-heading" width="100%">{title_page}</td>
     <td width="7"><img src="images/images_06.gif" width="7" height="30"></td>
   </tr>
   <tr>
-    <td colspan="3" class="body-content"><table width="100%" border="0" cellspacing="0" cellpadding="5">
+    <td colspan="3" class="body-content">
+        <table width="100%" border="0" cellspacing="0" cellpadding="5">
   <!-- BEGIN:error -->	
   <tr>
     <td colspan="2"><p class="p_error">{error}</p></td>
@@ -40,40 +41,27 @@ function openwin(url,w_title,width,height)
     <td class="content">{input_config_email}</td>
   </tr>
   <tr>
-    <td class="content">Địa chỉ</td>
-    <td class="content">{input_config_address}</td>
+    <td class="content">Địa chỉ Facebook</td>
+    <td class="content">{input_config_facebook}</td>
   </tr>
   <tr>
     <td class="content">Điện thoại</td>
     <td class="content">{input_config_phone}</td>
   </tr>
   <tr>
-    <td class="content">Di động</td>
-    <td class="content">{input_config_mobile}</td>
+    <td class="content">Địa chỉ Google Plus</td>
+    <td class="content">{input_config_google_plus}</td>
   </tr>
   <tr>
-    <td class="content">Ảnh trang chủ</td>
-    <td class="content">{input_config_homepage_image} {image_viewer}</td>
-  </tr>
-  <tr>
-    <td class="content">Hỗ trợ kỹ thuật</td>
-    <td class="content">{input_config_yahoo}</td>
-  </tr>
-  <tr>
-    <td class="content">Hỗ trợ kinh doanh</td>
-    <td class="content">{input_config_yahoo_sale}</td>
-  </tr>
-  <tr>
-    <td class="content">Nội dung footer</td>
-    <td class="content">{input_config_footer_content}</td>
+    <td class="content">Nội dung Meta</td>
+    <td class="content">{input_config_meta}</td>
   </tr>
   <tr>
     <td colspan="2" align="center"><input type="submit" value="{COM_ADD_UPDATE}" class="a_button"/>
-    &nbsp;
-	<input type="reset" value="{COM_RESET}" class="a_button">&nbsp;</td>
+    &nbsp;</td>
   </tr>
 </table>
-</td>
+    </td>
   </tr>
   <tr>
     <td><img src="images/images_17.gif" width="9" height="10" style="float:left"></td>

@@ -7,143 +7,114 @@
 	include "includes/function.php";
 	include "includes/function_page.php";
 	include "includes/footer.php";
-	include "includes/left.php";
+	//include "includes/left.php";
+	$flag = 'index';
 	include "includes/header.php";
-	include "includes/right.php";
+	//include "includes/right.php";
 	 
 	$xtpl = new XTemplate ("templates/index.html");
-		
-//main page
 
-//image
-	$sql_image = "SELECT config_homepage_image FROM tg_config";
-	$rs_image = execSQL($sql_image);
-	$row_image = mysql_fetch_assoc($rs_image);
-	if($row_image['config_homepage_image'])
-	{
-		if (file_exists("images/config/thumb_0_".$row_image['config_homepage_image']))
-		{
-			$home_image = $row_image['config_homepage_image'];
-			$xtpl->assign("home_image",$home_image);
-			$xtpl->parse("MAIN.home_image");
-		}
-	}
-//news
-	$sql_news = "SELECT md5(news_id) AS news_id, news_title, news_image, news_date, news_brief FROM tg_news WHERE news_is_hot = '1' AND news_active='1' ORDER BY news_date LIMIT 0 , 1";
+//slide
+	$sql_news = "SELECT md5(news_id) AS news_id, news_title, news_image, news_date, news_brief FROM tg_news WHERE news_is_hot = '1' AND news_active='1' ORDER BY news_date LIMIT 0 , 3";
 	$rs_news = execSQL($sql_news);
 	$no=mysql_num_rows($rs_news);
-		if ($no)
-			{
-				$row_news = mysql_fetch_assoc($rs_news);
-				if($row_news['news_image'])
+	if ($no)
+	{
+		$i = 0;
+		while($row_news = mysql_fetch_assoc($rs_news)){
+			if($i==0){$row_news['class']='active ';}
+			if($row_news['news_image'])
+				{
+					if(file_exists("upload/news/thumb_0_".$row_news['news_image']))
 					{
-						if(file_exists("images/news/thumb_1_".$row_news['news_image']))
-						{
-							$row_news['news_image'] = "<a href='news_detail.php?news_id=".$row_news['news_id']."'><img src='images/news/thumb_1_".$row_news['news_image']."' border='0'></a>";
-						} else 
-						{
-							$row_news['news_image'] = "";
-						}
-					} else
+						$row_news['news_image'] = '<img src="upload/news/thumb_0_'.$row_news['news_image'].'" class="img-responsive" height="350" />';
+					} else 
 					{
 						$row_news['news_image'] = "";
 					}
+				} else
+				{
+					$row_news['news_image'] = "";
+				}
+				$i++;
 			$xtpl->assign("row_news",$row_news);
 			$xtpl->parse("MAIN.hot_news");
-			}
-		
-//hot
-	$sql="SELECT md5(products_id) AS products_id, 
-				 product_name, 
-				 product_image, 
-				 product_price,
-				 is_in_store
-			FROM tg_product
-			WHERE is_feature='1'
-			ORDER BY product_date DESC
-			LIMIT 0 , 9
-		  ";
-	$rs = mysql_query($sql, $link);
-	$num=0;
-	if (@mysql_num_rows($rs)>0)
-	{
-		while ($row=mysql_fetch_assoc($rs))
-		{
-			$num++;
-			if($num % 3 == 0)
-			{
-				$row['line']="</tr><tr>";
-			} else 
-			{
-				$row['line']="";
-			}
-			if(file_exists('images/product/thumb_1_'.$row['product_image']))
-			{
-				$xtpl->assign("image",$row['product_image']);
-			} else 
-			{
-				$xtpl->assign("image","default.jpg");
-			}
-			if($row['is_in_store']==1)
-			{
-				$row['is_in_store'] = "Hết hàng";
-			}else{
-				$row['is_in_store'] = "Còn hàng";
-			}
-			$row['product_price'] = number_format($row['product_price']);
-			$xtpl->assign("row",$row);
-			$xtpl->parse("MAIN.hot");
 		}
-	} else
-	{
-		$ms = "Không có sản phẩm nào";
-		$xtpl->assign("ms",$ms);
-		$xtpl->parse("MAIN.ms");
 	}
-	//end hot
-	//newest
-	$sql1="SELECT md5(products_id) AS products_id, 
-				 product_name, 
-				 product_image, 
-				 product_price,
-				 is_in_store
-			FROM tg_product
-			WHERE product_status='1'
-			ORDER BY product_date DESC
-			LIMIT 0 , 9
-		  ";
-	$rs1 = mysql_query($sql1, $link);
-	$num1=0;
-	while ($row1=mysql_fetch_assoc($rs1))
+
+//news
+	$sql_news1 = "SELECT md5(news_id) AS news_id, news_title, news_image, news_date, news_brief FROM tg_news WHERE news_active='1' ORDER BY news_date LIMIT 0 , 4";
+	$rs_news1 = execSQL($sql_news1);
+	$no1=mysql_num_rows($rs_news1);
+	if ($no1)
 	{
-		$num1++;
-		if($num1 % 3 == 0)
-		{
-			$row1['line']="</tr><tr>";
-		} else 
-		{
-			$row1['line']="";
+		while($row_news1 = mysql_fetch_assoc($rs_news1)){
+			if($row_news1['news_image'])
+				{
+					if(file_exists("upload/news/thumb_0_".$row_news1['news_image']))
+					{
+						$row_news1['news_image'] = '<img class="media-object" src="upload/news/thumb_0_'.$row_news1['news_image'].'" alt="Image" width="55" height="45">';
+					} else 
+					{
+						$row_news1['news_image'] = "";
+					}
+				} else
+				{
+					$row_news1['news_image'] = "";
+				}
+				$row_news1['news_brief'] = sub_string($row_news1['news_brief'], 100, true);
+			$xtpl->assign("row_news1",$row_news1);
+			$xtpl->parse("MAIN.news");
 		}
-		if(file_exists('images/product/thumb_1_'.$row1['product_image']))
-		{
-			$xtpl->assign("image",$row1['product_image']);
-		} else 
-		{
-			$xtpl->assign("image","default.jpg");
-		}
-		if($row1['is_in_store']==1)
-		{
-			$row1['is_in_store'] = "Hết hàng";
-		}else{
-			$row1['is_in_store'] = "Còn hàng";
-		}
-		$row1['product_price'] = number_format($row1['product_price']);
-		$xtpl->assign("row1",$row1);
-		$xtpl->parse("MAIN.new");
 	}
-	//end
-//
-	
+//kien thuc
+    $sql_kt = "SELECT category_id, category_name FROM tg_category WHERE category_parent = 101";
+    $rs_kt = execSQL($sql_kt);
+    $num = 1;
+    while($row_kt = mysql_fetch_assoc($rs_kt)){
+        $sql_news_kt = "SELECT news_id, news_title FROM tg_news_cate WHERE cate_id = ".$row_kt['category_id']." ORDER BY news_id DESC LIMIT 0,3";
+        $rs_news_kt = execSQL($sql_news_kt);
+        while($row_news_kt = mysql_fetch_assoc($rs_news_kt)){
+            $xtpl->assign("news_kt",$row_news_kt);
+            $xtpl->parse("MAIN.KT.NEWS_KT");
+        }
+        $row_kt['image'] = '<img alt="" src="upload/product/'.$num.'.jpg" class="img-responsive" />';
+        $num++;
+        $xtpl->assign("KT", $row_kt);
+        $xtpl->parse("MAIN.KT");
+    }
+//cam nang
+    $sql_cn = "SELECT news_id, news_title, news_brief, news_image FROM tg_news_cate WHERE cate_id = 112 ORDER BY news_id DESC LIMIT 0,2";
+    $rs_cn = execSQL($sql_cn);
+    while($row_cn = mysql_fetch_assoc($rs_cn)){
+        $row_cn['news_brief'] = sub_string($row_cn['news_brief'], 100, true);
+        $xtpl->assign("CN", $row_cn);
+        $xtpl->parse("MAIN.CN");
+    }
+//kinh nghiem
+    $sql_kn = "SELECT news_id, news_title, news_brief, news_image FROM tg_news_cate WHERE cate_id = 109 ORDER BY news_id DESC LIMIT 0,2";
+    $rs_kn = execSQL($sql_kn);
+    while($row_kn = mysql_fetch_assoc($rs_kn)){
+        $row_kn['news_brief'] = sub_string($row_kn['news_brief'], 100, true);
+        $xtpl->assign("KN", $row_kn);
+        $xtpl->parse("MAIN.KN");
+    }
+//bai thuoc
+    $sql_bt1 = "SELECT news_id, news_title, news_brief, news_image FROM tg_news_cate WHERE cate_id = 120 ORDER BY news_id DESC LIMIT 0,1";
+    $rs_bt1 = execSQL($sql_bt1);
+    while($row_bt1 = mysql_fetch_assoc($rs_bt1)){
+        $row_bt1['news_brief'] = sub_string($row_bt1['news_brief'], 100, true);
+        $xtpl->assign("BT1", $row_bt1);
+        $xtpl->parse("MAIN.BT1");
+    }
+    $sql_bt2 = "SELECT news_id, news_title, news_brief, news_image FROM tg_news_cate WHERE cate_id = 120 ORDER BY news_id DESC LIMIT 0,4";
+    $rs_bt2 = execSQL($sql_bt2);
+    while($row_bt2 = mysql_fetch_assoc($rs_bt2)){
+        $row_bt2['news_brief'] = sub_string($row_bt2['news_brief'], 100, true);
+        $xtpl->assign("BT2", $row_bt2);
+        $xtpl->parse("MAIN.BT2");
+    }
+
 	$xtpl->assign("header_tostring",$header_tostring);
 	$xtpl->assign("footer_tostring",$footer_tostring);
 	$xtpl->assign("left_tostring",$left_tostring);

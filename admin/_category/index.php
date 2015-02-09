@@ -22,7 +22,7 @@
 	}
 	$keyword=$_POST['keyword'];
 	$show_result=$_POST['show_result'];
-	$condition=" WHERE 1=1";
+	$condition=" WHERE 1=1 ORDER BY category_parent ASC";
 	$page=$_POST['page']?$_POST['page']:1;
 	$pagegroup_size=10;
 	$limit=($show_result?$show_result:10);

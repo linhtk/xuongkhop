@@ -9,8 +9,7 @@
 			
 			$sql="DELETE FROM ".TABLE_PREFIX."category WHERE md5(category_id)='".$edit_id."'";
 			execSQL($sql);
-			$sql="DELETE FROM ".TABLE_PREFIX."category WHERE md5(category_id)='".$edit_id."'";
-			execSQL($sql);
+			
 			
 		}
 		else
@@ -24,8 +23,7 @@
 			
 					$sql="DELETE FROM ".TABLE_PREFIX."category WHERE md5(category_id)='".$edit_id."'";
 					execSQL($sql);
-					$sql="DELETE FROM ".TABLE_PREFIX."product WHERE md5(category_id)='".$edit_id."'";
-					execSQL($sql);
+					
 				}
 			}
 		}

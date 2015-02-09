@@ -2,7 +2,7 @@
 
 	// for data connection
 	$host = 'localhost';
-	$dbname = 'website';
+	$dbname = 'xuongkhop';
 	$dbuser = 'root';
 	$dbpwd = '';
 	$TABLE_PREFIX='tg_';

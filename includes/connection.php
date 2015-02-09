@@ -1,5 +1,5 @@
 <?php
 	$link = mysql_connect('localhost', 'root', '');
-	mysql_select_db('website', $link);
+	mysql_select_db('xuongkhop', $link);
 
 ?>

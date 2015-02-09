@@ -1,49 +1,31 @@
 <?php 
 
-	// for data connection
-	$host = 'localhost';
-	$dbname = 'website';
-	$dbuser = 'root';
-	$dbpwd = '';
-	$TABLE_PREFIX='tg_';
-	define('TABLE_PREFIX','tg_');
+	include "includes/global.php";
+	include "includes/connection.php";
+	include "includes/function.php";
+	include "includes/function_page.php";
 	
-	//Whole site
-	$title='May tinh Thao Gam - ';
-	$SITE_CHARSET='charset=utf-8';
-	$MAX_FILE_SIZE=1024000;
-	
-	$dbconn = mysql_connect($host, $dbuser, $dbpwd) or die(mysql_error().$host);
-	$db = mysql_select_db($dbname, $dbconn) or die(mysql_error().$host);
-	
-	//LOCALHOST
-//	define('HTTP_SERVER', 'http://localhost/tggum/catalog'); 
-//	define('HTTPS_SERVER', 'http://localhost/tggum/secure'); 
-//	define('DIR_HTTP_ROOT', 'C:/AppServ/www/tggum/catalog');
-//  	define('DIR_HTTPS_ROOT', 'C:/AppServ/www/tggum/secure');
-	
-	//TESTING
-	/*define('HTTP_SERVER', 'http://qsoftvietnam:888/testing/tggum'); 
-	define('HTTPS_SERVER', ''); 
-	define('DIR_HTTP_ROOT', 'C:/AppServ/www');
-  	define('DIR_HTTPS_ROOT', '');*/
-	
-	//NovaWhite
-	/*define('HTTP_SERVER', 'http://localhost'); // eg, http://localhost - should not be empty for productive servers
-	define('HTTPS_SERVER', ''); // eg, https://localhost - should not be empty for productive servers
-	define('DIR_HTTP_ROOT', '/oscommerce/catalog/');
-  	define('DIR_HTTPS_ROOT', '');*/
-	
-	$base_url='http://localhost/catalog';
-	$FCK_EDITOR_UPLOAD_PATH='/img/fck/'; //If your folder is not root, you must add it eg. /myfolder/img/fck/
-	$webmaster_email="admin@tggum.com.sg";
-	
-	
-	///
-//	$paypal_config['url']='https://www.sandbox.paypal.com/cgi-bin/webscr';
-//	//$paypal_config['url']='https://www.paypal.com/cgi-bin/webscr';
-//	$paypal_config['return']['cancel'] = "http://tggum.com.sg/onlinestore/index.php"; 
-//	$paypal_config['return']['thanks'] = "http://tggum.com.sg/onlinestore/thankyou.php";  
-// 	$paypal_config['account']='test@paypal.com';	
+	$right_news = "SELECT md5(news_id) AS news_id, news_title, news_image, news_brief FROM tg_news WHERE news_is_hot = '1' AND news_active='1' ORDER BY news_date LIMIT 0 , 3";
+	$rs_right_news = execSQL($right_news);
+	$right_no=mysql_num_rows($rs_right_news);
+	if ($right_no)
+	{
+		while($row_right_news = mysql_fetch_assoc($rs_right_news)){
+			if($row_right_news['news_image'])
+				{
+					if(file_exists("upload/news/thumb_1_".$row_right_news['news_image']))
+					{
+						$row_right_news['news_image'] = '<img src="upload/news/thumb_1_'.$row_right_news['news_image'].'" class="img-responsive" height="350" width="505" />';
+					} else 
+					{
+						$row_right_news['news_image'] = "";
+					}
+				} else
+				{
+					$row_right_news['news_image'] = "";
+				}
+				var_dump($row_right_news);
+		}
+	}
 	
 ?>

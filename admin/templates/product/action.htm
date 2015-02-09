@@ -1,0 +1,67 @@
+<!-- BEGIN:main -->
+{header_tostring}
+<link rel="stylesheet" type="text/css" media="all" href="../js/jscalendar/skins/aqua/theme.css" title="win2k-cold-1" />
+<script type="text/javascript" src="../js/jscalendar/calendar.js"></script>
+<script type="text/javascript" src="../js/jscalendar/lang/calendar-en.js"></script>
+<script type="text/javascript" src="../js/jscalendar/calendar-setup.js"></script>
+
+
+<script type="text/javascript" language="javascript">
+function openwin(url,w_title,width,height)
+{
+	var maxw = window.screen.availWidth;
+	var maxh = window.screen.availHeight;
+	var win = window.open(url,w_title,'screenX=0,screenY=0,left='+((maxw-width)/2)+',top=0,width=' + width + ',height=' + height+',toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no');
+		win.focus();
+}
+</script>
+<form name="frmUpdate" action="" method="post" enctype="multipart/form-data">
+<input type="hidden" name="frmAction" value="Action" />
+<input type="hidden" name="news_id" value="{news_id}" />
+{input_hidden_edit_id}
+{input_hidden_news_image}
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="box-detail" align="center" style="width:900px;">
+  <tr>
+    <td width="8"><img src="images/images_03.gif" width="9" height="30"></td>
+    <td class="bg-heading" width="100%">{title_page}</td>
+    <td width="7"><img src="images/images_06.gif" width="7" height="30"></td>
+  </tr>
+  <tr>
+    <td colspan="3" class="body-content"><table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <!-- BEGIN:error -->	
+  <tr>
+    <td colspan="2"><p class="p_error">{error}</p></td>
+  </tr>
+  <!-- END:error -->
+  <tr>
+    <td width="28%" class="content">Tên Sản phẩm</td>
+    <td width="72%" class="content">{input_product_name}</td>
+  </tr>
+  <tr>
+    <td width="28%" class="content">Hình ảnh</td>
+    <td width="72%" class="content">{input_product_image} {image_viewer}</td>
+  </tr>
+  <tr>
+    <td class="content">Lượt bình chọn</td>
+    <td class="content">{input_rate}</td>
+  </tr>
+  <tr>
+    <td class="content">Nội dung</td>
+    <td class="content">{input_product_desc}</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><input type="submit" value="{COM_ADD_UPDATE}" class="a_button"/>
+    &nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+    <td><img src="images/images_17.gif" width="9" height="10" style="float:left"></td>
+    <td><div class="line-bottom">&nbsp;</div></td>
+    <td><img src="images/images_21.gif" width="7" height="10" style="float:right;"></td>
+  </tr>
+</table>
+</form>
+{footer_tostring}
+<!-- END:main -->

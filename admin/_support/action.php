@@ -8,8 +8,10 @@
 	if($action=="Action")
 	{
 		$support_name=$_POST['support_name'];
+		$support_title = $_POST['support_title'];
 		$support_mobile=$_POST['support_mobile'];
 		$support_email=$_POST['support_email'];
+		$support_created_date = date("Y-m-d");
 		$content=$_POST['content'];
         $answer=$_POST['answer'];
 		$edit_id=$_POST['edit_id'];
@@ -41,12 +43,15 @@
 						SET 
 							support_name='$support_name'
 							,support_mobile='$support_mobile'
+							,support_title='$support_title'
 							,support_email='$support_email'
+							,support_created_date='$support_created_date'
 							,content='$content'
 							,answer='$answer'
 						WHERE md5(support_id)='$edit_id'";
+						//echo $sql; die();
 				execSQL($sql);
-				redir('index.php?mod=support');
+				redir('index.php?mod=_support');
 				exit();		
 			
 			}
@@ -54,19 +59,23 @@
 			{
 				$sql="INSERT INTO ".TABLE_PREFIX."support(
 						support_name
+						,support_title
 						,support_mobile
 						,support_email
+						,support_created_date
 						,content
 						,answer
 						) VALUES(
 						'$support_name'
+						,$support_title
 						,'$support_mobile'
 						,'$support_email'
+						,'$support_created_date'
 						,'$content'
 						,'$answer'
 						)";
 				execSQL($sql);
-				redir('index.php?mod=support');
+				redir('index.php?mod=_support');
 				exit();
 			}
 		}
@@ -75,6 +84,7 @@
 	{
 		if($edit_id){
 			$sql="SELECT support_name
+						,support_title
 						,support_mobile
 						,support_email
 						,content
@@ -84,6 +94,7 @@
 				 WHERE md5(support_id)='$edit_id'";
 			$row=recordset($sql);
 			$support_name					= $row['support_name'];
+			$support_title					= $row['support_title'];
 			$support_mobile 				= $row['support_mobile'];
 			$support_email 				= $row['support_email'];
 			$content 				= $row['content'];
@@ -94,6 +105,7 @@
 	}
 	
 	$input_support_name			= gen_input_text('support_name',$support_name,50,255,'','a_text');
+	$input_support_title			= gen_input_text('support_title',$support_title,50,255,'','a_text');
 	$input_support_mobile			= gen_input_text('support_mobile',$support_mobile,50,255,'','a_text');
 	$input_support_email			= gen_input_text('support_email',$support_email,50,255,'','a_text');
 	$input_content				= gen_input_FCKEditor('content',$content);
@@ -101,6 +113,7 @@
 	$input_hidden_edit_id		= gen_input_hidden('edit_id',$edit_id);
 	
 	$xtpl->assign('input_support_name',$input_support_name);
+	$xtpl->assign('input_support_title',$input_support_title);
 	$xtpl->assign('input_support_mobile',$input_support_mobile);
 	$xtpl->assign('input_support_email',$input_support_email);
 	$xtpl->assign('input_content',$input_content);

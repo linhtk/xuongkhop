@@ -1,111 +1,80 @@
 ﻿<!-- BEGIN:HEADER -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>{title}</title>
-<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="js/scriptaculous.js?load=effects"></script>
-<script type="text/javascript" src="js/lightbox.js"></script>
-<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="js/cycle.js"></script>
-<script type="text/javascript" src="js/jquery-ui.js"></script>
-<script type="text/javascript" src="js/sprinkle.js"></script>
-<script type="text/javascript" src="js/jquery-ui_pro.js"></script>
-<script language="javascript" type="text/javascript">
-function empty_cart()
-{
-	if(confirm('Bạn có muốn xóa giỏ hàng?'))
-	{
-		window.location.href='shopping_cart.php?act=empty';
-	}
-	return;
-}
-function update_cart()
-{
-	var f = document.frm_shopping_cart;
-	f.submit();
-	return;
-}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{title}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-function check_out()
-{
-	var total = document.getElementById('total');
-	if(total.value)
-	{
-		window.location.href='delivery_info.php';
-	}
-	else
-	{
-		alert('Giỏ hàng đang rỗng. Hãy tiếp tục mua hàng.');
-		return;
-	}
-}
-function add_to_cart()
-{
-	var frm = document.getElementById('form1');
-	frm.submit();
-}
-//window.onload=check_selected;
-$(document).ready(function() {
-	$('.slideshow').cycle({
-		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-	});
-});
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory 
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>-->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		
+        <!-- Add your site or application content here -->
+        <header>
+            <div id="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <h1 id="logo">
+                                <a href="#"><img src="img/logo.png" alt=""/></a>
+                            </h1>
+                        </div>
+                        <div class="col-lg-4">
+                            <strong>Tư vấn : {phone}</strong>
+                        </div>
+                        <div class="col-lg-3">
+                            <form action="" class="form-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-sm" placeholder="Tìm kiếm">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default btn-sm" type="button"><i class="glyphicon glyphicon-search"></i></button>
+                                    </span>
+                                </div><!-- /input-group -->
+                            </form>
+                        </div><!-- /.col-lg-6 -->
+                    </div>
 
-</script>
-<body>
-<link href="css/css.css" rel="stylesheet" type="text/css" />
-<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
-  <tr>
-    <td colspan="3" valign="top">
-    <table width="100%" border="0" cellpadding="0" cellspacing="0">
-      <tr>
-        <td align="center">
-        <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="980" height="240">
-          <param name="movie" value="quangdien.swf" />
-          <param name="quality" value="high" />
-          <param name="wmode" value="opaque" />
-          <param name="swfversion" value="6.0.65.0" />
-          <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don't want users to see the prompt. -->
-          <param name="expressinstall" value="../Scripts/expressInstall.swf" />
-          <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
-          <!--[if !IE]>-->
-          <object type="application/x-shockwave-flash" data="quangdien.swf" width="980" height="240">
-            <!--<![endif]-->
-            <param name="quality" value="high" />
-            <param name="wmode" value="opaque" />
-            <param name="swfversion" value="6.0.65.0" />
-            <param name="expressinstall" value="../Scripts/expressInstall.swf" />
-            <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
-            <div>
-              <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
-              <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+                </div>
             </div>
-            <!--[if !IE]>-->
-          </object>
-          <!--<![endif]-->
-        </object>
-        <div style="clear:both;"></div>
-        </td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="3" valign="top">
-    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="top_menu">
-      <tr>
-        <td> <a href="index.php" class="link_top_menu">Trang chủ</a></td>
-        <td> <a href="introduction.php" class="link_top_menu">Giới thiệu </a></td>
-        <td><a href="product_list.php" class="link_top_menu">Sản Phẩm</a></td>
-        <td> <a href="service.php" class="link_top_menu">Bảo hành</a></td>
-         <td><a href="list_news.php" class="link_top_menu">Tin tức</a></td>
-       <td> <a href="contact.php" class="link_top_menu">Liên hệ</a></td>
-       <td> <a href="download.php" class="link_top_menu">Download</a></td>
-       <td> <a href="search.php" class="link_top_menu">Tìm kiếm</a></td>
-      </tr>
-    </table>
-    </td>
-  </tr>
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-main-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="{index}"><a href="index.php">Trang chủ</a></li>
+                            <li class={benh}><a href="xuongkhop.php">Các bệnh về khớp</a></li>
+                            <li class={phong}><a href="phongbenh.php">Phòng và chữa bệnh</a></li>
+                            <li class={hoidap}><a href="hoidap.php">Hỏi Đáp</a></li>
+                            <li class={tin}><a href="tintuc.php">Tin tức</a></li>
+                            <li class={share}><a href="chiase.php">Bệnh nhân chia sẻ</a></li>
+                            <li class={contact}><a href="lienhe.php">Liên hệ</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </nav>
+        </header>
 <!-- END:HEADER -->

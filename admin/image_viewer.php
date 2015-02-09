@@ -1,12 +1,13 @@
 <?
+error_reporting(0);
 	//include "../settings.php";
 	include "../includes/xtpl.php";
 	include "../includes/global.php";
 	include "includes/languages/language_en.php";
 	include "includes/check_login.php";
 	$xtpl = new XTemplate("templates/image_viewer.htm");
-	$f="../images/".$_GET['path']."/".$_GET['img'];
-	$file="../images/".$_GET['path']."/".$_GET['img'];
+	$f="../upload/".$_GET['path']."/".$_GET['img'];
+	$file="../upload/".$_GET['path']."/".$_GET['img'];
 	if (file_exists($file)) 
 	{
 		$fileInfo = pathinfo($file);

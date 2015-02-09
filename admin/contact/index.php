@@ -8,7 +8,7 @@
 	$edit_id=$_POST['edit_id'];
 	if($bool_field)
 	{
-		$sql="UPDATE ".TABLE_PREFIX."support"." SET ".$bool_field."= not ".$bool_field." WHERE md5(".$table_name."_id)='$edit_id'";
+		$sql="UPDATE ".TABLE_PREFIX."contact"." SET ".$bool_field."= not ".$bool_field." WHERE md5(".$table_name."_id)='$edit_id'";
 		execSQL($sql); 
 	}
 	$condition=" WHERE 1=1 ";
@@ -18,7 +18,7 @@
 				,address
 				,phone
 				,email
-				FROM ".TABLE_PREFIX."support";
+				FROM ".TABLE_PREFIX."contact";
 				
 	$rs=execSQL($sql);
 	$row_total=mysql_num_rows($rs);
