@@ -30,7 +30,9 @@
 		if($row['answer'] != ''){
 			$row['support_date'] = formatDateFromDatabase($row['support_created_date']);
 			$row['answer'] = sub_string($row['answer'], 200);
-			$xtpl->parse("MAIN.faq.answer");
+            $row['support_id'] = $row['support_id'];
+            $xtpl->assign('id',$row['support_id']);
+            $xtpl->parse("MAIN.faq.answer");
 		}
 		$xtpl->assign("faq",$row);
 		$xtpl->parse("MAIN.faq");	

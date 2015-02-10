@@ -4,12 +4,12 @@
         <h2>Bài yêu thích</h2>
         <!-- BEGIN: right_news -->
         <div class="media">
-            <a class="pull-left" href="#">
+            <a class="pull-left" href="chitiet.php?id={right_news.news_id}">
                 {right_news.news_image}
             </a>
             <div class="media-body">
                 <h4 class="media-heading">{right_news.news_title}</h4>
-                <p>{right_news.news_brief}<a href="#" class="readmore">Xem thêm</a></p>
+                <p>{right_news.news_brief}<a href="chitiet.php?id={right_news.news_id}" class="readmore">Xem thêm</a></p>
             </div>
         </div>
         <!-- END:right_news -->

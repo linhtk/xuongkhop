@@ -434,7 +434,7 @@ aside p{
     color: #fff;
 }
 .slider #slider-thumbs p{
-    font-size: 11px;
+    font-size: 12px;
     color: #fff;
 }
 .slider .carousel-caption{
@@ -455,7 +455,7 @@ aside p{
     font-size: 12px;
 }
 #slider .carousel-inner img{
-    width: 632px;height: 305px;
+    width: 632px;height: 360px;
 }
 /*=========== FOOTER ===========*/
 footer{

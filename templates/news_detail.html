@@ -12,9 +12,16 @@
                         <p>{row.news_image}</p>
                         <p>{row.news_content}</p>
                     </div>
-
+                    <hr />
+                    <h4 class="media-heading">Tin khác: </h4>
+                    <ul class="list-unstyled">
+                        <!-- BEGIN: other -->
+                        <li><a href="chitiet.php?id={row1.news_id}">{row1.news_title}</a></li>
+                        <!-- END: other -->
+                    </ul>
                 </div>
             </div>
+
             {right_tostring}
         </div>
 

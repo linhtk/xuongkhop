@@ -1,0 +1,44 @@
+<!-- BEGIN:MAIN -->
+{header_tostring}
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+
+                <div class="content">
+                    <div class="media-body">
+                        <h4 class="media-heading">{row.support_title}</h4>
+                        <p><strong>Ngày đăng: </strong> {row.created_date}</p>
+                        <p>{row.content}</p>
+                        <p class="author text-right">{row.support_name}</p>
+                        <!-- BEGIN: answer -->
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="img/hoidap.jpg" alt="Image">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Trả lời</h4>
+                                <p><strong>Ngày đăng: </strong> {support_date}</p>
+                                <p>{answer}</p>
+
+                            </div>
+                        </div>
+                        <!-- END: answer -->
+                        <hr />
+                        <h4 class="media-heading">Câu hỏi khác: </h4>
+                            <ul class="list-unstyled">
+                                <!-- BEGIN: other -->
+                                <li><a href="chitiethoidap.php?id={row1.support_id}">{row1.support_title}</a></li>
+                                <!-- END: other -->
+                            </ul>
+                    </div>
+                </div>
+            </div>
+            {right_tostring}
+        </div>
+
+    </div>
+    <a href="#" class="scrollToTop"><i class="glyphicon glyphicon-circle-arrow-up"></i></a>
+</section>
+{footer_tostring}
+<!-- END:MAIN -->

@@ -43,7 +43,7 @@
 	}
 
 //news
-	$sql_news1 = "SELECT md5(news_id) AS news_id, news_title, news_image, news_date, news_brief FROM tg_news WHERE news_active='1' ORDER BY news_date LIMIT 0 , 4";
+	$sql_news1 = "SELECT md5(news_id) AS news_id, news_title, news_image, news_date, news_brief FROM tg_news WHERE news_active='1' ORDER BY news_date LIMIT 0 , 3";
 	$rs_news1 = execSQL($sql_news1);
 	$no1=mysql_num_rows($rs_news1);
 	if ($no1)
@@ -62,7 +62,7 @@
 				{
 					$row_news1['news_image'] = "";
 				}
-				$row_news1['news_brief'] = sub_string($row_news1['news_brief'], 100, true);
+				$row_news1['news_brief'] = sub_string($row_news1['news_brief'], 155, true);
 			$xtpl->assign("row_news1",$row_news1);
 			$xtpl->parse("MAIN.news");
 		}
