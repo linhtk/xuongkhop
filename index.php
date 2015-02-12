@@ -117,7 +117,10 @@
 //san pham
     $sql_sp = "SELECT * FROM tg_product ORDER BY product_id DESC";
     $rs_sp = execSQL($sql_sp);
+    $j = 0;
     while($row_sp = mysql_fetch_assoc($rs_sp)){
+        if($j==0){$row_sp['class']='active ';}
+        $j++;
         $row_sp['product_desc'] = sub_string($row_sp['product_desc'], 150, true);
         $xtpl->assign('SP', $row_sp);
         $xtpl->parse("MAIN.SP");

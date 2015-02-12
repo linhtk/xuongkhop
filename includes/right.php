@@ -12,7 +12,7 @@
 				{
 					if(file_exists("upload/news/".$row_right_news['news_image']))
 					{
-						$row_right_news['news_image'] = '<img src="upload/news/'.$row_right_news['news_image'].'" class="img-responsive" />';
+						$row_right_news['news_image'] = '<img src="upload/news/'.$row_right_news['news_image'].'" class="img-responsive" width="120" height="89" />';
 					} else 
 					{
 						$row_right_news['news_image'] = "";
@@ -35,7 +35,7 @@
         {
             if(file_exists("upload/products/".$row_sp['product_image']))
             {
-                $row_sp['product_image'] = '<img src="upload/products/'.$row_sp['product_image'].'" class="img-responsive" />';
+                $row_sp['product_image'] = '<img src="upload/products/'.$row_sp['product_image'].'" class="img-responsive" width="120" height="89" />';
             } else
             {
                 $row_sp['product_image'] = "";
