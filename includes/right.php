@@ -2,7 +2,7 @@
 	$xtpl_right = new XTemplate ("templates/right.html");
 
 /////news
-	$right_news = "SELECT md5(news_id) AS news_id, news_title, news_image, news_brief FROM tg_news WHERE news_is_hot = '1' AND news_active='1' ORDER BY news_date LIMIT 0 , 3";
+	$right_news = "SELECT md5(news_id) AS news_id, news_title, news_image, news_brief FROM tg_news WHERE news_is_hot = '1' AND news_active='1' ORDER BY news_date LIMIT 0 , 4";
 	$rs_right_news = execSQL($right_news);
 	$right_no=mysql_num_rows($rs_right_news);
 	if ($right_no)
@@ -27,7 +27,7 @@
 		}
 	}
 //san pham
-    $sql_sp = "SELECT * FROM tg_product ORDER BY product_id DESC LIMIT 0,3";
+    $sql_sp = "SELECT * FROM tg_product ORDER BY product_id DESC LIMIT 0,4";
     $rs_sp = execSQL($sql_sp);
     while($row_sp = mysql_fetch_assoc($rs_sp))
     {

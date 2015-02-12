@@ -114,7 +114,14 @@
         $xtpl->assign("BT2", $row_bt2);
         $xtpl->parse("MAIN.BT2");
     }
-
+//san pham
+    $sql_sp = "SELECT * FROM tg_product ORDER BY product_id DESC";
+    $rs_sp = execSQL($sql_sp);
+    while($row_sp = mysql_fetch_assoc($rs_sp)){
+        $row_sp['product_desc'] = sub_string($row_sp['product_desc'], 150, true);
+        $xtpl->assign('SP', $row_sp);
+        $xtpl->parse("MAIN.SP");
+    }
 	$xtpl->assign("header_tostring",$header_tostring);
 	$xtpl->assign("footer_tostring",$footer_tostring);
 	$xtpl->assign("left_tostring",$left_tostring);

@@ -36,4 +36,6 @@ $(document).ready(function(){
 	  $('[id^=carousel-selector-]').removeClass('selected');
 	  $('[id=carousel-selector-'+id+']').addClass('selected');
 	});
+
+
 });

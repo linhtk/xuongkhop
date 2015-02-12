@@ -80,7 +80,7 @@
 						,content
 						,address
 						,md5(id) AS edit_id
-					FROM ".TABLE_PREFIX."support
+					FROM ".TABLE_PREFIX."share
 				 WHERE md5(id)='$edit_id'";
 			$row=recordset($sql);
 			$fullname					= $row['fullname'];

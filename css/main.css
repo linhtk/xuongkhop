@@ -434,7 +434,7 @@ aside p{
     color: #fff;
 }
 .slider #slider-thumbs p{
-    font-size: 12px;
+    font-size: 11px;
     color: #fff;
 }
 .slider .carousel-caption{
@@ -454,8 +454,48 @@ aside p{
 .slider .carousel-caption p{
     font-size: 12px;
 }
+.slide .slider-thumbs img{
+    width: 90px;height: 71px;
+}
 #slider .carousel-inner img{
-    width: 632px;height: 360px;
+    width: 632px;height: 305px;
+}
+#slide-footer{
+    margin-top: 20px;
+    background: #fff;
+    padding: 10px 40px;
+}
+#slide-footer .carousel-control.left{
+    background: none;
+}
+#slide-footer .carousel-control.right{
+    background: none;
+}
+#slider-footer h2{
+    margin: 0 0 10px;
+    padding: 15px 0 5px 35px;
+    background: url(../img/icon-featured-news.png) no-repeat 0px 14px;
+}
+#slide-footer h2 span{
+    display: block;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #2393d1;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #2393d1;
+}
+
+#slide-footer h4 a{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+}
+#slide-footer .carousel-control .glyphicon-chevron-left, #slide-footer .carousel-control .icon-prev{
+    left: 15%;
+}
+#slide-footer .carousel-control .glyphicon-chevron-right, #slide-footer .carousel-control .icon-right{
+    right: 15%;
 }
 /*=========== FOOTER ===========*/
 footer{

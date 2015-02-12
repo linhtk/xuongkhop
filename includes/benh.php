@@ -2,7 +2,7 @@
 	$xtpl_benh = new XTemplate ("templates/benh.html");
 
 /////cam nang
-	$benh_news = "SELECT md5(news_id) AS news_id, news_title, news_image, news_brief FROM tg_news_cate WHERE cate_id = 119 LIMIT 0 , 4";
+	$benh_news = "SELECT md5(news_id) AS news_id, news_title, news_image, news_brief FROM tg_news_cate WHERE cate_id = 119 LIMIT 0 , 3";
 	$rs_benh_news = execSQL($benh_news);
 	$benh_no=mysql_num_rows($rs_benh_news);
 	if ($benh_no)
@@ -27,7 +27,7 @@
 		}
 	}
 /////duoc lieu
-	$duoc_news = "SELECT md5(news_id) AS news_id, news_title, news_image, news_brief FROM tg_news_cate WHERE cate_id = 120 LIMIT 0 , 4";
+	$duoc_news = "SELECT md5(news_id) AS news_id, news_title, news_image, news_brief FROM tg_news_cate WHERE cate_id = 120 LIMIT 0 , 3";
 	$rs_duoc_news = execSQL($duoc_news);
 	$duoc_no=mysql_num_rows($rs_duoc_news);
 	if ($duoc_no)

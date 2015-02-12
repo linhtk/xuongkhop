@@ -14,7 +14,7 @@
 		$news_content=$_POST['news_content'];
 		$news_image=$_FILES['news_image'];
 		$news_date=date("Y-m-d H:s:i");
-		$news_position = $_POST['news_position'];
+		$news_position = $_POST['news_position']?$_POST['news_position']:0;
 		$news_active=$_POST['news_active']?1:0;
 		$news_is_hot=$_POST['news_is_hot']?1:0;
 		$hidden_news_image = $_POST['hidden_news_image'];
