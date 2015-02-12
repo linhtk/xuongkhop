@@ -17,9 +17,9 @@ error_reporting(0);
 	$row = mysql_fetch_assoc($rs);
 	if($row['news_image'])
 	{
-		if(file_exists("upload/news/thumb_0_".$row['news_image']))
+		if(file_exists("upload/news/".$row['news_image']))
 		{
-			$row['news_image'] = "<img src='upload/news/thumb_0_".$row['news_image']."' />";
+			$row['news_image'] = "<img src='upload/news/".$row['news_image']."' />";
 		} else 
 		{
 			$row['news_image'] = "";

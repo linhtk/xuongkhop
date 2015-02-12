@@ -27,9 +27,9 @@
 	while ($row_tin = mysql_fetch_assoc($rs_tin)){
 		if($row_tin['news_image'])
 		{
-			if(file_exists("upload/news/thumb_0_".$row_tin['news_image']))
+			if(file_exists("upload/news/".$row_tin['news_image']))
 			{
-				$row_tin['news_image'] = '<img src="upload/news/thumb_0_'.$row_tin['news_image'].'" class="img-responsive" width="120" height="89" />';
+				$row_tin['news_image'] = '<img src="upload/news/'.$row_tin['news_image'].'" class="img-responsive" width="120" height="89" />';
 			} else 
 			{
 				$row_tin['news_image'] = "";

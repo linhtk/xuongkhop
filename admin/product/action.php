@@ -47,25 +47,25 @@
 			{
                 $product_image=$hidden_product_image;
 			}
-				// create thumnail image
-				if($_FILES['product_image']['name'])
-				{
-					for($i=0;$i<count($MAX_THUMB_WIDTH);$i++)
-					{
-						$MAX_QUALITY[$i]=$MAX_THUMB_WIDTH[$i]>$MAX_THUMB_HEIGHT[$i]?$MAX_THUMB_WIDTH[$i]:$MAX_THUMB_HEIGHT[$i];
-						thumbnail_images($_FILES['product_image'],$MAX_THUMB_WIDTH[$i] ,$MAX_THUMB_HEIGHT[$i] ,$path,$MAX_QUALITY[$i],"thumb_".$i,$product_image);
-						
-						// delete old thumb
-						deletefile($path."thumb_".$i."_".$hidden_product_image);
-					}
-					
-					// delete old file
-					deletefile($path.$hidden_product_image);
-					if($DELETE_ORIGIN_IMAGE)
-					{
-						deletefile($path.$product_image);
-					}
-				}
+//				// create thumnail image
+//				if($_FILES['product_image']['name'])
+//				{
+//					for($i=0;$i<count($MAX_THUMB_WIDTH);$i++)
+//					{
+//						$MAX_QUALITY[$i]=$MAX_THUMB_WIDTH[$i]>$MAX_THUMB_HEIGHT[$i]?$MAX_THUMB_WIDTH[$i]:$MAX_THUMB_HEIGHT[$i];
+//						thumbnail_images($_FILES['product_image'],$MAX_THUMB_WIDTH[$i] ,$MAX_THUMB_HEIGHT[$i] ,$path,$MAX_QUALITY[$i],"thumb_".$i,$product_image);
+//
+//						// delete old thumb
+//						unlink($path."thumb_".$i."_".$hidden_product_image);
+//					}
+//
+//					// delete old file
+//					deletefile($path.$hidden_product_image);
+//					if($DELETE_ORIGIN_IMAGE)
+//					{
+//                        unlink($path.$product_image);
+//					}
+//				}
 		}
 		else
 		{
@@ -88,25 +88,25 @@
 					$error.=ERROR_FILE_NOT;
 				}
 			}
-				// create thumnail image
-				if($_FILES['product_image']['name'])
-				{
-					for($i=0;$i<count($MAX_THUMB_WIDTH);$i++)
-					{
-						$MAX_QUALITY[$i]=$MAX_THUMB_WIDTH[$i]>$MAX_THUMB_HEIGHT[$i]?$MAX_THUMB_WIDTH[$i]:$MAX_THUMB_HEIGHT[$i];
-						thumbnail_images($_FILES['product_image'],$MAX_THUMB_WIDTH[$i] ,$MAX_THUMB_HEIGHT[$i] ,$path,$MAX_QUALITY[$i],"thumb_".$i,$product_image);
-						
-						// delete old thumb
-						deletefile($path."thumb_".$i."_".$hidden_product_image);
-					}
-					
-					// delete old file
-					deletefile($path.$hidden_product_image);
-					if($DELETE_ORIGIN_IMAGE)
-					{
-						deletefile($path.$product_image);
-					}
-				}
+//				// create thumnail image
+//				if($_FILES['product_image']['name'])
+//				{
+//					for($i=0;$i<count($MAX_THUMB_WIDTH);$i++)
+//					{
+//						$MAX_QUALITY[$i]=$MAX_THUMB_WIDTH[$i]>$MAX_THUMB_HEIGHT[$i]?$MAX_THUMB_WIDTH[$i]:$MAX_THUMB_HEIGHT[$i];
+//						thumbnail_images($_FILES['product_image'],$MAX_THUMB_WIDTH[$i] ,$MAX_THUMB_HEIGHT[$i] ,$path,$MAX_QUALITY[$i],"thumb_".$i,$product_image);
+//
+//						// delete old thumb
+//                        unlink($path."thumb_".$i."_".$hidden_product_image);
+//					}
+//
+//					// delete old file
+//					deletefile($path.$hidden_product_image);
+//					if($DELETE_ORIGIN_IMAGE)
+//					{
+//                        unlink($path.$product_image);
+//					}
+//				}
 		}
 //end upload		
 		if($error)
@@ -177,7 +177,7 @@
 	{
 		if ($product_image)
 		{
-		$image_viewer	= '&nbsp;<a href="#" onclick="openwin(\'image_viewer.php?path=product&img=thumb_0_'.$product_image.'\');">'.COM_VIEW_IMAGE.'</a>';
+		$image_viewer	= '&nbsp;<a href="#" onclick="openwin(\'image_viewer.php?path=product&img='.$product_image.'\');">'.COM_VIEW_IMAGE.'</a>';
 		$xtpl->assign('image_viewer',$image_viewer);
 		}
 	}

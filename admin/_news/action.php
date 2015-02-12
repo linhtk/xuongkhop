@@ -38,7 +38,7 @@
 			if($news_image['name'])
 			{
 				$news_image=uploadfile($path,$news_image,$upload_type,$MAX_FILE_SIZE);
-			
+
 				if($news_image==-1)
 				{
 					$error.=ERROR_FILE_ACCESS;
@@ -57,25 +57,26 @@
 			{
 				$news_image=$hidden_news_image;
 			}
-				// create thumnail image
-				if($_FILES['news_image']['name'])
-				{
-					for($i=0;$i<count($MAX_THUMB_WIDTH);$i++)
-					{
-						$MAX_QUALITY[$i]=$MAX_THUMB_WIDTH[$i]>$MAX_THUMB_HEIGHT[$i]?$MAX_THUMB_WIDTH[$i]:$MAX_THUMB_HEIGHT[$i];
-						thumbnail_images($_FILES['news_image'],$MAX_THUMB_WIDTH[$i] ,$MAX_THUMB_HEIGHT[$i] ,$path,$MAX_QUALITY[$i],"thumb_".$i,$news_image); 
-						
-						// delete old thumb
-						unlink($path."thumb_".$i."_".$hidden_news_image);
-					}
-					
-					// delete old file
-					deletefile($path.$hidden_news_image);
-					if($DELETE_ORIGIN_IMAGE)
-					{
-						deletefile($path.$news_image);
-					}
-				}
+//            var_dump($news_image); die('in edit');
+//				// create thumnail image
+//				if($_FILES['news_image']['name'])
+//				{
+//					for($i=0;$i<count($MAX_THUMB_WIDTH);$i++)
+//					{
+//						$MAX_QUALITY[$i]=$MAX_THUMB_WIDTH[$i]>$MAX_THUMB_HEIGHT[$i]?$MAX_THUMB_WIDTH[$i]:$MAX_THUMB_HEIGHT[$i];
+//						thumbnail_images($_FILES['news_image'],$MAX_THUMB_WIDTH[$i] ,$MAX_THUMB_HEIGHT[$i] ,$path,$MAX_QUALITY[$i],"thumb_".$i,$news_image);
+//
+//						// delete old thumb
+//						unlink($path."thumb_".$i."_".$hidden_news_image);
+//					}
+//
+//					// delete old file
+//                    unlink($path.$hidden_news_image);
+//					if($DELETE_ORIGIN_IMAGE)
+//					{
+//                        unlink($path.$news_image);
+//					}
+//				}
 		}
 		else
 		{
@@ -83,7 +84,7 @@
 			if($news_image['name'])
 			{
 				$news_image=uploadfile($path,$news_image,$upload_type,$MAX_FILE_SIZE);
-			
+
 				if($news_image==-1)
 				{
 					$error.=ERROR_FILE_ACCESS;
@@ -98,25 +99,27 @@
 					$error.=ERROR_FILE_NOT;
 				}
 			}
-				// create thumnail image
-				if($_FILES['news_image']['name'])
-				{
-					for($i=0;$i<count($MAX_THUMB_WIDTH);$i++)
-					{
-						$MAX_QUALITY[$i]=$MAX_THUMB_WIDTH[$i]>$MAX_THUMB_HEIGHT[$i]?$MAX_THUMB_WIDTH[$i]:$MAX_THUMB_HEIGHT[$i];
-						thumbnail_images($_FILES['news_image'],$MAX_THUMB_WIDTH[$i] ,$MAX_THUMB_HEIGHT[$i] ,$path,$MAX_QUALITY[$i],"thumb_".$i,$news_image); 
-						
-						// delete old thumb
-						unlink($path."thumb_".$i."_".$hidden_news_image);
-					}
-					
-					// delete old file
-                    unlink($path.$hidden_news_image);
-					if($DELETE_ORIGIN_IMAGE)
-					{
-                        unlink($path.$news_image);
-					}
-				}
+//            var_dump($news_image); die('in add');
+//				// create thumnail image
+//				if($_FILES['news_image']['name'])
+//				{
+//                    die('here');
+//					for($i=0;$i<count($MAX_THUMB_WIDTH);$i++)
+//					{
+//						$MAX_QUALITY[$i]=$MAX_THUMB_WIDTH[$i]>$MAX_THUMB_HEIGHT[$i]?$MAX_THUMB_WIDTH[$i]:$MAX_THUMB_HEIGHT[$i];
+//						$news_image_1 = thumbnail_images($_FILES['news_image'],$MAX_THUMB_WIDTH[$i] ,$MAX_THUMB_HEIGHT[$i] ,$path,$MAX_QUALITY[$i],"thumb_".$i,$news_image);
+//						var_dump($news_image_1);die('aa');
+//						// delete old thumb
+//						unlink($path."thumb_".$i."_".$hidden_news_image);
+//					}
+//
+//					// delete old file
+//                    unlink($path.$hidden_news_image);
+//					if($DELETE_ORIGIN_IMAGE)
+//					{
+//                        unlink($path.$news_image);
+//					}
+//				}
 		}
 //end upload		
 		if($error)
@@ -268,7 +271,7 @@
 	{
 		if ($news_image)
 		{
-		$image_viewer	= '&nbsp;<a href="#" onclick="openwin(\'image_viewer.php?path=news&img=thumb_0_'.$news_image.'\');">'.COM_VIEW_IMAGE.'</a>';
+		$image_viewer	= '&nbsp;<a href="#" onclick="openwin(\'image_viewer.php?path=news&img='.$news_image.'\');">'.COM_VIEW_IMAGE.'</a>';
 		$xtpl->assign('image_viewer',$image_viewer);
 		}
 	}

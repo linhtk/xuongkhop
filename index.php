@@ -25,9 +25,9 @@
 			if($i==0){$row_news['class']='active ';}
 			if($row_news['news_image'])
 				{
-					if(file_exists("upload/news/thumb_0_".$row_news['news_image']))
+					if(file_exists("upload/news/".$row_news['news_image']))
 					{
-						$row_news['news_image'] = '<img src="upload/news/thumb_0_'.$row_news['news_image'].'" class="img-responsive" height="350" />';
+						$row_news['news_image'] = '<img src="upload/news/'.$row_news['news_image'].'" class="img-responsive" height="350" />';
 					} else 
 					{
 						$row_news['news_image'] = "";
@@ -51,9 +51,9 @@
 		while($row_news1 = mysql_fetch_assoc($rs_news1)){
 			if($row_news1['news_image'])
 				{
-					if(file_exists("upload/news/thumb_0_".$row_news1['news_image']))
+					if(file_exists("upload/news/".$row_news1['news_image']))
 					{
-						$row_news1['news_image'] = '<img class="media-object" src="upload/news/thumb_0_'.$row_news1['news_image'].'" alt="Image" width="55" height="45">';
+						$row_news1['news_image'] = '<img class="media-object" src="upload/news/'.$row_news1['news_image'].'" alt="Image" width="55" height="45">';
 					} else 
 					{
 						$row_news1['news_image'] = "";

@@ -10,9 +10,9 @@
 		while($row_right_news = mysql_fetch_assoc($rs_right_news)){
 			if($row_right_news['news_image'])
 				{
-					if(file_exists("upload/news/thumb_1_".$row_right_news['news_image']))
+					if(file_exists("upload/news/".$row_right_news['news_image']))
 					{
-						$row_right_news['news_image'] = '<img src="upload/news/thumb_1_'.$row_right_news['news_image'].'" class="img-responsive" />';
+						$row_right_news['news_image'] = '<img src="upload/news/'.$row_right_news['news_image'].'" class="img-responsive" />';
 					} else 
 					{
 						$row_right_news['news_image'] = "";
@@ -33,9 +33,9 @@
     {
         if($row_sp['product_image'])
         {
-            if(file_exists("upload/products/thumb_1_".$row_sp['product_image']))
+            if(file_exists("upload/products/".$row_sp['product_image']))
             {
-                $row_sp['product_image'] = '<img src="upload/products/thumb_1_'.$row_sp['product_image'].'" class="img-responsive" />';
+                $row_sp['product_image'] = '<img src="upload/products/'.$row_sp['product_image'].'" class="img-responsive" />';
             } else
             {
                 $row_sp['product_image'] = "";

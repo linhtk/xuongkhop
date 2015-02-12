@@ -35,9 +35,9 @@
 		while($row_duoc_news = mysql_fetch_assoc($rs_duoc_news)){
 			if($row_duoc_news['news_image'])
 				{
-					if(file_exists("upload/news/thumb_1_".$row_duoc_news['news_image']))
+					if(file_exists("upload/news/".$row_duoc_news['news_image']))
 					{
-						$row_duoc_news['news_image'] = '<img src="upload/news/thumb_1_'.$row_duoc_news['news_image'].'" class="img-responsive" />';
+						$row_duoc_news['news_image'] = '<img src="upload/news/'.$row_duoc_news['news_image'].'" class="img-responsive" />';
 					} else 
 					{
 						$row_duoc_news['news_image'] = "";

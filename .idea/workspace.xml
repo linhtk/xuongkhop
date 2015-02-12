@@ -25,76 +25,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="action.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/_support/action.php">
+      <file leaf-file-name="tintuc.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/tintuc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="2278">
-              <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-              <folding>
-                <marker date="1012682752000" expanded="true" signature="1324:1683" placeholder="INSERT INTO ..." />
-                <marker date="1012682752000" expanded="true" signature="1800:2019" placeholder="SELECT suppo..TABLE_PREFIXsupport..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="action.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/share/action.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077" vertical-offset="1071" max-vertical-offset="2057">
-              <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
-              <folding>
-                <marker date="1423638282555" expanded="true" signature="1015:1230" placeholder="INSERT INTO ..." />
-                <marker date="1423638282555" expanded="true" signature="1344:1503" placeholder="SELECT fulln..TABLE_PREFIXshare..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.307692" vertical-offset="3426" max-vertical-offset="3995">
-              <caret line="228" column="17" selection-start-line="228" selection-start-column="17" selection-end-line="228" selection-end-column="17" />
+            <state vertical-scroll-proportion="17.076923" vertical-offset="444" max-vertical-offset="1003">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="benh.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/benh.php">
+      <file leaf-file-name="xuongkhop.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/xuongkhop.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34615386" vertical-offset="502" max-vertical-offset="1071">
-              <caret line="29" column="134" selection-start-line="29" selection-start-column="134" selection-end-line="29" selection-end-column="134" />
+            <state vertical-scroll-proportion="-5.8076925" vertical-offset="189" max-vertical-offset="1003">
+              <caret line="20" column="83" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="83" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chiase.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chiase.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="9.230769" vertical-offset="240" max-vertical-offset="799">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1423707960550" expanded="true" signature="89:205" placeholder="SELECT md5(n..tg_news_cate..." />
-                <marker date="1423707960550" expanded="true" signature="965:1081" placeholder="SELECT md5(n..tg_news_cate..." />
+                <marker date="1012686742000" expanded="true" signature="576:598" placeholder="SELECT * FRO..tg_share..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hoidap.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hoidap.php">
+      <file leaf-file-name="chitiet.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chitiet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.884615" vertical-offset="200" max-vertical-offset="935">
-              <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+            <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="918">
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding>
-                <marker date="1423550110278" expanded="true" signature="571:595" placeholder="SELECT * FRO..tg_support..." />
+                <marker date="1423730217390" expanded="true" signature="386:443" placeholder="SELECT * FRO..tg_news..." />
+                <marker date="1423730217390" expanded="true" signature="794:920" placeholder="SELECT md5(n..tg_news..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="right.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/right.php">
+      <file leaf-file-name="chitiethoidap.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chitiethoidap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11950791" vertical-offset="0" max-vertical-offset="1020">
-              <caret line="4" column="173" selection-start-line="4" selection-start-column="173" selection-end-line="4" selection-end-column="173" />
-              <folding>
-                <marker date="1423708072225" expanded="true" signature="88:242" placeholder="SELECT md5(n..tg_news..." />
-                <marker date="1423708072225" expanded="true" signature="1019:1078" placeholder="SELECT * FRO..tg_product..." />
-              </folding>
+            <state vertical-scroll-proportion="-14.961538" vertical-offset="138" max-vertical-offset="782">
+              <caret line="31" column="32" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,18 +83,66 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.692307" vertical-offset="1692" max-vertical-offset="2329">
-              <caret line="122" column="32" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
+            <state vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="2329">
+              <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
               <folding>
-                <marker date="1423705906699" expanded="true" signature="464:629" placeholder="SELECT md5(n..tg_news..." />
-                <marker date="1423705906699" expanded="true" signature="1293:1436" placeholder="SELECT md5(n..tg_news..." />
-                <marker date="1423705906699" expanded="true" signature="2149:2227" placeholder="SELECT categ..tg_category..." />
-                <marker date="1423705906699" expanded="true" signature="2347:2482" placeholder="SELECT md5(n..tg_news_cate..." />
-                <marker date="1423705906699" expanded="true" signature="2919:3055" placeholder="SELECT md5(n..tg_news_cate..." />
-                <marker date="1423705906699" expanded="true" signature="3321:3457" placeholder="SELECT md5(n..tg_news_cate..." />
-                <marker date="1423705906699" expanded="true" signature="3722:3858" placeholder="SELECT md5(n..tg_news_cate..." />
-                <marker date="1423705906699" expanded="true" signature="4120:4256" placeholder="SELECT md5(n..tg_news_cate..." />
-                <marker date="1423705906699" expanded="true" signature="4528:4577" placeholder="SELECT * FRO..tg_product..." />
+                <marker date="1423730239091" expanded="true" signature="464:629" placeholder="SELECT md5(n..tg_news..." />
+                <marker date="1423730239091" expanded="true" signature="1277:1420" placeholder="SELECT md5(n..tg_news..." />
+                <marker date="1423730239091" expanded="true" signature="2117:2195" placeholder="SELECT categ..tg_category..." />
+                <marker date="1423730239091" expanded="true" signature="2315:2450" placeholder="SELECT md5(n..tg_news_cate..." />
+                <marker date="1423730239091" expanded="true" signature="2887:3023" placeholder="SELECT md5(n..tg_news_cate..." />
+                <marker date="1423730239091" expanded="true" signature="3289:3425" placeholder="SELECT md5(n..tg_news_cate..." />
+                <marker date="1423730239091" expanded="true" signature="3690:3826" placeholder="SELECT md5(n..tg_news_cate..." />
+                <marker date="1423730239091" expanded="true" signature="4088:4224" placeholder="SELECT md5(n..tg_news_cate..." />
+                <marker date="1423730239091" expanded="true" signature="4496:4545" placeholder="SELECT * FRO..tg_product..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="phongbenh.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phongbenh.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6923077" vertical-offset="457" max-vertical-offset="1003">
+              <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+              <folding>
+                <marker date="1423730246480" expanded="true" signature="579:648" placeholder="SELECT *, md..tg_news_cate..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/search.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1598">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1410726694000" expanded="true" signature="551:689" placeholder="SELECT md5(p..tg_product..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tintuc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tintuc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6923077" vertical-offset="457" max-vertical-offset="1003">
+              <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+              <folding>
+                <marker date="1423730259334" expanded="true" signature="574:618" placeholder="SELECT * FRO..tg_news_cate..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xuongkhop.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xuongkhop.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.12820514" vertical-offset="457" max-vertical-offset="1003">
+              <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+              <folding>
+                <marker date="1423730264942" expanded="true" signature="578:680" placeholder="SELECT md5(n..tg_news_cate..." />
               </folding>
             </state>
           </provider>
@@ -129,8 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/admin/config/index.php" />
-        <option value="$PROJECT_DIR$/admin/templates/config/index.htm" />
         <option value="$PROJECT_DIR$/admin/_support/index.php" />
         <option value="$PROJECT_DIR$/admin/templates/_support/index.htm" />
         <option value="$PROJECT_DIR$/admin/_support/action.php" />
@@ -149,37 +176,39 @@
         <option value="$PROJECT_DIR$/includes/connection.php" />
         <option value="$PROJECT_DIR$/admin/templates/home.htm" />
         <option value="$PROJECT_DIR$/admin/templates/product/index.htm" />
-        <option value="$PROJECT_DIR$/admin/product/action.php" />
         <option value="$PROJECT_DIR$/admin/templates/product/action.htm" />
         <option value="$PROJECT_DIR$/admin/product/confirm.php" />
         <option value="$PROJECT_DIR$/admin/includes/languages/arr_page_name.php" />
         <option value="$PROJECT_DIR$/admin/product/setting.php" />
-        <option value="$PROJECT_DIR$/admin/product/index.php" />
         <option value="$PROJECT_DIR$/admin/admin/confirm.php" />
         <option value="$PROJECT_DIR$/save.php" />
         <option value="$PROJECT_DIR$/news_detail.php" />
         <option value="$PROJECT_DIR$/templates/benh.html" />
         <option value="$PROJECT_DIR$/includes/global.php" />
-        <option value="$PROJECT_DIR$/xuongkhop.php" />
         <option value="$PROJECT_DIR$/admin/_news/setting.php" />
         <option value="$PROJECT_DIR$/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/templates/phongbenh.html" />
-        <option value="$PROJECT_DIR$/phongbenh.php" />
         <option value="$PROJECT_DIR$/templates/xuongkhop.html" />
         <option value="$PROJECT_DIR$/templates/hoidap.html" />
         <option value="$PROJECT_DIR$/hoidap.php" />
         <option value="$PROJECT_DIR$/templates/right.html" />
         <option value="$PROJECT_DIR$/chitiethoidap.php" />
         <option value="$PROJECT_DIR$/templates/chitiethoidap.html" />
-        <option value="$PROJECT_DIR$/chitiet.php" />
         <option value="$PROJECT_DIR$/templates/news_detail.html" />
-        <option value="$PROJECT_DIR$/admin/_news/action.php" />
         <option value="$PROJECT_DIR$/admin/share/action.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/admin/_news/action.php" />
+        <option value="$PROJECT_DIR$/admin/_news/index.php" />
+        <option value="$PROJECT_DIR$/admin/product/action.php" />
+        <option value="$PROJECT_DIR$/admin/product/index.php" />
         <option value="$PROJECT_DIR$/includes/benh.php" />
         <option value="$PROJECT_DIR$/includes/right.php" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/chitiet.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/phongbenh.php" />
+        <option value="$PROJECT_DIR$/tintuc.php" />
+        <option value="$PROJECT_DIR$/xuongkhop.php" />
       </list>
     </option>
   </component>
@@ -248,20 +277,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xuongkhop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -316,7 +331,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -324,7 +339,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -362,62 +377,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/_category/confirm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/contact/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="833">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/contact/index.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.26923" vertical-offset="204" max-vertical-offset="2584">
-          <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/contact/action.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1258">
-          <caret line="54" column="60" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/contact/action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="2057">
-          <caret line="106" column="32" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/contact/confirm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="850">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/share/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="748">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/share/confirm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="268" max-vertical-offset="850">
-          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/config/action.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="2125">
@@ -496,20 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/product/action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3743409" vertical-offset="1377" max-vertical-offset="3400">
-          <caret line="127" column="36" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/product/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.07557118" vertical-offset="876" max-vertical-offset="1445">
-          <caret line="49" column="108" selection-start-line="49" selection-start-column="108" selection-end-line="49" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/templates/admin/confirm.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4089347" vertical-offset="0" max-vertical-offset="646">
@@ -553,21 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36379614" vertical-offset="558" max-vertical-offset="10234">
-          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/benh.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="663">
-          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/_news/setting.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="255">
@@ -589,52 +519,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/phongbenh.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="986">
-          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phongbenh.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769" vertical-offset="204" max-vertical-offset="1003">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xuongkhop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30228472" vertical-offset="253" max-vertical-offset="1003">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/hoidap.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6274165" vertical-offset="816" max-vertical-offset="1666">
           <caret line="69" column="100" selection-start-line="69" selection-start-column="100" selection-end-line="69" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/xuongkhop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8076925" vertical-offset="189" max-vertical-offset="1003">
-          <caret line="20" column="83" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/right.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23901582" vertical-offset="51" max-vertical-offset="816">
-          <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chitiethoidap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66838485" vertical-offset="138" max-vertical-offset="782">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -645,90 +533,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chitiet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923" vertical-offset="306" max-vertical-offset="918">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/news_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29209623" vertical-offset="0" max-vertical-offset="646">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/_category/action.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.68717045" vertical-offset="459" max-vertical-offset="1768">
           <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/_news/action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44815466" vertical-offset="2244" max-vertical-offset="5015">
-          <caret line="147" column="112" selection-start-line="147" selection-start-column="112" selection-end-line="147" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/_support/action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="2278">
-          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-          <folding>
-            <marker date="1012682752000" expanded="true" signature="1324:1683" placeholder="INSERT INTO ..." />
-            <marker date="1012682752000" expanded="true" signature="1800:2019" placeholder="SELECT suppo..TABLE_PREFIXsupport..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/share/action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077" vertical-offset="1071" max-vertical-offset="2057">
-          <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
-          <folding>
-            <marker date="1423638282555" expanded="true" signature="1015:1230" placeholder="INSERT INTO ..." />
-            <marker date="1423638282555" expanded="true" signature="1344:1503" placeholder="SELECT fulln..TABLE_PREFIXshare..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.692307" vertical-offset="1692" max-vertical-offset="2329">
-          <caret line="122" column="32" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
-          <folding>
-            <marker date="1423705906699" expanded="true" signature="464:629" placeholder="SELECT md5(n..tg_news..." />
-            <marker date="1423705906699" expanded="true" signature="1293:1436" placeholder="SELECT md5(n..tg_news..." />
-            <marker date="1423705906699" expanded="true" signature="2149:2227" placeholder="SELECT categ..tg_category..." />
-            <marker date="1423705906699" expanded="true" signature="2347:2482" placeholder="SELECT md5(n..tg_news_cate..." />
-            <marker date="1423705906699" expanded="true" signature="2919:3055" placeholder="SELECT md5(n..tg_news_cate..." />
-            <marker date="1423705906699" expanded="true" signature="3321:3457" placeholder="SELECT md5(n..tg_news_cate..." />
-            <marker date="1423705906699" expanded="true" signature="3722:3858" placeholder="SELECT md5(n..tg_news_cate..." />
-            <marker date="1423705906699" expanded="true" signature="4120:4256" placeholder="SELECT md5(n..tg_news_cate..." />
-            <marker date="1423705906699" expanded="true" signature="4528:4577" placeholder="SELECT * FRO..tg_product..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.307692" vertical-offset="3426" max-vertical-offset="3995">
-          <caret line="228" column="17" selection-start-line="228" selection-start-column="17" selection-end-line="228" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/benh.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34615386" vertical-offset="502" max-vertical-offset="1071">
-          <caret line="29" column="134" selection-start-line="29" selection-start-column="134" selection-end-line="29" selection-end-column="134" />
-          <folding>
-            <marker date="1423707960550" expanded="true" signature="89:205" placeholder="SELECT md5(n..tg_news_cate..." />
-            <marker date="1423707960550" expanded="true" signature="965:1081" placeholder="SELECT md5(n..tg_news_cate..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,18 +545,278 @@
         <state vertical-scroll-proportion="-13.884615" vertical-offset="200" max-vertical-offset="935">
           <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
           <folding>
-            <marker date="1423550110278" expanded="true" signature="571:595" placeholder="SELECT * FRO..tg_support..." />
+            <marker date="1423550110278" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tg_support..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/_support/action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="23.538462" vertical-offset="1530" max-vertical-offset="2278">
+          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+          <folding>
+            <marker date="1012682752000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1012682752000" expanded="true" signature="-1:-1" placeholder="SELECT suppo..TABLE_PREFIXsupport..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/share/action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="1326" max-vertical-offset="2057">
+          <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
+          <folding>
+            <marker date="1423638282555" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423638282555" expanded="true" signature="-1:-1" placeholder="SELECT fulln..TABLE_PREFIXshare..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/global.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73110723" vertical-offset="9665" max-vertical-offset="10234">
+          <caret line="593" column="23" selection-start-line="593" selection-start-column="23" selection-end-line="593" selection-end-column="23" />
+          <folding>
+            <marker date="1423470496002" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1423470496002" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423470496002" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423470496002" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423470496002" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423470496002" expanded="true" signature="-1:-1" placeholder="SELECT CONCA.._TABLE_PREFIXrights a..." />
+            <marker date="1423470496002" expanded="true" signature="-1:-1" placeholder="SELECT CONCA.._TABLE_PREFIXrights a..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/_news/action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25307557" vertical-offset="4497" max-vertical-offset="5066">
+          <caret line="273" column="95" selection-start-line="273" selection-start-column="95" selection-end-line="273" selection-end-column="95" />
+          <folding>
+            <marker date="1423729921586" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1423729921586" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423729921586" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423729921586" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423729921586" expanded="true" signature="-1:-1" placeholder="SELECT news_..TABLE_PREFIXnews..." />
+            <marker date="1423729921586" expanded="true" signature="-1:-1" placeholder="SELECT cate_..tg_news_cate..." />
+            <marker date="1423729921586" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tg_category..." />
+            <marker date="1423729921586" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tg_category..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/_news/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3884007" vertical-offset="1071" max-vertical-offset="1717">
+          <caret line="50" column="106" selection-start-line="50" selection-start-column="106" selection-end-line="50" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/product/action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-43.807693" vertical-offset="0" max-vertical-offset="3400">
+          <caret line="67" column="17" selection-start-line="49" selection-start-column="16" selection-end-line="67" selection-end-column="17" />
+          <folding>
+            <marker date="1423730007262" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1423730007262" expanded="true" signature="-1:-1" placeholder="SELECT produ..TABLE_PREFIXproduct..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/product/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.884615" vertical-offset="593" max-vertical-offset="1445">
+          <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/image_viewer.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.8461537" vertical-offset="204" max-vertical-offset="1224">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/image_viewer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44815466" vertical-offset="0" max-vertical-offset="1462">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/benh.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075" vertical-offset="476" max-vertical-offset="1071">
+          <caret line="39" column="78" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
+          <folding>
+            <marker date="1423730100140" expanded="true" signature="-1:-1" placeholder="SELECT md5(n..tg_news_cate..." />
+            <marker date="1423730100140" expanded="true" signature="-1:-1" placeholder="SELECT md5(n..tg_news_cate..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/right.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11950791" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="4" column="173" selection-start-line="4" selection-start-column="173" selection-end-line="4" selection-end-column="173" />
+        <state vertical-scroll-proportion="-14.692307" vertical-offset="247" max-vertical-offset="1020">
+          <caret line="37" column="70" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
           <folding>
-            <marker date="1423708072225" expanded="true" signature="88:242" placeholder="SELECT md5(n..tg_news..." />
-            <marker date="1423708072225" expanded="true" signature="1019:1078" placeholder="SELECT * FRO..tg_product..." />
+            <marker date="1423730114051" expanded="true" signature="-1:-1" placeholder="SELECT md5(n..tg_news..." />
+            <marker date="1423730114051" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tg_product..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/benh.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="663">
+          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-52.307693" vertical-offset="0" max-vertical-offset="3995">
+          <caret line="80" column="61" selection-start-line="80" selection-start-column="61" selection-end-line="80" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/chiase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.8461537" vertical-offset="204" max-vertical-offset="1700">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/news_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="646">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/phongbenh.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="986">
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/right.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="816">
+          <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tintuc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="17.076923" vertical-offset="444" max-vertical-offset="1003">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/xuongkhop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8076925" vertical-offset="189" max-vertical-offset="1003">
+          <caret line="20" column="83" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chiase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.230769" vertical-offset="240" max-vertical-offset="799">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1012686742000" expanded="true" signature="576:598" placeholder="SELECT * FRO..tg_share..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chitiet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="918">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <marker date="1423730217390" expanded="true" signature="386:443" placeholder="SELECT * FRO..tg_news..." />
+            <marker date="1423730217390" expanded="true" signature="794:920" placeholder="SELECT md5(n..tg_news..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chitiethoidap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.961538" vertical-offset="138" max-vertical-offset="782">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="2329">
+          <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+          <folding>
+            <marker date="1423730239091" expanded="true" signature="464:629" placeholder="SELECT md5(n..tg_news..." />
+            <marker date="1423730239091" expanded="true" signature="1277:1420" placeholder="SELECT md5(n..tg_news..." />
+            <marker date="1423730239091" expanded="true" signature="2117:2195" placeholder="SELECT categ..tg_category..." />
+            <marker date="1423730239091" expanded="true" signature="2315:2450" placeholder="SELECT md5(n..tg_news_cate..." />
+            <marker date="1423730239091" expanded="true" signature="2887:3023" placeholder="SELECT md5(n..tg_news_cate..." />
+            <marker date="1423730239091" expanded="true" signature="3289:3425" placeholder="SELECT md5(n..tg_news_cate..." />
+            <marker date="1423730239091" expanded="true" signature="3690:3826" placeholder="SELECT md5(n..tg_news_cate..." />
+            <marker date="1423730239091" expanded="true" signature="4088:4224" placeholder="SELECT md5(n..tg_news_cate..." />
+            <marker date="1423730239091" expanded="true" signature="4496:4545" placeholder="SELECT * FRO..tg_product..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phongbenh.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6923077" vertical-offset="457" max-vertical-offset="1003">
+          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+          <folding>
+            <marker date="1423730246480" expanded="true" signature="579:648" placeholder="SELECT *, md..tg_news_cate..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1598">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1410726694000" expanded="true" signature="551:689" placeholder="SELECT md5(p..tg_product..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tintuc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6923077" vertical-offset="457" max-vertical-offset="1003">
+          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+          <folding>
+            <marker date="1423730259334" expanded="true" signature="574:618" placeholder="SELECT * FRO..tg_news_cate..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xuongkhop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12820514" vertical-offset="457" max-vertical-offset="1003">
+          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+          <folding>
+            <marker date="1423730264942" expanded="true" signature="578:680" placeholder="SELECT md5(n..tg_news_cate..." />
           </folding>
         </state>
       </provider>
