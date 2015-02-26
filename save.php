@@ -17,17 +17,25 @@
 	$address = $_POST['address'];
 	$content = $_POST['content'];
 
-	$error = 0;
-	if($fullname==''){ $error = 1;}
-	if($phoneNumber == '') { $error = 1; }
-	if($email == '') { $error = 1; }
-	if($address == '') { $error = 1; }
-	if($content == '') { $error = 1; }
+	$error = 0;$msg="";
+	if($fullname==''){ $error = 1; $msg .= "Vui lòng điền họ tên <br />";}
+	if($phoneNumber == '') { $error = 1;  $msg .= "Vui lòng điền số điện thoại <br />"; }
+	if($email == '') { $error = 1; $msg .= "Vui lòng điền email <br />"; }
+	if($address == '') { $error = 1; $msg .= "Vui lòng điền địa chỉ <br />"; }
+	if($content == '') { $error = 1; $msg .= "Vui lòng điền nội dung"; }
 	if($error == 0) {
-		$sql = " INSERT INTO tg_share(fullname, address, phone, email, content) VALUES ('$fullname', '$address, '$phoneNumber', '$email', '$content')";
+		$sql = " INSERT INTO tg_share(fullname, address, phone, email, content) VALUES ('$fullname', '$address', '$phoneNumber', '$email', '$content')";
 		execSQL($sql);
 		redir('chiase.php');
-	}
+	} else {
+        $xtpl->assign('msg',$msg);
+        $xtpl->assign('fullname',$fullname);
+        $xtpl->assign('phoneNumber',$phoneNumber);
+        $xtpl->assign('email',$email);
+        $xtpl->assign('address',$address);
+        $xtpl->assign('content',$content);
+        $xtpl->parse("MAIN.error");
+    }
 	
 	
 	$xtpl->assign("header_tostring",$header_tostring);

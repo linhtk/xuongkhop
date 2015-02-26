@@ -19,7 +19,7 @@
                             <h4 class="media-heading"> >> {tin.fullname} ({tin.email})</h4>
                             <div class="media-body">
                                 <p>{tin.content}</p>
-                                <a href="#" class="readmore pull-right">Chi tiết</a>
+                                <a href="chitietchiase.php?id={tin.id}" class="readmore pull-right">Chi tiết</a>
                             </div>
                         </div>
                         <!-- END: tin -->
@@ -37,14 +37,14 @@
                                     <label class="sr-only" for="fullname">Họ và tên</label>
                                     <div id="fullname_p" class="input-group">
                                         <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
-                                        <input type="text" class="form-control" id="fullname" placeholder="Họ và tên">
+                                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Họ và tên">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="phoneNumber">Điện thoại</label>
                                     <div id="phoneNumber_p" class="input-group">
                                         <div class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></div>
-                                        <input type="text" class="form-control" id="phoneNumber" placeholder="Điện thoại liên hệ">
+                                        <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Điện thoại liên hệ">
                                     </div>
                                 </div>
                             </div>
@@ -53,14 +53,14 @@
                                     <label class="sr-only" for="email">Địa chỉ</label>
                                     <div id="address_p" class="input-group">
                                         <div class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></div>
-                                        <input type="text" class="form-control" id="address" placeholder="Địa chỉ liên hệ">
+                                        <input type="text" class="form-control" id="address" name="address" placeholder="Địa chỉ liên hệ">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="email">Email</label>
                                     <div id="email_p" class="input-group">
                                         <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
-                                        <input type="text" class="form-control" id="email" placeholder="Email">
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                                     <label class="sr-only" for="content">Nội dung</label>
                                     <div id="content_p" class="input-group">
                                         <div class="input-group-addon" style="vertical-align: top;"><i class="glyphicon glyphicon-comment"></i></div>
-                                        <textarea class="form-control" name="" id="content" cols="30" rows="7"></textarea>
+                                        <textarea class="form-control" name="content" id="content" cols="30" rows="7"></textarea>
                                     </div>
                                 </div>
                             </div>

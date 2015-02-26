@@ -125,6 +125,19 @@
         $xtpl->assign('SP', $row_sp);
         $xtpl->parse("MAIN.SP");
     }
+//hoi dap
+    $sql_hd = "SELECT * FROM tg_support WHERE answer != '' ORDER BY support_id DESC LIMIT 0,2";
+    $rs_hd = execSQL($sql_hd);
+    $u = 0;
+    while($row_hd = mysql_fetch_assoc($rs_hd))
+    {
+        if($u==0){$row_hd['class']=' active';}
+        $u++;
+        $row_hd['traloi'] = sub_string($row_hd['answer'],100, true);
+        $row_hd['cauhoi'] = strip_tags(sub_string($row_hd['content'],80, true), '<p>');
+        $xtpl->assign("HD",$row_hd);
+        $xtpl->parse("MAIN.HD");
+    }
 	$xtpl->assign("header_tostring",$header_tostring);
 	$xtpl->assign("footer_tostring",$footer_tostring);
 	$xtpl->assign("left_tostring",$left_tostring);
