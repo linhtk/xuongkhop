@@ -182,7 +182,7 @@
 							,'$news_is_hot'
 							)";
 					$rs = execSQL($sql);
-					$news_id = mysqli_insert_id($rs);
+					$news_id = mysql_insert_id();
 					$sql_cate2 = "INSERT INTO tg_news_cate(news_id, cate_id, news_title, news_image, news_brief) 
 							VALUES ";
 					for($i=0;$i<count($news_cate);$i++){

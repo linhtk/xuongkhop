@@ -25,6 +25,7 @@
 	$limit=($show_result?$show_result:20);
 	$offset=($page-1)*$limit;
 	$LIMIT=" LIMIT $offset,$limit";
+    $ORDER = "ORDER BY news_id DESC";
 	$sql="SELECT 
 				md5(".$table_name."_id) as edit_id	
 				,".$table_name."_id

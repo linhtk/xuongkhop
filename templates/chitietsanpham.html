@@ -1,0 +1,32 @@
+<!-- BEGIN:MAIN -->
+{header_tostring}
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+
+                <div class="content">
+                    <div class="news">
+                        <h4><a href="#">{row.product_name}</a></h4>
+                        <p><b>Đánh giá sản phẩm: {row.rate}</b></p>
+                        <p>{row.product_image}</p>
+                        <p>{row.product_desc}</p>
+                    </div>
+                    <hr />
+                    <h4 class="media-heading">Sản phẩm khác: </h4>
+                    <ul class="list-unstyled">
+                        <!-- BEGIN: other -->
+                        <li><a href="chitietsanpham.php?id={row1.news_id}">{row1.news_title}</a></li>
+                        <!-- END: other -->
+                    </ul>
+                </div>
+            </div>
+
+            {right_tostring}
+        </div>
+
+    </div>
+    <a href="#" class="scrollToTop"><i class="glyphicon glyphicon-circle-arrow-up"></i></a>
+</section>
+{footer_tostring}
+<!-- END:MAIN -->

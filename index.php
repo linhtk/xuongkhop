@@ -15,7 +15,7 @@
 	$xtpl = new XTemplate ("templates/index.html");
 
 //slide
-	$sql_news = "SELECT md5(news_id) AS news_id, news_title, news_image, news_date, news_brief FROM tg_news WHERE news_is_hot = '1' AND news_active='1' ORDER BY news_date LIMIT 0 , 3";
+	$sql_news = "SELECT md5(news_id) AS news_id, news_title, news_image, news_date, news_brief FROM tg_news WHERE news_is_hot = '1' AND news_active='1' ORDER BY news_id DESC LIMIT 0 , 3";
 	$rs_news = execSQL($sql_news);
 	$no=mysql_num_rows($rs_news);
 	if ($no)
@@ -43,7 +43,7 @@
 	}
 
 //news
-	$sql_news1 = "SELECT md5(news_id) AS news_id, news_title, news_image, news_date, news_brief FROM tg_news WHERE news_active='1' ORDER BY news_date LIMIT 0 , 3";
+	$sql_news1 = "SELECT md5(news_id) AS news_id, news_title, news_image, news_date, news_brief FROM tg_news WHERE news_active='1' ORDER BY news_id DESC LIMIT 0 , 3";
 	$rs_news1 = execSQL($sql_news1);
 	$no1=mysql_num_rows($rs_news1);
 	if ($no1)
@@ -72,13 +72,23 @@
     $rs_kt = execSQL($sql_kt);
     $num = 1;
     while($row_kt = mysql_fetch_assoc($rs_kt)){
-        $sql_news_kt = "SELECT md5(news_id) AS news_id, news_title FROM tg_news_cate WHERE cate_id = ".$row_kt['category_id']." ORDER BY news_id DESC LIMIT 0,3";
+        $sql_kt_hot = "SELECT n.news_image, md5(n.news_id) AS id FROM tg_news AS n INNER JOIN tg_news_cate AS nc WHERE n.news_id = nc.news_id AND nc.cate_id = ".$row_kt['category_id']." AND n.news_is_hot = 1 ORDER BY n.news_id DESC LIMIT 0,1";
+        $rs_kt_hot = execSQL($sql_kt_hot);
+        $row_kt_hot = mysql_fetch_assoc($rs_kt_hot);
+        $kt_hot_img = $row_kt_hot['news_image'];
+        $sql_news_kt = "SELECT md5(news_id) AS id, news_title FROM tg_news_cate WHERE cate_id = ".$row_kt['category_id']." ORDER BY news_id DESC LIMIT 0,3";
         $rs_news_kt = execSQL($sql_news_kt);
         while($row_news_kt = mysql_fetch_assoc($rs_news_kt)){
             $xtpl->assign("news_kt",$row_news_kt);
             $xtpl->parse("MAIN.KT.NEWS_KT");
         }
-        $row_kt['image'] = '<img alt="" src="upload/product/'.$num.'.jpg" class="img-responsive" />';
+        if(($kt_hot_img != '')&&(file_exists("upload/news/".$kt_hot_img)))
+        {
+            $row_kt['image'] = '<a href="chitiet.php?id='.$row_kt_hot['id'].'"><img alt="" src="upload/news/'.$kt_hot_img.'" class="img-responsive" /></a>';
+        } else {
+            $row_kt['image'] = '<img alt="" src="upload/product/'.$num.'.jpg" class="img-responsive" />';
+        }
+
         $num++;
         $xtpl->assign("KT", $row_kt);
         $xtpl->parse("MAIN.KT");
