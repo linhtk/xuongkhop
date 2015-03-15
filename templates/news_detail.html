@@ -7,10 +7,11 @@
 
                 <div class="content">
                     <div class="news">
-                        <h4><a href="#">{row.news_title}</a></h4>
-                        <p><b>{row.news_brief}</b></p>
-                        <p>{row.news_image}</p>
+                        <h4 class="news-title">{row.news_title}</h4>
+                        <!--                        <p><b>{row.news_brief}</b></p>
+                                                <p>{row.news_image}</p>-->
                         <p>{row.news_content}</p>
+                        <div class="fb-comments" data-href="http://benhxuongkhop.info/chitiet.php?id={row.news_id}" data-numposts="5" data-colorscheme="light"></div>
                     </div>
                     <hr />
                     <h4 class="media-heading">Tin khác: </h4>
@@ -19,12 +20,20 @@
                         <li><a href="chitiet.php?id={row1.news_id}">{row1.news_title}</a></li>
                         <!-- END: other -->
                     </ul>
+                    <div class="row">
+                        {benh_tostring}
+                    </div>
                 </div>
             </div>
 
             {right_tostring}
+            
         </div>
-
+<!-- BEGIN:QC 
+            <div class="col-md-12">
+                <img src="upload/adv/{QC.adv_image}" alt="" class="img-responsive">
+            </div>
+             END:QC -->
     </div>
     <a href="#" class="scrollToTop"><i class="glyphicon glyphicon-circle-arrow-up"></i></a>
 </section>

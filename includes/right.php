@@ -48,6 +48,15 @@
         $xtpl_right->assign("SP",$row_sp);
         $xtpl_right->parse("RIGHT.SP");
     }
+//video
+    $sql_video = "SELECT config_video FROM tg_config LIMIT 0,1";
+    $rs_video = execSQL($sql_video);
+    $row_video = mysql_fetch_assoc($rs_video);
+    $video = $row_video['config_video'];
+    if($video!=''){
+        $xtpl_right->assign('video',$video);
+        $xtpl_right->parse("RIGHT.video");
+    }
 	$xtpl_right->parse("RIGHT");
 	$right_tostring = $xtpl_right->text("RIGHT");
 	

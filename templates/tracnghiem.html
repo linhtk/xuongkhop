@@ -1,0 +1,89 @@
+<!-- BEGIN:MAIN -->
+{header_tostring}
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="block-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="#">Trắc nghiệm về xương khớp</a>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div class="content">
+                    <div class="news">
+                        <form method="post" action="savetest.php" class="form-contact" id="frmTest">
+                            <input type="hidden" name="Action" value="Action"/>
+                            <input type="hidden" name="arrId" value="{arrId}" />
+                    	<div class="row alert alert-warning alert-dismissible" role="alert" id="errblock" style="display:none;">
+                        	<button type="button" class="close" data-dismiss="alert" aria-lable="close" ><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="sr-only" for="fullname">Họ và tên</label>
+                                    <div id="fullname_p" class="input-group">
+                                        <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Họ và tên">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="phoneNumber">Điện thoại</label>
+                                    <div id="phoneNumber_p" class="input-group">
+                                        <div class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></div>
+                                        <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Điện thoại liên hệ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="sr-only" for="email">Địa chỉ</label>
+                                    <div id="address_p" class="input-group">
+                                        <div class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></div>
+                                        <input type="text" class="form-control" id="address" name="address" placeholder="Địa chỉ liên hệ">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="email">Email</label>
+                                    <div id="email_p" class="input-group">
+                                        <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BEGIN:question -->
+                        <div class="media item-news">
+                            <h4 class="media-heading"> >> {question.question}</h4>
+                            <div class="media-body">
+                                <p>Đáp án</p>
+                                <!-- BEGIN:ans -->
+                                <!--<input type="hidden" name="q_id" value="" />-->
+                                <p><input type="radio" name="answer-{q_id}[]" value="{ans.id}">{ans.answer}</p>
+                                <!-- END:ans -->
+                            </div>
+                        </div>
+                        <!-- END:question -->
+                        {page}
+                        <div class="text-right">
+                            <input type="reset" class="btn btn-primary" value="Nhập lại" />
+                            <input type="button" class="btn btn-primary" value="Gửi" onclick="checksavetest();" />
+                        </div>
+                    </form>
+                    
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+           {right_tostring} 
+        </div>
+        
+    </div>
+     <a href="#" class="scrollToTop"><i class="glyphicon glyphicon-circle-arrow-up"></i></a>
+    </section>
+{footer_tostring}
+<!-- END:MAIN -->

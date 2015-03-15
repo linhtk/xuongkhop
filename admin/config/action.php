@@ -13,7 +13,7 @@
 		$config_email=$_POST['config_email'];
 		$config_google_plus=$_POST['config_google_plus'];
 		$config_meta = $_POST['config_meta'];
-		//$config_yahoo_sale = $_POST['config_yahoo_sale'];
+		$config_video = $_POST['config_video'];
 		//$config_footer_content = $_POST['config_footer_content'];
 		$edit_id = $_POST['edit_id'];
 		//$hidden_config_homepage_image = $_POST['hidden_config_homepage_image'];
@@ -46,6 +46,7 @@
                             ,config_email='$config_email'
                             ,config_google_plus='$config_google_plus'
                             ,config_meta='$config_meta'
+                            ,config_video='$config_video'
                         WHERE config_id='$edit_id'";
                 execSQL($sql);
                 redir('index.php?mod=config');
@@ -60,6 +61,7 @@
                         ,config_email
                         ,config_google_plus
                         ,config_meta
+                        ,config_video
                         ) VALUES(
                         '$config_title_site'
                         ,'$config_phone'
@@ -67,6 +69,7 @@
                         ,'$config_email'
                         ,'$config_google_plus'
                         ,'$config_meta'
+                        ,'$config_video'
                         )";
 					execSQL($sql);
 					redir('index.php?mod=config');
@@ -83,6 +86,7 @@
 						,config_email	
 						,config_google_plus
 						,config_meta
+						,config_video
 						,config_id AS edit_id
 				 FROM ".TABLE_PREFIX."config
 				 WHERE md5(config_id)='$edit_id'";
@@ -95,6 +99,7 @@
 			$config_email						= $row['config_email'];
 			$config_google_plus				    = $row['config_google_plus'];
 			$config_meta						= $row['config_meta'];
+            $config_video                       = $row['config_video'];
 
 		}
 	}
@@ -105,12 +110,14 @@
 	$input_config_email						= gen_input_text('config_email',$config_email,50,255,'','a_text');
     $input_config_google_plus				= gen_input_text('config_google_plus',$config_google_plus,50,255,'','a_text');
 	$input_config_meta				        = gen_input_textarea('config_meta',$config_meta,50,20,'','a_text');
+    $input_config_video                     = gen_input_textarea('config_video', $config_video, 50, 20,'','a_text');
 	$input_hidden_edit_id					= gen_input_hidden('edit_id',$edit_id);
 	$xtpl->assign('input_config_title_site',$input_config_title_site);
 	$xtpl->assign('input_config_phone',$input_config_phone);
 	$xtpl->assign('input_config_facebook',$input_config_facebook);
 	$xtpl->assign('input_config_email',$input_config_email);
 	$xtpl->assign('input_config_google_plus',$input_config_google_plus);
+    $xtpl->assign('input_config_video', $input_config_video);
 	$xtpl->assign('input_config_meta',$input_config_meta);
 	$xtpl->assign('input_hidden_edit_id',$input_hidden_edit_id);
 	$xtpl->assign('COM_ADD_UPDATE',COM_ADD_UPDATE);

@@ -24,7 +24,7 @@
 	$pagegroup_size=10;
 	$limit=($show_result?$show_result:20);
 	$offset=($page-1)*$limit;
-	$LIMIT=" LIMIT $offset,$limit";
+	$LIMIT=" ORDER BY adv_position ASC LIMIT $offset,$limit";
 	$sql="SELECT 
 				md5(".$table_name."_id) as edit_id	
 				,".$table_name."_id
@@ -32,7 +32,7 @@
 				,adv_image
 				,adv_active
 				,adv_link
-				,adv_is_left
+				,adv_position
 				FROM ".TABLE_PREFIX.$table_name." 
 				".$condition ;
 	$rs=execSQL($sql);
@@ -45,11 +45,12 @@
 	{
 		$array[$i]['no']=++$offset;
 		$edit_id=$array[$i]['edit_id'];
+                $array[$i]['position'] = get_cate_name($array[$i]['adv_position']);
 		if($array[$i]['adv_image'])
 		{
-			if (file_exists("../images/adv/thumb_0_".$array[$i]['adv_image']))
+			if (file_exists("../upload/adv/".$array[$i]['adv_image']))
 			{
-				$array[$i]['adv_image'] = '<a href="#" onclick="openwin(\'image_viewer.php?path=adv&img=thumb_0_'.$array[$i]['adv_image'].'\');">'.COM_VIEW_IMAGE.'</a>';
+				$array[$i]['adv_image'] = '<a href="#" onclick="openwin(\'image_viewer.php?path=adv&img='.$array[$i]['adv_image'].'\');">'.COM_VIEW_IMAGE.'</a>';
 			} else 
 			{
 				$array[$i]['adv_image'] = 'Không có ảnh';

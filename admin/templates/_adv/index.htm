@@ -23,15 +23,14 @@ function openwin(url,w_title,width,height)
   <input type="hidden" name="edit_id" value="">
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="body-index">
     <tr>
-      <td width="6" valign="top"><img src="images/images_03_1.jpg" width="6"></td>
       <td class="row-index"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="sortable" >
           <thead>
           <tr><td width="10" class="cols-action">{COM_LBL_NO}</td>
-            <td class="cols-index">Tiêu đề</td>
-            <td width="100" class="cols-index">Liên kết</td>
-            <td width="100" class="cols-index">Ảnh</td>
-            <td width="100" class="cols-index">Bên trái</td>
-            <td width="100" class="cols-index">Trạng thái</td>
+            <!--<td class="cols-index">Tiêu đề</td>-->
+            <td class="cols-index">Liên kết</td>
+            <td width="150" class="cols-index">Ảnh</td>
+            <td width="150" class="cols-index">Vị trí</td>
+            <td width="100" class="cols-index">Hiển thị</td>
             <td width="100" class="cols-index">{COM_LBL_ACTION}</td>
           </thead>
           <tr>
@@ -40,10 +39,10 @@ function openwin(url,w_title,width,height)
           <!-- BEGIN:LIST -->
           <tr onmouseover="this.className='tr-mouserOver';" onmouseout="this.className='tr-mouserOut'">
             <td class="cols-content">{LIST.no}&nbsp;</td>
-            <td class="cols-content">{LIST.adv_title}&nbsp;</td>
+            <!--<td class="cols-content">{LIST.adv_title}&nbsp;</td>-->
             <td class="cols-content" valign="top">{LIST.adv_link}</td>
             <td class="cols-content" valign="top">{LIST.adv_image}</td>
-            <td class="cols-content" valign="top">{LIST.adv_is_left}</td>
+            <td class="cols-content" valign="top">{LIST.position}</td>
             <td class="cols-content" valign="top">{LIST.adv_active}</td>
             <td class="cols-content" valign="top"><a href="#" onclick="Update('{LIST.edit_id}')"><img src="images/images_17.jpg" width="16" border="0"></a>&nbsp;<a href="#" onclick="Delete('{LIST.edit_id}')"><img src="images/images_19.jpg" width="18" border="0"></a>&nbsp;
               <input type="checkbox" name="check_delete[]" value="{LIST.edit_id}"></td>
@@ -53,7 +52,6 @@ function openwin(url,w_title,width,height)
           
           
       </table></td>
-      <td width="6" valign="top"><img src="images/images_03_2.jpg" width="6"></td>
     </tr>
   </table>
 </form>

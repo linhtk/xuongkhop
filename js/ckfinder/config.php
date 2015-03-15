@@ -30,7 +30,7 @@ function CheckAuthentication()
 	// user logs in your system. To be able to use session variables don't
 	// forget to add session_start() at the top of this file.
 
-	return false;
+	return true;
 }
 
 // LicenseKey : Paste your license key here. If left blank, CKFinder will be
@@ -60,8 +60,11 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-$baseUrl = '/ckfinder/userfiles/';
-
+$baseUrl = '/upload/fck/';
+//$baseUrl = 'http://localhost/integrated/uploads/';
+$enabled = true;
+$config['SecureImageUploads'] = false;
+$config['ChmodFolders'] = 0777 ;
 /*
 $baseDir : the path to the local directory (in the server) which points to the
 above $baseUrl URL. This is the path used by CKFinder to handle the files in

@@ -11,10 +11,10 @@
                         <div class="carousel-inner">
                         	
                         <!-- BEGIN: hot_news -->
-                            <div class="{row_news.class}item" data-slide-number="0">
+                            <div class="{row_news.class}item" data-slide-number="{row_news.num}">
                                 {row_news.news_image}
                                 <div class="carousel-caption">
-                                    <h4>{row_news.news_title}</h4>
+                                    <a href="chitiet.php?id={row_news.news_id}"><h4>{row_news.news_title}</h4></a>
                                     <p>{row_news.news_brief} <a href="chitiet.php?id={row_news.news_id}" class="readmore">Chi tiết</a></p>
                                 </div>
                             </div>
@@ -40,10 +40,11 @@
                 <ul class="list-unstyled">
                 <!-- BEGIN:news -->
                     <li>
-                        <div class="media" id="carousel-selector-0" class="selected">
+                        
+                        <div class="media" id="carousel-selector-{row_news1.num}" class="selected">
                             <a class="pull-left" href="chitiet.php?id={row_news1.news_id}">{row_news1.news_image}</a>
                             <div class="media-body">
-                                <h4 class="media-heading">{row_news1.news_title}</h4>
+                                <a class="pull-left" href="chitiet.php?id={row_news1.news_id}"><h4 class="media-heading">{row_news1.news_title}</h4></a>
                                 <p>{row_news1.news_brief}</p>
                             </div>
                         </div>
@@ -58,14 +59,14 @@
     <section id="main-homepage">
     <div class="container">
         <section class="group-category">
-            <h1><span>Kiến thức</span> bệnh xương khớp</h1>
+            <a href="camnang.php"><h1><span>Kiến thức</span> bệnh xương khớp</h1></a>
             <div class="row">
                 <!-- BEGIN: KT -->
                 <div class="col-sm-6 col-md-3">
                     <div class="thumbnail">
                         {KT.image}
                         <div class="caption">
-                            <h3>{KT.category_name}</h3>
+                            <h3><a href="xuongkhop.php?id={KT.category_id}">{KT.category_name}</a></h3>
                             <ul class="list-unstyled">
                                 <!-- BEGIN: NEWS_KT -->
                                 <li><a href="chitiet.php?id={news_kt.id}">{news_kt.news_title}</a></li>
@@ -81,7 +82,7 @@
         <section class="group-category multi-group-category">
             <div class="row">
                 <div class="col-md-6">
-                    <h1><span>Cẩm nang </span>Bệnh xương khớp</h1>
+                    <a href="camnang.php?id=112"><h1><span>Cẩm nang </span>Bệnh xương khớp</h1></a>
                     <div class="row">
                         <!-- BEGIN: CN -->
                         <div class="col-md-6">
@@ -99,7 +100,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h1><span>Kinh nghiệm </span>Chữa bệnh xương khớp</h1>
+                    <a href="camnang.php?id=109"><h1><span>Kinh nghiệm </span>Chữa bệnh xương khớp</h1></a>
                     <div class="row">
                         <!-- BEGIN: KN -->
                         <div class="col-md-6">
@@ -120,11 +121,13 @@
         </section><!--End .group-category -->
         <section id="adv">
             <div class="row">
+                <!-- BEGIN:QC -->
                 <div class="col-md-8">
-                    <img alt="" src="upload/adv2.jpg"/>
+                    <img alt="" src="upload/adv/{QC.adv_image}"/>
                 </div>
+                <!-- END:QC -->
                 <div class="col-md-4">
-                    <img alt="" src="upload/adv1.jpg" />
+                    <a href="tracnghiem.php"><img alt="" src="upload/adv1.jpg" /></a>
                 </div>
             </div>
         </section><!--End #adv-->
@@ -132,7 +135,7 @@
             <div class="row">
                 <div class="col-md-8 block-featured-news">
                     <div class="inner">
-                        <h2><span>Bài thuốc chữa bệnh xương khớp</span></h2>
+                        <a href="http://benhxuongkhop.info/phongbenh.php"><h2><span>Bài thuốc chữa bệnh xương khớp</span></h2></a>
                         <div class="row">
                             <!-- BEGIN: BT1 -->
                             <div class="col-md-6">
@@ -166,8 +169,8 @@
                 </div>
                 <div class="col-md-4 block-question">
                     <div class="inner">
-                        <img alt="" src="img/question.png" class="img-responsive" />
-                         <h3>Hỏi đáp chuyên gia</h3>
+                        <a href="hoidap.php"><img alt="" src="img/question.png" class="img-responsive" />
+                         <h3>Hỏi đáp chuyên gia</h3></a>
                         <div id="carousel-question" class="carousel slide" data-ride="carousel">
                           <!-- Indicators -->
                           <ol class="carousel-indicators">
@@ -179,7 +182,7 @@
                           <div class="carousel-inner" role="listbox">
                               <!-- BEGIN:HD -->
                               <div class="item{HD.class}">
-                                    <p class="question">{HD.support_title}</p>
+                                  <p class="question"><a href="chitietchiase.php?id={HD.support_id}">{HD.support_title}</a></p>
                                     <p class="answer">
                                         <strong class="help-block">Trả lời</strong>
                                         <span>{HD.traloi}</span>
@@ -191,7 +194,7 @@
     
                         </div>
                         <div class="send-question">
-                            <a href="chiase.php">Gửi câu hỏi của bạn</a>
+                            <a href="hoidap.php">Gửi câu hỏi của bạn</a>
                         </div>
                     </div>
                 </div><!--End .block-question-->

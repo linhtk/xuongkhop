@@ -17,28 +17,21 @@
                     <div class="news">
                     <!-- BEGIN:tin -->
                         <div class="media item-news">
-                            <h4 class="media-heading"> >> {tin.news_title}</h4>
-                            <a class="pull-left" href="#">
+                            <h4 class="media-heading"><a href="chitiet.php?id={tin.numId}"><span class="glyphicon glyphicon-play-circle"></span> {tin.news_title}</a></h4>
+                            <a class="pull-left" href="chitiet.php?id={tin.news_id}">
                                 {tin.news_image}
                             </a>
                             <div class="media-body">
                                 
                                 <p>{tin.news_brief}</p>
-                                <a href="#" class="readmore pull-right">Chi tiết</a>
+                                <a href="chitiet.php?id={tin.numId}" class="readmore pull-right">Chi tiết</a>
                             </div>
                         </div>
                         <!-- END: tin -->
-                        {pages}
+                        {page}
                         
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="upload/adv2.jpg" alt="" class="img-responsive">
-                        </div>
-                        <div class="col-md-6">
-                            <img src="upload/adv2.jpg" alt="" class="img-responsive">
-                        </div>
-                    </div>
+                    
                     {benh_tostring}
                     
                 </div>

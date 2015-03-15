@@ -9,7 +9,7 @@
 	define('TABLE_PREFIX','tg_');
 	
 	//Whole site
-	$title='May tinh Thao Gam - ';
+	$title='Benh Xuong Khop - ';
 	$SITE_CHARSET='charset=utf-8';
 	$MAX_FILE_SIZE=1024000;
 	

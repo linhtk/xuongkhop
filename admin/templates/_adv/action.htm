@@ -19,23 +19,23 @@ function openwin(url,w_title,width,height)
 <input type="hidden" name="frmAction" value="Action" />
 {input_hidden_edit_id}
 {input_hidden_adv_image}
-<table width="100%" border="0" cellspacing="0" cellpadding="0" class="box-detail" align="center" style="width:900px;">
+<table width="100%" border="0" cellspacing="4" cellpadding="4" class="box-detail" align="center" style="width:900px;">
   <tr>
     <td width="8"><img src="images/images_03.gif" width="9" height="30"></td>
     <td class="bg-heading" width="100%">{title_page}</td>
     <td width="7"><img src="images/images_06.gif" width="7" height="30"></td>
   </tr>
   <tr>
-    <td colspan="3" class="body-content"><table width="100%" border="0" cellspacing="0" cellpadding="5">
+    <td colspan="3" class="body-content"><table width="100%" border="0" cellspacing="5" cellpadding="5">
   <!-- BEGIN:error -->	
   <tr>
     <td colspan="2"><p class="p_error">{error}</p></td>
   </tr>
   <!-- END:error -->
-  <tr>
+<!--  <tr>
     <td width="28%" class="content">Tiêu đề</td>
     <td width="72%" class="content">{input_adv_title}</td>
-  </tr>
+  </tr>-->
   <tr>
     <td class="content">Ảnh</td>
     <td class="content">{input_adv_image}{image_viewer}</td>
@@ -45,20 +45,16 @@ function openwin(url,w_title,width,height)
     <td class="content">{input_adv_link}</td>
   </tr>
   <tr>
-    <td align="content">Vị trí</td>
-    <td align="content">{input_adv_position}</td>
+    <td class="content">Vị trí</td>
+    <td class="content">{input_adv_position}</td>
   </tr>
   <tr>
-    <td class="content">Bên trái</td>
-    <td class="content">{input_adv_is_left}</td>
+    <td class="content">Hiển thị</td>
+    <td class="content">{input_adv_active}</td>
   </tr>
   <tr>
-    <td align="content">Hiển thị</td>
-    <td align="content">{input_adv_active}</td>
-  </tr>
-  <tr>
-    <td align="center">&nbsp;</td>
-    <td align="left"><input type="submit" value="{COM_ADD_UPDATE}" class="a_button"/>
+    <td class="center">&nbsp;</td>
+    <td class="center" align="left"><input type="submit" value="{COM_ADD_UPDATE}" class="a_button"/>
     &nbsp;
 	<input type="reset" value="{COM_RESET}" class="a_button"></td>
   </tr>

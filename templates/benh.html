@@ -1,5 +1,12 @@
 <!-- BEGIN:BENH -->
 <div class="row">
+    <!-- BEGIN:BENHQC -->
+    <div class="col-md-6">
+        <img src="upload/adv/{BENHQC.adv_image}" alt="" class="img-responsive">
+    </div>
+    <!-- END:BENHQC -->
+</div>
+<div class="row">
     <div class="col-md-6 block-news-related">
         <h2>Cẩm nang phòng bệnh</h2>
         <!-- BEGIN: benh_news -->
@@ -8,7 +15,7 @@
                 {benh_news.news_image}
             </a>
             <div class="media-body">
-                <h4 class="media-heading">{benh_news.news_title}</h4>
+                <h4 class="media-heading"><a href="chitiet.php?id={benh_news.news_id}">{benh_news.news_title}</a></h4>
                 <span class="help-block">{benh_news.news_created_date}</span>
                 <p>{benh_news.news_brief}<a href="chitiet.php?id={benh_news.news_id}" class="readmore">Xem thêm</a></p>
             </div>
@@ -23,12 +30,12 @@
                 {duoc_news.news_image}
             </a>
             <div class="media-body">
-                <h4 class="media-heading">{duoc_news.news_title}</h4>
+                <h4 class="media-heading"><a href="chitiet.php?id={duoc_news.news_id}">{duoc_news.news_title}</a></h4>
                 <span class="help-block">{duoc_news.news_created_date}</span>
                 <p>{duoc_news.news_brief}<a href="chitiet.php?id={duoc_news.news_id}" class="readmore">Xem thêm</a></p>
             </div>
         </div>
         <!-- END: duoc_news -->
     </div>
-    </div>
+</div>
 <!-- END:BENH -->

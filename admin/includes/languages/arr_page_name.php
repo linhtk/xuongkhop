@@ -7,4 +7,6 @@
 	$page['config'] 				= "Quản lý Thông tin chung";
 	$page['share'] 					= "Bệnh nhân chia sẻ";
     $page['product'] 					= "Quản lý Sản phẩm";
+    $page['_adv'] 					= "Quản lý Quảng cáo";
+    $page['test'] 					= "Câu hỏi trắc nghiệm";
 ?>

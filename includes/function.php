@@ -642,6 +642,57 @@ function formatData($text)
 	return $text;
 }	
 
+function count_item ($id) {
+	$sql="SELECT 
+		  		products_id
+		  FROM tg_product
+		  WHERE md5(category_id)='".$id."' AND product_status='1'
+		  ";
+	$rs=execSQL($sql);
+	if ($rs) {
+		$num=mysql_num_rows($rs);
+	}
+	return $num;
+}
+function check_product ($id){
+	$sql=" SELECT products_id FROM tg_product WHERE category_id='".$id."' ";
+	$rs=execSQL($sql);
+	if ($rs) {
+		$sum=mysql_num_rows($rs);
+		if ($sum>0) {
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+}
+function check_login($user,$pass) {
+	$sql="SELECT customers_id 
+			FROM tg_customers 
+			WHERE customers_username='".$user."' 
+					AND md5(customers_password)='".$pass."'";
+	$rs=execSQL($sql);
+	if ($rs) {
+		$no=mysql_num_rows($rs);
+		if ($no>0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+function get_user_id($user) {
+	$sql="SELECT 
+		  	md5(customers_id) AS customers_id
+		  FROM tg_customers
+		  WHERE customers_username='".$user."'";
+	$rs=execSQL($sql);
+	if ($rs) {
+		$row=mysql_fetch_assoc($rs);
+		$id=$row['customers_id'];
+	}
+	return $id;
+}
 function gen_rand_string($hash){
 	$chars = array( 'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D', 'e', 'E', 'f', 'F', 'g', 'G', 'h', 'H', 'i', 'I', 'j', 'J',  'k', 'K', 'l', 'L', 'm', 'M', 'n', 'N', 'o', 'O', 'p', 'P', 'q', 'Q', 'r', 'R', 's', 'S', 't', 'T',  'u', 'U', 'v', 'V', 'w', 'W', 'x', 'X', 'y', 'Y', 'z', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0');		
 	$max_chars = count($chars) - 1;

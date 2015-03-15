@@ -152,6 +152,7 @@ font-size:12px;
 .box-detail .body-content .content
 {
 border-bottom:solid 1px #d0d7e4;
+padding: 10px;
 }
 .box-detail .body-content .td-header
 {
@@ -211,5 +212,5 @@ span.error{
 	padding-left:10px;
 	font-size:14px;
 }
-
+.padding10{padding: 10px !important;}
 

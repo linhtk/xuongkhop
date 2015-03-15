@@ -19,13 +19,34 @@
 			execSQL($sql); 
 		}
 	}
-	$condition=" WHERE 1=1";
-	$page=$_POST['page']?$_POST['page']:1;
+        $condition=" WHERE 1=1";
+	$keyword = $_POST['keyword'];
+        $cate_id = $_POST['cate_id'];
+        if($keyword != ''){
+            $condition .= " AND news_title LIKE '% ". $keyword ." %'";
+        }
+        if($cate_id != ''){
+            $sql_news_id = "SELECT news_id FROM tg_news_cate WHERE cate_id = ".$cate_id;
+            $rs_news_is = execSQL($sql_news_id);
+            $arrNewsId = "(";
+            $i = 0;
+            $total = mysql_num_rows($rs_news_is);
+            while($row_news_id = mysql_fetch_assoc($rs_news_is)){
+                if($i == $total-1){
+                    $arrNewsId .= $row_news_id['news_id']. ")";
+                } else {
+                    $arrNewsId .= $row_news_id['news_id']. " ,";
+                }
+                $i++;
+            }
+            $condition .= " AND news_id IN ". $arrNewsId;
+        }
+        $page=$_POST['page']?$_POST['page']:1;
 	$pagegroup_size=10;
 	$limit=($show_result?$show_result:20);
 	$offset=($page-1)*$limit;
 	$LIMIT=" LIMIT $offset,$limit";
-    $ORDER = "ORDER BY news_id DESC";
+        $ORDER = "ORDER BY news_id DESC";
 	$sql="SELECT 
 				md5(".$table_name."_id) as edit_id	
 				,".$table_name."_id
@@ -80,8 +101,22 @@
 	{
 		$xtpl->assign('pages',$pages);				
 	}
-	
-	
+	$sql_cate = "SELECT * FROM tg_category WHERE category_has_child = 0 AND category_status = 1 ORDER BY category_parent";
+	$rs_cate = execSQL($sql_cate);
+        $selectCate = "<option value=''>Danh muc tin</option>";
+        while($row_cate = mysql_fetch_assoc($rs_cate))
+        {
+            if($cate_id!=''){
+                if($cate_id == $row_cate['category_id']){
+                    $selectCate .= "<option value='".$row_cate['category_id']."' selected='selected'>".$row_cate['category_name']."</option>"; 
+                }else {
+                    $selectCate .= "<option value='".$row_cate['category_id']."'>".$row_cate['category_name']."</option>"; 
+                }
+            }else{
+                $selectCate .= "<option value='".$row_cate['category_id']."'>".$row_cate['category_name']."</option>"; 
+            }
+        }
+	$xtpl->assign('option',$selectCate);
 	$xtpl->assign('show_result',$limit);								
 	$xtpl->assign('COM_LBL_SEARCH',COM_LBL_SEARCH);	
 	$xtpl->assign('COM_SHOW_RESULT',COM_SHOW_RESULT);								

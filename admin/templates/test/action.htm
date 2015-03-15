@@ -1,0 +1,130 @@
+<!-- BEGIN:main -->
+{header_tostring}
+<link rel="stylesheet" type="text/css" media="all" href="../js/jscalendar/skins/aqua/theme.css" title="win2k-cold-1" />
+<script type="text/javascript" src="../js/jscalendar/calendar.js"></script>
+<script type="text/javascript" src="../js/jscalendar/lang/calendar-en.js"></script>
+<script type="text/javascript" src="../js/jscalendar/calendar-setup.js"></script>
+
+<script language="javascript" type="text/javascript" src="../js/general.js"></script>
+<script type="text/javascript" language="javascript">
+    function openwin(url, w_title, width, height)
+    {
+        var maxw = window.screen.availWidth;
+        var maxh = window.screen.availHeight;
+        var win = window.open(url, w_title, 'screenX=0,screenY=0,left=' + ((maxw - width) / 2) + ',top=0,width=' + width + ',height=' + height + ',toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no');
+        win.focus();
+    }
+</script>
+<form name="frmUpdate" action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="frmAction" value="Action" />
+    {input_hidden_edit_id}
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="box-detail" align="center" style="width:900px;" >
+        <tr>
+            <td width="8"><img src="images/images_03.gif" width="9" height="30"></td>
+            <td class="bg-heading" width="100%">{title_page}</td>
+            <td width="7"><img src="images/images_06.gif" width="7" height="30"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="body-content">
+                <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                    <tbody id='TextBoxesGroup'>
+                        <!-- BEGIN:error -->	
+                        <tr>
+                            <td colspan="2"><p class="p_error">{error}</p></td>
+                        </tr>
+                        <!-- END:error -->
+                    <script type="text/javascript">
+
+                        $(document).ready(function () {
+
+                            var counter = 2;
+                            $(".removeButton").hide();
+                            $("#addButton").click(function () {
+                                if (counter > 2) {
+                                    $(".removeButton").show();
+                                }
+                                if (counter > 10) {
+                                    alert("Bạn chỉ được nhập 10 câu trả lời");
+                                    return false;
+                                }
+
+                                var newTextBoxDiv = $(document.createElement('tr'))
+                                        .attr("id", 'answer_' + counter);
+
+                                newTextBoxDiv.after().html('<td width="20%" class="content">Câu trả lời ' + counter + '</td>' +
+                                        '<td width="60%" class="content"><textarea rows="2" style="width: 100%;" name="answer[' + counter +']'+
+                                        '"></textarea></td>');
+// +'<td width="20%" class="content"><input type="radio" name="answer_true[' + counter +']"> Câu trả lời đúng </td>'
+                                newTextBoxDiv.appendTo("#TextBoxesGroup");
+
+
+                                counter++;
+                            });
+
+                            $(".removeButton").click(function () {
+                                if (counter == 2) {
+                                    $(".removeButton").hide();
+                                    return false;
+                                }
+
+                                counter--;
+
+                                $("#answer_" + counter).remove();
+
+                            });
+
+
+                        });
+                    </script>
+                    <tr>
+                        <td width="20%" class="content">Nội dung câu hỏi</td>
+                        <td width="80%" class="content" colspan="2">
+                            <textarea rows="3" style="width: 100%;" name='question'>{question}</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="20%" class="content">Vị trí</td>
+                        <td width="80%" class="content" colspan="2">
+                            <input type="text" name='position' value='{position}' />
+                        </td>
+                    </tr>
+                    <!-- BEGIN:answer -->
+                    <tr id="answer_{answer.i}">
+                        <td width="20%" class="content">Câu trả lời {answer.i}</td>
+                        <td width="60%" class="content">
+                            <textarea rows="2" style="width: 100%;" name="answer[{answer.i}]">{answer.answer}</textarea>
+                        </td>
+<!--                        <td width="20%" class="content">
+                            <input type="radio" name="answer_true[]" value="" {answer.checked}> Câu trả lời đúng
+                        </td>-->
+                    </tr>
+                    <!-- END:answer -->
+                    </tbody>
+
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                    <tr>
+                        <td class="content"> 
+                            <div style="padding: 10px;" align="center">
+                                <input id="addButton" type="button" value="Thêm câu trả lời" class=""/>
+                                <input type="button" value="Xóa" class="removeButton">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" class="content">
+                            <input type="submit" value="{COM_ADD_UPDATE}" class=""/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="images/images_17.gif" width="9" height="10" style="float:left"></td>
+            <td><div class="line-bottom">&nbsp;</div></td>
+            <td><img src="images/images_21.gif" width="7" height="10" style="float:right;"></td>
+        </tr>
+    </table>
+</form>
+{footer_tostring}
+<!-- END:main -->

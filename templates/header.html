@@ -19,10 +19,18 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+        <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-		
+
         <!-- Add your site or application content here -->
         <header>
             <div id="header-top">
@@ -65,9 +73,17 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-main-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="{index}"><a href="index.php">Trang chủ</a></li>
-                            <li class={benh}><a href="xuongkhop.php">Các bệnh về khớp</a></li>
+                            <li class="{index}"><a href="index.php"><span style="font-size:16px;" class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                            <li class="dropdown {benh}">
+                                <a href="xuongkhop.php" class="dropdown-toggle disabled js-activated" data-toggle="dropdown" role="button" aria-expanded="false">Các bệnh về khớp <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <!-- BEGIN:sub -->
+                                    <li><a href="xuongkhop.php?id={sub.category_id}">{sub.category_name}</a></li>
+                                    <!-- END:sub -->
+                                </ul>
+                            </li>
                             <li class={phong}><a href="phongbenh.php">Phòng và chữa bệnh</a></li>
+                            <li class={camnang}><a href="camnang.php">Cẩm nang <span class="hidden-sm">bệnh xương khớp</span></a></li>
                             <li class={hoidap}><a href="hoidap.php">Hỏi Đáp</a></li>
                             <li class={tin}><a href="tintuc.php">Tin tức</a></li>
                             <li class={share}><a href="chiase.php">Bệnh nhân chia sẻ</a></li>
@@ -77,4 +93,4 @@
                 </div>
             </nav>
         </header>
-<!-- END:HEADER -->
+        <!-- END:HEADER -->
